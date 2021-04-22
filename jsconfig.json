@@ -6,10 +6,9 @@
         "@utils/*": [
           "utils/*"
         ],
-        "@assets/*": ["public/assets/*"],
-        "@data/*": [
-          "data/*"
-        ],
+        "@theme/*": [
+          "theme/*"
+        ]
       }
     }
   }

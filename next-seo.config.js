@@ -1,26 +1,26 @@
 const config = {
-  title: 'Home | Complete Farmer',
+  title: 'Home | The Goverment College Umuahia',
   description:
-    'A demand-driven digital agriculture platform that uses data and tech to produce high-quality agriculture products at scale.',
+    'So much of what makes Winchester exceptional is the people who are a part of the school. Also, its beauty - the buildings, the grounds, the setting. Our heritage and archives provide insight into the past, while our community partnerships prepare boys for a future of compassionate leadership.',
   openGraph: {
     type: 'website',
     locale: 'en_IE',
     description:
-      'A demand-driven digital agriculture platform that uses data and tech to produce high-quality agriculture products at scale.',
-    url: 'https://www.completefarmer.com',
-    site_name: 'Complete Farmer',
+      'So much of what makes Winchester exceptional is the people who are a part of the school. Also, its beauty - the buildings, the grounds, the setting. Our heritage and archives provide insight into the past, while our community partnerships prepare boys for a future of compassionate leadership.',
+    url: 'https://www.xxx.com',
+    site_name: 'The Goverment College Umuahia',
     images: [
       {
         url: 'https://i.imgur.com/YlCJLAZ.jpg',
         width: 1200,
         height: 622,
-        alt: 'Complete Farmer'
+        alt: 'The Goverment College Umuahia'
       }
     ]
   },
   twitter: {
-    handle: '@CompleteFarmer',
-    site: '@CompleteFarmer',
+    handle: '@',
+    site: '@',
     cardType: 'summary_large_image'
   }
 }
