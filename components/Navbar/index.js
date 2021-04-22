@@ -71,11 +71,10 @@ const MainNav = () => {
           justify='flex-end'
         >
           {menus.map(menu => (
-            <>
+            <React.Fragment key={menu.id}>
               {menu.items && (
                 <DropDown
                   mr={5}
-                  key={menu.id}
                   data={menu.items}
                   title={menu.title}
                   d={{ base: 'none', xl: 'block' }}
@@ -83,11 +82,7 @@ const MainNav = () => {
               )}
 
               {menu.link && (
-                <Box
-                  key={menu.id}
-                  mr={{ xl: 10 }}
-                  d={{ base: 'none', xl: 'block' }}
-                >
+                <Box mr={{ xl: 10 }} d={{ base: 'none', xl: 'block' }}>
                   <NextLink href={menu.link} passHref>
                     <Link
                       _focus={{ outline: 'none' }}
@@ -101,7 +96,6 @@ const MainNav = () => {
 
               {menu.btnLink && (
                 <Box
-                  key={menu.id}
                   ml={{ md: 4, xl: 12 }}
                   mr={{ md: 4, xl: 5 }}
                   d={{ base: 'none', md: 'block' }}
@@ -119,7 +113,7 @@ const MainNav = () => {
                       h={{ md: 12 }}
                       rounded='0'
                       fontWeight={400}
-                      colorScheme='gucButton'
+                      colorScheme='gcuButton'
                       fontSize={{ base: 'sm', xl: 'lg' }}
                       w={{ md: '9.75rem' }}
                       _focus={{ outline: 'none' }}
@@ -129,7 +123,7 @@ const MainNav = () => {
                   </Link>
                 </Box>
               )}
-            </>
+            </React.Fragment>
           ))}
 
           <IconButton

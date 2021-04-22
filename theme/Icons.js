@@ -62,3 +62,26 @@ export const ScrollDown = createIcon({
     </>
   )
 })
+
+export const ArrowBtnRightIcon = createIcon({
+  displayName: 'ArrowBtnRightIcon',
+  viewBox: '0 0 48 48',
+  path: (
+    <>
+      <circle cx='24' cy='24' r='24' fill='#C4C4C4' fillOpacity='0.5' />
+      <circle
+        cx='24'
+        cy='24'
+        r='23'
+        fill='transparent'
+        stroke='white'
+        strokeWidth='2'
+        strokeOpacity='0.5'
+      />
+      <path
+        d='M31.7071 24.7071C32.0976 24.3166 32.0976 23.6834 31.7071 23.2929L25.3431 16.9289C24.9526 16.5384 24.3195 16.5384 23.9289 16.9289C23.5384 17.3195 23.5384 17.9526 23.9289 18.3431L29.5858 24L23.9289 29.6569C23.5384 30.0474 23.5384 30.6805 23.9289 31.0711C24.3195 31.4616 24.9526 31.4616 25.3431 31.0711L31.7071 24.7071ZM17 25H31V23H17V25Z'
+        fill='#FCFCFC'
+      />
+    </>
+  )
+})

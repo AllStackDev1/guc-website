@@ -1,6 +1,14 @@
 import React from 'react'
-import { Flex, Box, Text, Center, Divider, Container } from '@chakra-ui/react'
-import { ScrollDown } from 'theme/Icons'
+import {
+  Flex,
+  Box,
+  Icon,
+  Text,
+  Center,
+  Divider,
+  Container
+} from '@chakra-ui/react'
+import { ScrollDown, ArrowBtnRightIcon } from '@theme/Icons'
 
 export default function Hero() {
   return (
@@ -12,13 +20,15 @@ export default function Hero() {
       bgPos='center'
       textColor='white'
       bgRepeat='no-repeat'
-      minH='100vh'
+      h='43.438rem'
       direction='column'
+      align='center'
+      justify='center'
+      pos='relative'
     >
       <Container
-        maxW='7xl'
         d='flex'
-        mt={64}
+        maxW='7xl'
         align='center'
         flexDirection='column'
         justify='center'
@@ -28,14 +38,14 @@ export default function Hero() {
           <Divider orientation='vertical' borderColor='white' />
         </Center>
 
-        <Text fontSize='lg' mt={3}>
+        <Text letterSpacing='0.41em' fontSize='lg' mt={6}>
           WELCOME TO
         </Text>
         <Text fontSize='85px' lineHeight='shorter'>
           The Government College Umuahia
         </Text>
       </Container>
-      <Flex pos='absolute' top='40%' right={20}>
+      <Flex pos='absolute' top='40%' right={32}>
         <Text
           fontFamily='heading'
           fontSize='md'
@@ -47,7 +57,26 @@ export default function Hero() {
           }}
         >
           Scroll to see more
-          <Box as={ScrollDown} mt={2} boxSize={8} />
+          <Box as={ScrollDown} mt={2} boxSize={10} />
+        </Text>
+      </Flex>
+      <Flex
+        p={10}
+        left={10}
+        bottom={5}
+        border='1px'
+        pos='absolute'
+        justify='space-between'
+        borderColor='white'
+      >
+        <Text fontFamily='body' fontWeight='500' fontSize='lg'>
+          Educating young boys to men since 1929
+          <Icon
+            as={ArrowBtnRightIcon}
+            ml={4}
+            color='transparent'
+            boxSize={10}
+          />
         </Text>
       </Flex>
     </Flex>

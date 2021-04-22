@@ -56,7 +56,7 @@ const DropDown = ({ title, data, color, ...rest }) => {
                 <AnimatePresence>
                   {data.map((item, i) => (
                     <Menu.Item
-                      key={item.name}
+                      key={item.id}
                       as={MotionBox}
                       custom={i}
                       variants={{

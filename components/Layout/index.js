@@ -37,12 +37,12 @@ const Layout = ({ children, name, link, image_url = '', description = '' }) => {
       />
       <Navbar />
       <Box
+        h='100%'
         as='main'
         role='main'
-        aria-labelledby='main'
-        h='100%'
-        mt={{ base: 16, md: '4.5rem', xl: 36 }}
         fontFamily='body'
+        aria-labelledby='main'
+        mt={{ base: 16, md: '4.5rem', xl: 36 }}
       >
         {children}
       </Box>

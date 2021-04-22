@@ -30,14 +30,15 @@ export const theme = extendTheme({
     body: '"Montserrat", sans-serif'
   },
   colors: {
-    guc: {
+    gcu: {
       100: '#C82B38',
       200: '#2E3748',
       300: '#9B0D39',
       350: 'rgba(200, 43, 56, 0.03)',
-      400: '#049F9B'
+      400: '#049F9B',
+      500: '#6A7986'
     },
-    gucButton: {
+    gcuButton: {
       500: '#C82B38',
       600: '#C82B38'
     }
@@ -83,7 +84,7 @@ export const theme = extendTheme({
     90: '25rem',
     95: '26rem',
     108: '27rem',
-    109: '28.125rem',
+    109: '28rem',
     110: '30rem',
     115: '32rem',
     120: '35rem',
@@ -93,9 +94,11 @@ export const theme = extendTheme({
     125: '45rem',
     127: '48rem',
     129: '50rem',
+    129.5: '50.25rem',
     130: '55rem',
     135: '60rem',
     137: '65rem',
+    138: '65.438rem',
     140: '70rem',
     143: '72rem',
     145: '76rem',

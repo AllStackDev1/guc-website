@@ -1,6 +1,11 @@
 import React from 'react'
+
 import Layout from '@components/Layout'
 import Hero from '@components/home/Hero'
+import About from '@components/home/About'
+import Vision from '@components/Home/Vision'
+import MessageAndProcedure from '@components/Home/MessageAndProcedure'
+import CorePurpose from '@components/Home/CorePurpose'
 
 export default function Home() {
   return (
@@ -10,6 +15,10 @@ export default function Home() {
       description='So much of what makes Winchester exceptional is the people who are a part of the school. Also, its beauty - the buildings, the grounds, the setting. Our heritage and archives provide insight into the past, while our community partnerships prepare boys for a future of compassionate leadership.'
     >
       <Hero />
+      <About />
+      <Vision />
+      <MessageAndProcedure />
+      <CorePurpose />
     </Layout>
   )
 }
