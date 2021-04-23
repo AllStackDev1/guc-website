@@ -1,8 +1,8 @@
 import React from 'react'
 
 import Layout from '@components/Layout'
-import Hero from '@components/home/Hero'
-import About from '@components/home/About'
+import Hero from '@components/Home/Hero'
+import About from '@components/Home/About'
 import Vision from '@components/Home/Vision'
 import MessageAndProcedure from '@components/Home/MessageAndProcedure'
 import CorePurpose from '@components/Home/CorePurpose'
