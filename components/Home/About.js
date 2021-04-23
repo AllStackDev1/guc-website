@@ -12,6 +12,7 @@ import {
 const About = () => {
   return (
     <Flex
+      id='about-us'
       py={{ xl: 10 }}
       pos='relative'
       align='center'

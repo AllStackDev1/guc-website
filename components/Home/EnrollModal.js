@@ -51,6 +51,7 @@ const EnrollModal = ({ isOpen, onClose }) => {
             <Text {...textStyles}>Ongoing for 2021/2022</Text>
             <Text {...textStyles}>Academic Session</Text>
           </Box>
+
           <Button
             rounded='0'
             color='#fff'

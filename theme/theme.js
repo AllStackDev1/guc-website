@@ -36,6 +36,7 @@ export const theme = extendTheme({
       300: '#9B0D39',
       350: 'rgba(200, 43, 56, 0.03)',
       400: '#049F9B',
+      450: 'rgba(0, 0, 0, 0.5)',
       500: '#6A7986'
     },
     gcuButton: {
