@@ -6,6 +6,9 @@ import About from '@components/home/About'
 import Vision from '@components/Home/Vision'
 import MessageAndProcedure from '@components/Home/MessageAndProcedure'
 import CorePurpose from '@components/Home/CorePurpose'
+import Experience from '@components/Home/Experience'
+import Location from '@components/Home/Location'
+import Footer from '@components/Home/Footer'
 
 export default function Home() {
   return (
@@ -19,6 +22,9 @@ export default function Home() {
       <Vision />
       <MessageAndProcedure />
       <CorePurpose />
+      <Experience />
+      <Location />
+      <Footer />
     </Layout>
   )
 }
