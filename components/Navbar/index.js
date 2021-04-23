@@ -11,7 +11,7 @@ import DropDown from './DropDown'
 import MobileDropdown from './MobileDropdown'
 
 const MainNav = () => {
-  const { toggleMobleMenu, isMobileMenuOpen } = useApp()
+  const { handleModal, toggleMobleMenu, isMobileMenuOpen } = useApp()
 
   const menus = [
     {
@@ -22,18 +22,16 @@ const MainNav = () => {
     {
       id: 2,
       title: 'About Us',
-      link: '/#'
-
-      // items: [
-      //   {
-      //     title: 'History',
-      //     action: () => {}
-      //   },
-      //   {
-      //     title: 'Admissions',
-      //     action: () => {}
-      //   }
-      // ]
+      items: [
+        {
+          title: 'Our History',
+          action: () => handleModal('history')
+        },
+        {
+          title: 'Admissions',
+          action: () => handleModal('procedure')
+        }
+      ]
     },
     {
       id: 3,

@@ -65,6 +65,7 @@ const CorePurpose = ({ handleModal }) => {
             color='gcu.100'
             fontWeight={600}
             fontSize='sm'
+            d='none'
           >
             DISCOVER MORE
           </Text>

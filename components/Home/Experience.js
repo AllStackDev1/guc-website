@@ -31,16 +31,18 @@ const Experience = () => {
         <Box mt={16} border='1px' py={10} px={4}>
           <Icon as={QuoteIcon} boxSize={6} />
           <Text mt={8} fontFamily='quote' fontSize='md'>
-            The teachers I am closest to are like my parents here. Although it
-            is great living with friends your own age, sometimes you need to
-            talk to someone who has come a longer way, and can provide a nuanced
-            perspective about everything – from personal crises to communism!
+            I was determined to attend GCU, motivated by a reputation that was
+            legendary. In two years, I acquired the essential elements that have
+            propelled me thus far—resilience, endurance, survival instincts,
+            confidence and self-belief. Above all, from Umuahia, I took the
+            lesson that relationship and friendship must be nurtured and
+            defended.
           </Text>
-          <Text mt={8}>
-            <Text as='span'>-Kenzo</Text>
+          <Text mt={6}>
+            <Text as='span'>- EKE, U. K</Text>
             <br />
-            <Text fontSize='sm' lineHeight='32px' as='span'>
-              -Umuahia
+            <Text fontSize='sm' as='span'>
+              - GMD FBN Holdings Plc, Class of 1980
             </Text>
           </Text>
         </Box>
@@ -57,16 +59,23 @@ const Experience = () => {
         >
           <Icon as={QuoteIcon} boxSize={6} />
           <Text mt={8} fontFamily='quote' fontSize='md'>
-            The teachers I am closest to are like my parents here. Although it
-            is great living with friends your own age, sometimes you need to
-            talk to someone who has come a longer way, and can provide a nuanced
-            perspective about everything – from personal crises to communism!
+            My greetings to all Umuahians. That school has lived in my system
+            all my life. I left the school but the school never left me. I’m
+            there every night in my dreams. When I came to Umuahia in 1954, I
+            was frightened. I wondered how I will make it there for five years.
+            It turned out that I stayed on for HSC, making it seven years. When
+            I had to leave, I wept. I did not want to go. I had fallen in love
+            with GCU and did not want to leave. It was a wonderful life there
+            but I had to go. Every good thing must end, only the love of God is
+            eternal. My life has been influenced profoundly by GCU. As I head
+            towards my 81st birthday, I thank God that I am an Umuahian. “We
+            lift our voices to Thee oh Lord…
           </Text>
-          <Text mt={8}>
-            <Text as='span'>-Kenzo</Text>
+          <Text mt={6}>
+            <Text as='span'>- Professor Alfred Etim Inyang</Text>
             <br />
-            <Text fontSize='sm' lineHeight='32px' as='span'>
-              -Umuahia
+            <Text fontSize='sm' as='span'>
+              - Professor of Theoretical Physics, 1954, Fisher House
             </Text>
           </Text>
         </Box>
@@ -91,7 +100,7 @@ const Experience = () => {
               >
                 Our Teachers
               </Heading>
-              <Text fontWeight='600' letterSpacing='4px'>
+              <Text d='none' fontWeight='600' letterSpacing='4px'>
                 DISCOVER MORE
               </Text>
             </Box>
@@ -108,17 +117,17 @@ const Experience = () => {
           >
             <Icon as={QuoteIcon} boxSize={6} />
             <Text mt={8} fontFamily='quote' fontSize='md'>
-              The teachers I am closest to are like my parents here. Although it
-              is great living with friends your own age, sometimes you need to
-              talk to someone who has come a longer way, and can provide a
-              nuanced perspective about everything – from personal crises to
-              communism!
+              GCU did us well, it imbued in us a sense of pride and prepared us
+              for a very decent and merit- based society, the ingredients that
+              great Nations the world over, are made of. Which I will forever
+              cherish and not trade for anything else.{' '}
+              <b>UMUAHIA my GREAT ALMA MATER.</b>
             </Text>
             <Text mt={8}>
-              <Text as='span'>-Kenzo</Text>
+              <Text as='span'>- Sonny Iroche</Text>
               <br />
               <Text fontSize='sm' lineHeight='32px' as='span'>
-                -Umuahia
+                - BsC, MBA - Class of 1970
               </Text>
             </Text>
           </Box>

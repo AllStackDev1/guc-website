@@ -79,22 +79,43 @@ const DropDown = ({ title, data, color, ...rest }) => {
                       animate='visible'
                       exit='removed'
                     >
-                      {({ active }) => (
-                        <NextLink href={item.link} passHref>
-                          <Link
-                            py={2}
-                            px={6}
-                            _hover={{
-                              textDecor: 'none'
-                            }}
-                            bg={active && color}
-                            color={active && 'white'}
-                            d='block'
-                          >
-                            {item.title}
-                          </Link>
-                        </NextLink>
-                      )}
+                      {({ active }) => {
+                        if (item.link) {
+                          return (
+                            <NextLink href={item.link} passHref>
+                              <Link
+                                py={2}
+                                px={6}
+                                _hover={{
+                                  textDecor: 'none'
+                                }}
+                                bg={active && color}
+                                color={active && 'white'}
+                                d='block'
+                              >
+                                {item.title}
+                              </Link>
+                            </NextLink>
+                          )
+                        }
+                        if (item.action) {
+                          return (
+                            <Text
+                              py={2}
+                              px={6}
+                              _hover={{
+                                color: 'black'
+                              }}
+                              cursor='pointer'
+                              color={active && 'white'}
+                              d='block'
+                              onClick={item.action}
+                            >
+                              {item.title}
+                            </Text>
+                          )
+                        }
+                      }}
                     </Menu.Item>
                   ))}
                 </AnimatePresence>

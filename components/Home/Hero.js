@@ -49,7 +49,7 @@ export default function Hero() {
             The Government College Umuahia
           </Text>
         </Container>
-        <Flex pos='absolute' top='40%' right={32}>
+        <Flex pos='absolute' top='35%' right={32}>
           <Text
             fontFamily='heading'
             fontSize='md'
@@ -81,6 +81,11 @@ export default function Hero() {
               color='transparent'
               boxSize={10}
             />
+          </Text>
+        </Flex>
+        <Flex p={10} right={10} bottom={5} pos='absolute'>
+          <Text fontFamily='quote' fontWeight='500' fontSize='lg'>
+            Values, excellence, integrity and leadership...
           </Text>
         </Flex>
       </Flex>
