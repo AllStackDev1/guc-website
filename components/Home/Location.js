@@ -22,23 +22,31 @@ const Location = () => {
         w='100%'
         templateRows='repeat(3, 1fr)'
         templateColumns='repeat(2, 1fr)'
-        gap={8}
+        gap={10}
       >
         <GridItem rowSpan={3} colSpan={1}>
           <Image src='/images/Class-Room-Block-A.png' />
-          <Text>Class Room Block A</Text>
+          <Text fontSize='24px' fontFamily='heading'>
+            Class Room Block A
+          </Text>
         </GridItem>
         <GridItem>
           <Image src='/images/Dormitory.png' />
-          <Text>Dormitory</Text>
+          <Text fontSize='24px' fontFamily='heading'>
+            Dormitory
+          </Text>
         </GridItem>
         <GridItem>
           <Image src='/images/Dinning-Hall.png' />
-          <Text>Dining Hall</Text>
+          <Text fontSize='24px' fontFamily='heading'>
+            Dining Hall
+          </Text>
         </GridItem>
         <GridItem>
           <Image src='/images/Library.png' />
-          <Text>21st Century state of the arts Library</Text>
+          <Text fontSize='24px' fontFamily='heading'>
+            21st Century state of the arts Library
+          </Text>
         </GridItem>
       </Grid>
     </Box>
