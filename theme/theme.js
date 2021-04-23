@@ -41,6 +41,9 @@ export const theme = extendTheme({
     gcuButton: {
       500: '#C82B38',
       600: '#C82B38'
+    },
+    gcuLG: {
+      100: 'linear-gradient(91deg, rgba(0, 0, 0, 0.78) 10.74%, rgba(0, 0, 0, 0) 116.89%)'
     }
   },
   space: {
@@ -91,6 +94,7 @@ export const theme = extendTheme({
     122: '37rem',
     123: '40rem',
     124: '42rem',
+    124.5: '43rem',
     125: '45rem',
     127: '48rem',
     129: '50rem',
