@@ -1,19 +1,26 @@
 import React from 'react'
-import { Box, Flex, Container, Text, Icon, Heading } from '@chakra-ui/react'
-import { FacebookIcon, InstaIcon, YouTubeIcon } from '@theme/Icons'
+import {
+  Box,
+  Flex,
+  Link,
+  Container,
+  Text,
+  Icon,
+  Heading
+} from '@chakra-ui/react'
+import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 
 const Footer = () => {
   return (
     <Flex
       mt={8}
-      p={32}
       py={{ xl: 10 }}
       pos='relative'
       justify='space-between'
       align='flex-end'
     >
       <Container
-        py={10}
+        pt={10}
         d='flex'
         maxW='7xl'
         align='center'
@@ -59,18 +66,51 @@ const Footer = () => {
           fontFamily='body'
           fontSize='lg'
           mx='auto'
-          mt='24'
+          borderTop='1px'
+          borderColor='gray.400'
+          mt={10}
+          pt={10}
           w='100%'
           align='center'
           justify='space-between'
         >
-          <Text>© 2021 GCU. All rights reserved</Text>
+          <Text fontFamily='heading' fontSize='md' fontWeight='bold'>
+            © 2021 GCU. All rights reserved
+          </Text>
           <Flex align='center'>
-            <Text mr={10}>Follow us</Text>
+            <Text
+              color='gcu.100'
+              fontFamily='heading'
+              fontSize='sm'
+              fontWeight='bold'
+              mr={10}
+            >
+              Follow us
+            </Text>
 
-            <Icon as={FacebookIcon} boxSize={6} />
-            <Icon mx={10} as={YouTubeIcon} boxSize={6} />
-            <Icon as={InstaIcon} boxSize={6} />
+            <Link
+              isExternal
+              href='https://www.facebook.com/GCUOBANational'
+              rel='noreferrer'
+            >
+              <Icon as={FaFacebook} color='gray.500' boxSize={6} />
+            </Link>
+
+            <Link
+              mx={8}
+              isExternal
+              href='https://www.twitter.com/gcumuahia'
+              rel='noreferrer'
+            >
+              <Icon as={FaTwitter} color='gray.500' boxSize={6} />
+            </Link>
+            <Link
+              isExternal
+              href='https://www.instagram.com/gcu.umuahia'
+              rel='noreferrer'
+            >
+              <Icon as={FaInstagram} color='gray.500' boxSize={6} />
+            </Link>
           </Flex>
         </Flex>
       </Container>

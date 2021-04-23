@@ -109,3 +109,10 @@
     font-weight: 200;
     src: url('/fonts/TRYVesterbro-Poster.woff') format('woff'), url('/fonts/TRYVesterbro-Poster.otf') format('otf');
 }
+
+@font-face {
+    font-family: 'PlayfairDisplay';
+    src: url('/fonts/PlayfairDisplay-Italic.woff') format('woff'), url('/fonts/PlayfairDisplay-Poster.ttf') format('ttf');
+    font-weight: normal;
+    font-style: italic;
+}

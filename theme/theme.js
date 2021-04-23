@@ -27,7 +27,8 @@ export const theme = extendTheme({
   ...breakpoints,
   fonts: {
     heading: '"TRYVesterbro", sans-serif',
-    body: '"Montserrat", sans-serif'
+    body: '"Montserrat", sans-serif',
+    quote: '"PlayfairDisplay", sans-serif'
   },
   colors: {
     gcu: {

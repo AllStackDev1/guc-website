@@ -30,7 +30,7 @@ const Experience = () => {
         </Text>
         <Box mt={16} border='1px' py={10} px={4}>
           <Icon as={QuoteIcon} boxSize={6} />
-          <Text mt={8} fontSize='md'>
+          <Text mt={8} fontFamily='quote' fontSize='md'>
             The teachers I am closest to are like my parents here. Although it
             is great living with friends your own age, sometimes you need to
             talk to someone who has come a longer way, and can provide a nuanced
@@ -56,7 +56,7 @@ const Experience = () => {
           mb={4}
         >
           <Icon as={QuoteIcon} boxSize={6} />
-          <Text mt={8} fontSize='md'>
+          <Text mt={8} fontFamily='quote' fontSize='md'>
             The teachers I am closest to are like my parents here. Although it
             is great living with friends your own age, sometimes you need to
             talk to someone who has come a longer way, and can provide a nuanced
@@ -107,7 +107,7 @@ const Experience = () => {
             px={4}
           >
             <Icon as={QuoteIcon} boxSize={6} />
-            <Text mt={8} fontSize='md'>
+            <Text mt={8} fontFamily='quote' fontSize='md'>
               The teachers I am closest to are like my parents here. Although it
               is great living with friends your own age, sometimes you need to
               talk to someone who has come a longer way, and can provide a

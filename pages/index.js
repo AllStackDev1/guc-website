@@ -47,7 +47,7 @@ export default function Home() {
   return (
     <Layout
       name='Home'
-      image_url=''
+      image_url='https://thegcu.com/images/logo.svg'
       description='So much of what makes Winchester exceptional is the people who are a part of the school. Also, its beauty - the buildings, the grounds, the setting. Our heritage and archives provide insight into the past, while our community partnerships prepare boys for a future of compassionate leadership.'
     >
       {getModal(modalType)}

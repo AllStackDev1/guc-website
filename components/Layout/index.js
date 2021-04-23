@@ -6,7 +6,7 @@ import { Box } from '@chakra-ui/react'
 import Navbar from '@components/Navbar'
 
 const Layout = ({ children, name, link, image_url = '', description = '' }) => {
-  const main_site_url = 'https://xxx.com'
+  const main_site_url = 'https://thegcu.com/'
   const main_site_title = 'The Goverment College Umuahia'
 
   return (
@@ -29,11 +29,11 @@ const Layout = ({ children, name, link, image_url = '', description = '' }) => {
           ],
           site_name: main_site_title
         }}
-        // twitter={{
-        //   handle: '@',
-        //   site: `${main_site_url}/${name.toLowerCase()}`,
-        //   cardType: 'summary_large_image'
-        // }}
+        twitter={{
+          handle: '@gcumuahia',
+          site: `${main_site_url}/${name.toLowerCase()}`,
+          cardType: 'summary_large_image'
+        }}
       />
       <Navbar />
       <Box
