@@ -22,7 +22,18 @@ const MainNav = () => {
     {
       id: 2,
       title: 'About Us',
-      link: '/#about-us'
+      link: '/#'
+
+      // items: [
+      //   {
+      //     title: 'History',
+      //     action: () => {}
+      //   },
+      //   {
+      //     title: 'Admissions',
+      //     action: () => {}
+      //   }
+      // ]
     },
     {
       id: 3,
@@ -104,7 +115,6 @@ const MainNav = () => {
                     href={menu.btnLink}
                     _hover={{ hover: 'none' }}
                     _focus={{ outline: 'none' }}
-                    isExternal
                     rel='noreferrer'
                   >
                     <Button

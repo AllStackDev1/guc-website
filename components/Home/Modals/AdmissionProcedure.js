@@ -15,7 +15,7 @@ import {
   ModalCloseButton
 } from '@chakra-ui/react'
 
-const AdmissionProcedureModal = ({ isOpen, onClose }) => {
+const AdmissionProcedure = ({ isOpen, onClose }) => {
   const textStyle = {
     my: 4,
     fontSize: 'sm',
@@ -125,9 +125,9 @@ const AdmissionProcedureModal = ({ isOpen, onClose }) => {
   )
 }
 
-AdmissionProcedureModal.propTypes = {
+AdmissionProcedure.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired
 }
 
-export default AdmissionProcedureModal
+export default AdmissionProcedure

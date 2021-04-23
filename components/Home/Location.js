@@ -34,7 +34,7 @@ const Location = () => {
         </GridItem>
         <GridItem>
           <Image src='/images/Dinning-Hall.png' />
-          <Text>Dinning Hall</Text>
+          <Text>Dining Hall</Text>
         </GridItem>
         <GridItem>
           <Image src='/images/Library.png' />

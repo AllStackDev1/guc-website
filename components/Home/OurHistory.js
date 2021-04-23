@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {
   Box,
   Flex,
@@ -12,7 +13,7 @@ import {
   Heading
 } from '@chakra-ui/react'
 
-const Vision = () => {
+const OurHistory = ({ handleModal }) => {
   return (
     <Grid
       py={{ xl: 10 }}
@@ -51,22 +52,26 @@ const Vision = () => {
               fontSize='45px'
               lineHeight='63px'
             >
-              Vision Statement
+              Our History
             </Heading>
             <Text fontSize='sm' lineHeight='25px' mt={5} mb={6}>
-              Rooted in the legacy of the old Government College Umuahia, the
-              modern GCU offers an internationally minded educational programme
-              driven by a well-informed, highly educated and experienced
-              leadership which has the capacity to improve and develop students
-              so that they have an enquiring mind, a stable character, and the
-              focus and determination to achieve national and international
-              excellence.
+              Robert Fisher arrived in Umuahia in 1927, on January 29, 1929 he
+              opened the gates of the school to 25 students drawn from all parts
+              of Nigeria and West Africa, but with catchment in Eastern Nigeria,
+              and the Southern Cameroons The Government College Umuahia began in
+              1929 as a teacher training institute and in 1930, converted to a
+              secondary school. Fisher ran this school until 1939 when, at the
+              start of the Second World war, he left for England on retirement
+              and was replaced by W. N. Tolfree.
             </Text>
             <Text
               fontFamily='body'
               letterSpacing='4px'
               fontWeight={600}
               fontSize='sm'
+              cursor='pointer'
+              zIndex={1000}
+              onClick={() => handleModal('history')}
             >
               LEARN MORE
             </Text>
@@ -107,4 +112,8 @@ const Vision = () => {
   )
 }
 
-export default Vision
+OurHistory.propTypes = {
+  handleModal: PropTypes.func.isRequired
+}
+
+export default OurHistory

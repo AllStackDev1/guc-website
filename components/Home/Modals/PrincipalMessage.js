@@ -11,7 +11,7 @@ import {
   ModalCloseButton
 } from '@chakra-ui/react'
 
-const PrincipalMessageModal = ({ isOpen, onClose }) => {
+const PrincipalMessage = ({ isOpen, onClose }) => {
   const textStyle = {
     my: 4,
     fontSize: 'sm',
@@ -82,9 +82,9 @@ const PrincipalMessageModal = ({ isOpen, onClose }) => {
   )
 }
 
-PrincipalMessageModal.propTypes = {
+PrincipalMessage.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired
 }
 
-export default PrincipalMessageModal
+export default PrincipalMessage

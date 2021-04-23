@@ -1,9 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {
+  Box,
   Flex,
   Text,
   Grid,
-  Image,
   Center,
   GridItem,
   Container,
@@ -11,7 +12,7 @@ import {
   Heading
 } from '@chakra-ui/react'
 
-const CorePurpose = () => {
+const CorePurpose = ({ handleModal }) => {
   return (
     <Grid
       py={{ xl: 10 }}
@@ -70,33 +71,76 @@ const CorePurpose = () => {
         </Container>
       </GridItem>
       <GridItem d='flex' flexDir='column' textColor='white'>
-        <Flex pos='relative' align='center'>
-          <Heading
-            pos='absolute'
-            right={0}
-            left={0}
-            fontSize='45px'
-            lineHeight='63px'
+        <Box
+          h={85}
+          bgSize='cover'
+          bgPos='center'
+          bgRepeat='no-repeat'
+          bgImage="url('/images/vision.png')"
+        >
+          <Flex
+            align='center'
+            flexDir='column'
+            justify='center'
+            w='100%'
+            h='100%'
+            bg='gcu.450'
           >
-            BOARDING
-          </Heading>
-          <Image src='/images/boarding.png' w='100%' h='100%' />
-        </Flex>
-        <Flex pos='relative' align='center'>
-          <Heading
-            pos='absolute'
-            right={0}
-            left={0}
-            fontSize='45px'
-            lineHeight='63px'
+            <Heading fontSize='45px' lineHeight='63px'>
+              Vision Statement
+            </Heading>
+            <Text
+              fontFamily='body'
+              letterSpacing='4px'
+              fontWeight={600}
+              fontSize='sm'
+              cursor='pointer'
+              zIndex={1000}
+              onClick={() => handleModal('vision')}
+            >
+              LEARN MORE
+            </Text>
+          </Flex>
+        </Box>
+
+        <Box
+          h={85}
+          bgSize='cover'
+          bgPos='center'
+          bgRepeat='no-repeat'
+          bgImage="url('/images/mision.png')"
+        >
+          <Flex
+            align='center'
+            flexDir='column'
+            justify='center'
+            w='100%'
+            h='100%'
+            bg='gcu.450'
           >
-            ENVIROMENT
-          </Heading>
-          <Image src='/images/enviroment.png' w='100%' h='100%' />
-        </Flex>
+            <Heading fontSize='45px' lineHeight='63px'>
+              Mission Statement
+            </Heading>
+            <Text
+              fontFamily='body'
+              letterSpacing='4px'
+              fontWeight={600}
+              fontSize='sm'
+              cursor='pointer'
+              zIndex={1000}
+              onClick={() => handleModal('mission')}
+            >
+              LEARN MORE
+            </Text>
+          </Flex>
+        </Box>
       </GridItem>
     </Grid>
   )
+}
+
+CorePurpose.propTypes = {
+  handleModal: PropTypes.func.isRequired
 }
 
 export default CorePurpose
