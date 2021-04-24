@@ -85,7 +85,7 @@ export default function Hero() {
         </Flex>
         <Flex p={10} right={10} bottom={5} pos='absolute'>
           <Text fontFamily='quote' fontWeight='500' fontSize='lg'>
-            Values, excellence, integrity and leadership...
+            Excellence, integrity and leadership...
           </Text>
         </Flex>
       </Flex>

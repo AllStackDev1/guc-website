@@ -23,7 +23,7 @@ const OurHistory = ({ handleModal }) => {
       templateColumns={{ md: '35% 65%' }}
     >
       <GridItem>
-        <Image src='/images/student.png' w='100%' h='100%' />
+        <Image src='/images/robert-fisher.jpeg' w='100%' h='100%' />
       </GridItem>
       <GridItem>
         <Box
