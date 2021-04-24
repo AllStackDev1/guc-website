@@ -27,7 +27,7 @@ const EnrollModal = ({ isOpen, onClose }) => {
         bgSize='cover'
         bgPos='center'
         bgRepeat='no-repeat'
-        bgImage="url('/images/yingchou-unsplash.png')"
+        bgImage="url('/images/student.png')"
       >
         <ModalCloseButton color='white' size={6} />
         <ModalBody
@@ -76,11 +76,8 @@ const EnrollModal = ({ isOpen, onClose }) => {
             >
               FOR MORE INFORMATION
             </Heading>
-            <Text {...textStyles} mb={3} fontWeight='500'>
-              +234(8)7384-3794
-            </Text>
             <Text {...textStyles} fontWeight='500'>
-              +234(8)000-0000-1
+              gcu.umuahi@gmail.com
             </Text>
           </Box>
         </ModalBody>
