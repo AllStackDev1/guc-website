@@ -5,14 +5,12 @@ import { useDisclosure } from '@chakra-ui/react'
 const AppContext = createContext()
 
 export const AppContextProvider = ({ children }) => {
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [isMenuOpen, setMenuOpen] = useState(false)
   const [modalType, setModalType] = useState('enroll')
 
   const { isOpen, onOpen, onClose } = useDisclosure()
 
-  const toggleMobleMenu = () => {
-    setMobileMenuOpen(!isMobileMenuOpen)
-  }
+  const toggleMenu = () => setMenuOpen(!isMenuOpen)
 
   const handleModal = type => {
     onOpen()
@@ -27,8 +25,8 @@ export const AppContextProvider = ({ children }) => {
         onClose,
         modalType,
         handleModal,
-        toggleMobleMenu,
-        isMobileMenuOpen
+        toggleMenu,
+        isMenuOpen
       }}
     >
       {children}

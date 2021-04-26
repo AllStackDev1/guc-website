@@ -10,7 +10,7 @@ import DropDown from './DropDown'
 import MobileDropdown from './MobileDropdown'
 
 const MainNav = () => {
-  const { handleModal, toggleMobleMenu, isMobileMenuOpen } = useApp()
+  const { handleModal, toggleMenu, isMenuOpen } = useApp()
 
   const menus = [
     {
@@ -63,7 +63,7 @@ const MainNav = () => {
         <Box
           px={2}
           pos='absolute'
-          onClick={_ => toggleMobleMenu()}
+          onClick={_ => toggleMenu()}
           d={{ base: 'block', xl: 'none' }}
         >
           <IconButton
@@ -72,7 +72,7 @@ const MainNav = () => {
             p={0}
             minW='unset'
             icon={
-              isMobileMenuOpen ? (
+              isMenuOpen ? (
                 <CloseMenuIcon boxSize={4} />
               ) : (
                 <OpenMenuIcon boxSize={6} />
@@ -80,7 +80,7 @@ const MainNav = () => {
             }
           />
           <Text mt={-2} fontWeight='bold' fontSize='x-small'>
-            {isMobileMenuOpen ? 'Close' : 'Menu'}
+            {isMenuOpen ? 'Close' : 'Menu'}
           </Text>
         </Box>
 
@@ -158,7 +158,7 @@ const MainNav = () => {
         </Flex>
       </Flex>
 
-      {isMobileMenuOpen && (
+      {isMenuOpen && (
         <Box
           bg='white'
           w='100%'
