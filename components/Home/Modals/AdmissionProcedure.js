@@ -18,7 +18,7 @@ import {
 const AdmissionProcedure = ({ isOpen, onClose }) => {
   const textStyle = {
     my: 4,
-    fontSize: 'sm',
+    fontSize: { base: 'xs', lg: 'sm' },
     lineHeight: '25px'
   }
 
@@ -64,16 +64,20 @@ const AdmissionProcedure = ({ isOpen, onClose }) => {
   return (
     <Modal isOpen={isOpen} onClose={onClose} size='3xl' isCentered>
       <ModalOverlay />
-      <ModalContent>
+      <ModalContent
+        rounded='xl'
+        mx={{ base: 5 }}
+        mt={{ base: 44, lg: 'unset' }}
+      >
         <ModalCloseButton p={2} size={6} />
-        <ModalBody py={12} px={14}>
+        <ModalBody py={12} px={{ base: 8, lg: 14 }}>
           <Heading
+            fontSize={{ base: 'lg', lg: '34px' }}
+            mb={{ base: 5, lg: 10 }}
             textAlign='center'
             fontWeight='400'
             lineHeight='45px'
-            fontSize='34px'
             as='h4'
-            mb={8}
           >
             Admission Procedure
           </Heading>
@@ -92,9 +96,11 @@ const AdmissionProcedure = ({ isOpen, onClose }) => {
 
           <List spacing={3}>
             {lists.map(list => (
-              <ListItem key={list.id} {...textStyle} d='flex'>
+              <ListItem key={list.id} d='flex'>
                 <ListIcon as={CircleCheckIcon} boxSize={6} />
-                <Text ml={2}>{list.text}</Text>
+                <Text fontSize={{ base: 'xs', lg: 'sm' }} ml={2}>
+                  {list.text}
+                </Text>
               </ListItem>
             ))}
           </List>
@@ -109,9 +115,9 @@ const AdmissionProcedure = ({ isOpen, onClose }) => {
               rounded='0'
               color='#fff'
               boxShadow='lg'
-              h={{ md: 12 }}
+              h={{ base: 10, md: 12 }}
               fontWeight={400}
-              w={{ md: '9.75rem' }}
+              w={{ base: 28, md: '9.75rem' }}
               colorScheme='gcuButton'
               fontSize='md'
               _focus={{ outline: 'none' }}

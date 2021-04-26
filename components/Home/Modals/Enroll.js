@@ -26,6 +26,9 @@ const EnrollModal = ({ isOpen, onClose }) => {
         h={124.5}
         bgSize='cover'
         bgPos='center'
+        rounded='xl'
+        mx={{ base: 10 }}
+        mt={{ base: 32 }}
         bgRepeat='no-repeat'
         bgImage="url('/images/student.png')"
       >
@@ -37,13 +40,14 @@ const EnrollModal = ({ isOpen, onClose }) => {
           bgSize='cover'
           bgPos='center'
           bgRepeat='no-repeat'
+          rounded='xl'
           bg='gcuLG.100'
         >
           <Heading
             as='h4'
             fontWeight='normal'
-            fontSize='54px'
-            lineHeight='69px'
+            fontSize={{ base: '40px', lg: '54px' }}
+            lineHeight={{ base: '48px', lg: '69px' }}
           >
             ENTRANCE EXAMINATION
           </Heading>
@@ -56,9 +60,9 @@ const EnrollModal = ({ isOpen, onClose }) => {
             rounded='0'
             color='#fff'
             boxShadow='lg'
-            h={{ md: 12 }}
+            h={{ base: 10, md: 12 }}
             fontWeight={400}
-            w={{ md: '9.75rem' }}
+            w={{ base: 28, md: '9.75rem' }}
             colorScheme='gcuButton'
             fontSize={{ base: 'sm', xl: 'lg' }}
             _focus={{ outline: 'none' }}

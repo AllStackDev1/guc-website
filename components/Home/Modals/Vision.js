@@ -13,23 +13,23 @@ import {
 const Vision = ({ isOpen, onClose }) => {
   const textStyle = {
     my: 4,
-    fontSize: 'sm',
+    fontSize: { base: 'xs', lg: 'sm' },
     lineHeight: '25px'
   }
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} size='3xl' isCentered>
       <ModalOverlay />
-      <ModalContent>
+      <ModalContent rounded='xl' mx={{ base: 5 }}>
         <ModalCloseButton p={2} size={6} />
-        <ModalBody py={16} px={14}>
+        <ModalBody py={{ base: 8, lg: 16 }} px={{ base: 8, lg: 14 }}>
           <Heading
+            fontSize={{ base: 'lg', lg: '34px' }}
+            mb={{ base: 5, lg: 10 }}
             textAlign='center'
             fontWeight='400'
             lineHeight='45px'
-            fontSize='34px'
             as='h4'
-            mb={10}
           >
             Vision Statement
           </Heading>

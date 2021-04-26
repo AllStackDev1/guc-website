@@ -42,13 +42,34 @@ const MobileDropdown = ({ item }) => {
         )}
       </Flex>
       {toggleMenus &&
-        item.items?.map(item => (
-          <NextLink href={item.link} key={item.title} passHref>
-            <Link _hover={{ textDecor: 'none' }} d='block' ml={6} py={1}>
-              {item.title}
-            </Link>
-          </NextLink>
-        ))}
+        item.items?.map(item => {
+          if (item.link) {
+            return (
+              <NextLink href={item.link} key={item.title} passHref>
+                <Link _hover={{ textDecor: 'none' }} d='block' ml={6} py={1}>
+                  {item.title}
+                </Link>
+              </NextLink>
+            )
+          }
+          if (item.action) {
+            return (
+              <Text
+                py={2}
+                px={6}
+                _hover={{
+                  color: 'black'
+                }}
+                cursor='pointer'
+                d='block'
+                onClick={item.action}
+              >
+                {item.title}
+              </Text>
+            )
+          }
+          return null
+        })}
     </Box>
   )
 }
