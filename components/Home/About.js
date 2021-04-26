@@ -13,7 +13,7 @@ const About = () => {
   return (
     <Flex
       id='about-us'
-      py={{ xl: 10 }}
+      py={{ base: 16, xl: 10 }}
       pos='relative'
       align='center'
       justify='center'
@@ -30,22 +30,32 @@ const About = () => {
         justify='center'
         fontFamily='heading'
       >
-        <Center height={16}>
+        <Center height={{ base: 10, lg: 16 }}>
           <Divider orientation='vertical' borderColor='gray.700' />
         </Center>
 
-        <Text letterSpacing='0.41em' fontSize='lg' my={6}>
+        <Text
+          letterSpacing='0.41em'
+          fontSize={{ base: 'sm', lg: 'lg' }}
+          my={{ base: 4, lg: 6 }}
+        >
           EXPLORE
         </Text>
-        <Heading as='h4' fontWeight='normal' fontSize='42px' lineHeight='35px'>
+        <Heading
+          as='h4'
+          fontWeight='normal'
+          fontSize={{ base: '2xl', lg: '2.625rem' }}
+          lineHeight='35px'
+        >
           About GCU
         </Heading>
         <Text
           textAlign='center'
           fontFamily='body'
-          fontSize='lg'
-          lineHeight='35px'
-          my={12}
+          fontWeight={{ base: '300', lg: 'normal' }}
+          fontSize={{ base: 'xs', lg: 'lg' }}
+          lineHeight={{ base: '24px', lg: '35px' }}
+          my={{ base: 6, lg: 12 }}
         >
           Welcome to Government College Umuahia, a boarding school for boys aged
           between 10 and 17 and a world class residential all boys secondary
@@ -57,6 +67,7 @@ const About = () => {
           letterSpacing='4px'
           fontWeight={600}
           fontSize='sm'
+          d='none'
           color='gcu.100'
         >
           DISCOVER MORE

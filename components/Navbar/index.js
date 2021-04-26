@@ -1,7 +1,6 @@
 import React from 'react'
-// import PropTypes from 'prop-types'
 import NextLink from 'next/link'
-import { Box, Button, Flex, Link, IconButton } from '@chakra-ui/react'
+import { Text, Box, Button, Flex, Link, IconButton } from '@chakra-ui/react'
 
 import useApp from 'context/app'
 
@@ -56,21 +55,51 @@ const MainNav = () => {
         zIndex={60}
         align='center'
         borderBottomWidth={1}
-        px={{ base: 2, md: 12, xl: 16 }}
+        px={{ base: 4, md: 12, xl: 16 }}
         d={{ xs: 'none', lg: 'flex' }}
         fontSize={{ lg: 'sm', xl: 'md' }}
         h={{ base: 16, md: '4.5rem', xl: 36 }}
       >
-        <Flex align='center'>
+        <Box
+          px={2}
+          pos='absolute'
+          onClick={_ => toggleMobleMenu()}
+          d={{ base: 'block', xl: 'none' }}
+        >
+          <IconButton
+            colorScheme='none'
+            aria-label='Open Mobile Menu'
+            p={0}
+            minW='unset'
+            icon={
+              isMobileMenuOpen ? (
+                <CloseMenuIcon boxSize={4} />
+              ) : (
+                <OpenMenuIcon boxSize={6} />
+              )
+            }
+          />
+          <Text mt={-2} fontWeight='bold' fontSize='x-small'>
+            {isMobileMenuOpen ? 'Close' : 'Menu'}
+          </Text>
+        </Box>
+
+        <Flex mx={{ base: 'auto', lg: 'unset' }} align='center'>
           <NextLink href='/' passHref>
             <Link _focus={{ outline: 'none' }} _hover={{ outline: 'none' }}>
-              <Box bgImage="url('/images/logo.svg')" w='7.5rem' h={32} />
+              <Box
+                bgImage={{
+                  base: "url('/images/logo@1x.svg')",
+                  lg: "url('/images/logo.svg')"
+                }}
+                w={{ base: '3.125rem', lg: '7.5rem' }}
+                h={{ base: '3.063rem', lg: 32 }}
+              />
             </Link>
           </NextLink>
         </Flex>
 
         <Flex
-          right={{ base: 0, md: 10, xl: 0 }}
           align='center'
           mx={{ xl: 5 }}
           pos='absolute'
@@ -78,20 +107,17 @@ const MainNav = () => {
           fontSize='md'
           fontWeight={500}
           justify='flex-end'
+          right={{ md: 10, xl: 0 }}
+          d={{ base: 'none', xl: 'flex' }}
         >
           {menus.map(menu => (
             <React.Fragment key={menu.id}>
               {menu.items && (
-                <DropDown
-                  mr={5}
-                  data={menu.items}
-                  title={menu.title}
-                  d={{ base: 'none', xl: 'block' }}
-                />
+                <DropDown mr={5} data={menu.items} title={menu.title} />
               )}
 
               {menu.link && (
-                <Box mr={{ xl: 10 }} d={{ base: 'none', xl: 'block' }}>
+                <Box mr={{ xl: 10 }}>
                   <NextLink href={menu.link} passHref>
                     <Link
                       _focus={{ outline: 'none' }}
@@ -104,11 +130,7 @@ const MainNav = () => {
               )}
 
               {menu.btnLink && (
-                <Box
-                  ml={{ md: 4, xl: 12 }}
-                  mr={{ md: 4, xl: 5 }}
-                  d={{ base: 'none', md: 'block' }}
-                >
+                <Box ml={{ md: 4, xl: 12 }} mr={{ md: 4, xl: 5 }}>
                   <Link
                     href={menu.btnLink}
                     _hover={{ hover: 'none' }}
@@ -133,20 +155,6 @@ const MainNav = () => {
               )}
             </React.Fragment>
           ))}
-
-          <IconButton
-            d={{ base: 'block', xl: 'none' }}
-            colorScheme='none'
-            aria-label='Open Mobile Menu'
-            onClick={_ => toggleMobleMenu()}
-            icon={
-              isMobileMenuOpen ? (
-                <CloseMenuIcon boxSize={6} />
-              ) : (
-                <OpenMenuIcon boxSize={6} />
-              )
-            }
-          />
         </Flex>
       </Flex>
 

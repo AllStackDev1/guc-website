@@ -22,20 +22,22 @@ const OurHistory = ({ handleModal }) => {
       justify='center'
       templateColumns={{ md: '35% 65%' }}
     >
-      <GridItem>
+      <GridItem d={{ base: 'none', md: 'block' }}>
         <Image src='/images/robert-fisher.jpeg' w='100%' h='100%' />
       </GridItem>
       <GridItem>
         <Box
-          p={20}
           w='100%'
           h='100%'
           color='white'
           textAlign='center'
           bgColor='gcu.100'
           pos='relative'
+          pb={20}
+          pt={{ base: 10, lg: 20 }}
+          px={{ base: 0, lg: 20 }}
         >
-          <Center height={16}>
+          <Center height={{ base: 10, lg: 16 }}>
             <Divider orientation='vertical' borderColor='white' />
           </Center>
           <Container
@@ -49,8 +51,9 @@ const OurHistory = ({ handleModal }) => {
             <Heading
               as='h4'
               fontWeight='normal'
-              fontSize='45px'
-              lineHeight='63px'
+              fontSize={{ base: '2xl', lg: '2.813rem' }}
+              lineHeight={{ base: '35px', lg: '63px' }}
+              letterSpacing={{ base: '0.03em' }}
             >
               Our History
             </Heading>
@@ -76,7 +79,7 @@ const OurHistory = ({ handleModal }) => {
               LEARN MORE
             </Text>
           </Container>
-          <Flex mt={20} align='center'>
+          <Flex mt={20} px={{ base: 10, lg: 0 }} align='center'>
             <Image src='/images/arrow_left.png' />
             <Flex w='100%' mx={5} justify='center' align='center'>
               <Box w='20%' bgColor='white' border='1px' h={1} />
@@ -89,7 +92,8 @@ const OurHistory = ({ handleModal }) => {
         <Box
           w={124}
           h={130}
-          top='-25%'
+          top={{ base: '0', lg: '-25%' }}
+          left={{ base: '-15%', lg: 'unset' }}
           pos='absolute'
           bgSize='cover'
           bgPos='center'
@@ -105,6 +109,7 @@ const OurHistory = ({ handleModal }) => {
           bgSize='cover'
           bgPos='center'
           bgRepeat='no-repeat'
+          d={{ base: 'none', md: 'block' }}
           bgImage="url('/images/snake.png')"
         />
       </GridItem>

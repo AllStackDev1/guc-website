@@ -5,15 +5,14 @@ import { QuoteIcon } from '@theme/Icons'
 const Experience = () => {
   return (
     <Flex
-      mt={8}
-      p={32}
-      py={{ xl: 10 }}
+      py={32}
+      px={{ base: 8, lg: 32 }}
       bgColor='gcu.350'
       pos='relative'
+      flexDir={{ base: 'column', lg: 'row' }}
       justify='space-between'
-      align='flex-end'
     >
-      <Box w={82}>
+      <Box w={{ lg: 82 }}>
         <Heading
           as='h4'
           textColor='gcu.100'
@@ -47,7 +46,7 @@ const Experience = () => {
           </Text>
         </Box>
       </Box>
-      <Box w={82}>
+      <Box w={{ lg: 82 }}>
         <Box
           bgColor='gray.900'
           textColor='white'
@@ -79,10 +78,18 @@ const Experience = () => {
             </Text>
           </Text>
         </Box>
-        <Image src='/images/bluejay-bash-student-feature.png' />
+        <Image
+          d={{ base: 'none', lg: 'block' }}
+          src='/images/bluejay-bash-student-feature.png'
+        />
       </Box>
-      <Box w={82}>
-        <Box w={82} pos='absolute' top={-8}>
+      <Box w={{ lg: 82 }}>
+        <Flex
+          flexDir={{ base: 'column-reverse', lg: 'column' }}
+          w={{ lg: 82 }}
+          pos={{ lg: 'absolute' }}
+          top={{ lg: -8 }}
+        >
           <Flex pos='relative' flexDir='column'>
             <Box
               pos='absolute'
@@ -114,6 +121,7 @@ const Experience = () => {
             border='1px'
             py={8}
             px={4}
+            mb={{ base: 8, lg: 'unset' }}
           >
             <Icon as={QuoteIcon} boxSize={6} />
             <Text mt={8} fontFamily='quote' fontSize='md'>
@@ -131,7 +139,7 @@ const Experience = () => {
               </Text>
             </Text>
           </Box>
-        </Box>
+        </Flex>
       </Box>
     </Flex>
   )

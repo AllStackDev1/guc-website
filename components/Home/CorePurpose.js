@@ -22,7 +22,6 @@ const CorePurpose = ({ handleModal }) => {
       templateColumns={{ md: '55% 45%' }}
     >
       <GridItem
-        p={20}
         d='flex'
         w='100%'
         h='100%'
@@ -31,13 +30,10 @@ const CorePurpose = ({ handleModal }) => {
         textAlign='center'
         alignContent='center'
         justifyContent='center'
+        pt={{ lg: 20 }}
+        pb={{ base: 8, lg: 20 }}
+        px={{ base: 0, lg: 20 }}
       >
-        <Center height={16}>
-          <Divider orientation='vertical' borderColor='gray.700' />
-        </Center>
-        <Text letterSpacing='0.41em' fontSize='lg' mt={6}>
-          LIVING
-        </Text>
         <Container
           mt={8}
           d='flex'
@@ -46,11 +42,21 @@ const CorePurpose = ({ handleModal }) => {
           justify='center'
           flexDirection='column'
         >
+          <Center height={{ base: 10, lg: 16 }}>
+            <Divider orientation='vertical' borderColor='gray.700' />
+          </Center>
+          <Text
+            letterSpacing='0.41em'
+            fontSize={{ base: 'sm', lg: 'lg' }}
+            my={{ base: 4, lg: 6 }}
+          >
+            LIVING
+          </Text>
           <Heading
             as='h4'
             fontWeight='normal'
-            fontSize='45px'
-            lineHeight='63px'
+            fontSize={{ base: '2xl', lg: '2.625rem' }}
+            lineHeight='35px'
           >
             Core GCU Purpose
           </Heading>
@@ -77,7 +83,10 @@ const CorePurpose = ({ handleModal }) => {
           bgSize='cover'
           bgPos='center'
           bgRepeat='no-repeat'
-          bgImage="url('/images/vision.png')"
+          bgImage={{
+            base: "url('/images/vision@1x.png')",
+            lg: "url('/images/vision.png')"
+          }}
         >
           <Flex
             align='center'
@@ -87,10 +96,15 @@ const CorePurpose = ({ handleModal }) => {
             h='100%'
             bg='gcu.450'
           >
-            <Heading fontSize='45px' lineHeight='63px'>
+            <Heading
+              fontSize='45px'
+              w={{ base: '70%', md: '100%' }}
+              lineHeight={{ base: '42px', lg: '63px' }}
+            >
               Vision Statement
             </Heading>
             <Text
+              mt={{ base: 3, lg: 2 }}
               fontFamily='body'
               letterSpacing='4px'
               fontWeight={600}
@@ -109,7 +123,10 @@ const CorePurpose = ({ handleModal }) => {
           bgSize='cover'
           bgPos='center'
           bgRepeat='no-repeat'
-          bgImage="url('/images/mision.png')"
+          bgImage={{
+            base: "url('/images/mision@1x.png')",
+            lg: "url('/images/mision.png')"
+          }}
         >
           <Flex
             align='center'
@@ -119,10 +136,15 @@ const CorePurpose = ({ handleModal }) => {
             h='100%'
             bg='gcu.450'
           >
-            <Heading fontSize='45px' lineHeight='63px'>
+            <Heading
+              fontSize='45px'
+              w={{ base: '70%', md: '100%' }}
+              lineHeight={{ base: '42px', lg: '63px' }}
+            >
               Mission Statement
             </Heading>
             <Text
+              mt={{ base: 3, lg: 2 }}
               fontFamily='body'
               letterSpacing='4px'
               fontWeight={600}

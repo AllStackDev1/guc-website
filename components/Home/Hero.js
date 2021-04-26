@@ -13,21 +13,24 @@ import { ScrollDown, ArrowBtnRightIcon } from '@theme/Icons'
 export default function Hero() {
   return (
     <Box
-      bg={"url('images/bg-hero.png')"}
+      bg={{
+        base: "url('images/bg-hero@1x.png')",
+        lg: "url('images/bg-hero.png')"
+      }}
       bgSize='cover'
       bgPos='center'
       bgRepeat='no-repeat'
-      h='43.438rem'
+      h={{ base: 95, lg: '43.438rem' }}
     >
       <Flex
-        pr={{ md: '3.125rem', xl: '8.75rem' }}
-        pl={{ md: '3.125rem', xl: '7.5rem' }}
+        pr={{ md: '3.125rem', lg: '8.75rem' }}
+        pl={{ md: '3.125rem', lg: '7.5rem' }}
+        h={{ base: 95, lg: '43.438rem' }}
         bgColor='gcu.450'
         textColor='white'
-        h='43.438rem'
         direction='column'
         align='center'
-        justify='center'
+        justify={{ base: 'space-around', lg: 'center' }}
         pos='relative'
       >
         <Container
@@ -38,18 +41,32 @@ export default function Hero() {
           justify='center'
           fontFamily='heading'
         >
-          <Center height={16}>
+          <Center height={{ base: 10, lg: 16 }}>
             <Divider orientation='vertical' borderColor='white' />
           </Center>
-
-          <Text letterSpacing='0.41em' fontSize='lg' mt={6}>
+          <Text
+            letterSpacing='0.41em'
+            fontSize={{ base: 'sm', lg: 'lg' }}
+            mt={6}
+          >
             WELCOME TO
           </Text>
-          <Text fontSize='85px' lineHeight='shorter'>
+          <Text
+            fontSize={{ base: '1.875rem', lg: '5.313rem' }}
+            lineHeight='shorter'
+          >
             The Government College Umuahia
           </Text>
+          <Center mt={6} height={10} d={{ base: 'flex', lg: 'none' }}>
+            <Divider orientation='vertical' borderColor='white' />
+          </Center>
         </Container>
-        <Flex pos='absolute' top='35%' right={32}>
+        <Flex
+          d={{ base: 'none', lg: 'flex' }}
+          pos='absolute'
+          right={32}
+          top='35%'
+        >
           <Text
             fontFamily='heading'
             fontSize='md'
@@ -65,25 +82,36 @@ export default function Hero() {
           </Text>
         </Flex>
         <Flex
-          p={10}
-          left={10}
-          bottom={5}
           border='1px'
-          pos='absolute'
-          justify='space-between'
+          align='center'
           borderColor='white'
+          justify='space-between'
+          p={{ base: 4, lg: 10 }}
+          left={{ base: 0, lg: 10 }}
+          bottom={{ base: 0, lg: 5 }}
+          pos={{ base: 'relative', lg: 'absolute' }}
         >
-          <Text fontFamily='body' fontWeight='500' fontSize='lg'>
+          <Text
+            fontFamily='body'
+            fontWeight='500'
+            fontSize={{ base: 'sm', lg: 'lg' }}
+          >
             Educating young boys to men since 1929
-            <Icon
-              as={ArrowBtnRightIcon}
-              ml={4}
-              color='transparent'
-              boxSize={10}
-            />
           </Text>
+          <Icon
+            as={ArrowBtnRightIcon}
+            ml={4}
+            color='transparent'
+            boxSize={{ base: 6, lg: 10 }}
+          />
         </Flex>
-        <Flex p={10} right={10} bottom={5} pos='absolute'>
+        <Flex
+          d={{ base: 'none', lg: 'flex' }}
+          p={10}
+          right={10}
+          bottom={5}
+          pos='absolute'
+        >
           <Text fontFamily='quote' fontWeight='500' fontSize='lg'>
             Excellence, integrity and leadership...
           </Text>
