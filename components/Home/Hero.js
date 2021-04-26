@@ -13,7 +13,7 @@ import { ScrollDown, ArrowBtnRightIcon } from '@theme/Icons'
 export default function Hero() {
   return (
     <Box
-      bg={{
+      bgImg={{
         base: "url('images/bg-hero@1x.png')",
         lg: "url('images/bg-hero.png')"
       }}
