@@ -50,7 +50,7 @@ const CorePurpose = ({ handleModal }) => {
             fontSize={{ base: 'sm', lg: 'lg' }}
             my={{ base: 4, lg: 6 }}
           >
-            LIVING
+            LIVING OUR
           </Text>
           <Heading
             as='h4'

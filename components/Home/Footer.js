@@ -33,7 +33,7 @@ const Footer = () => {
         <Divider borderColor='gray.400' mb={8} />
 
         <Image
-          mx={{ lg: 'auto' }}
+          mx='auto'
           src='/images/logo.svg'
           w={{ base: '5.438rem', lg: '7.5rem' }}
           h={{ base: '5.313rem', lg: 32 }}
@@ -42,7 +42,7 @@ const Footer = () => {
         <Heading
           as='h4'
           mx={{ lg: 'auto' }}
-          w={{ lg: 125 }}
+          w={{ lg: 130 }}
           fontWeight='bold'
           textAlign={{ base: 'left', lg: 'center' }}
           fontSize={{ base: '2rem', lg: '3.375rem' }}

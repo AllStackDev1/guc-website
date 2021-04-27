@@ -57,6 +57,7 @@ const EnrollModal = ({ isOpen, onClose }) => {
           </Box>
 
           <Button
+            className='blink_me'
             rounded='0'
             color='#fff'
             boxShadow='lg'
@@ -81,7 +82,7 @@ const EnrollModal = ({ isOpen, onClose }) => {
               FOR MORE INFORMATION
             </Heading>
             <Text {...textStyles} fontWeight='500'>
-              gcu.umuahi@gmail.com
+              gcu.umuahia@gmail.com
             </Text>
           </Box>
         </ModalBody>

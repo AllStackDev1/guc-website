@@ -105,7 +105,7 @@ const Experience = () => {
                 fontWeight='400'
                 lineHeight='35px'
               >
-                Our Teachers
+                Our Alumni
               </Heading>
               <Text d='none' fontWeight='600' letterSpacing='4px'>
                 DISCOVER MORE
