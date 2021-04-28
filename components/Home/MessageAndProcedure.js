@@ -51,11 +51,11 @@ const MessageAndProcedure = ({ handleModal }) => {
             READ MORE
           </Text>
         </Flex>
-        <Image src='images/etty-fidele.png' d={{ base: 'none', lg: 'block' }} />
         <Image
-          src='images/etty-fidele@1x.png'
-          d={{ base: 'block', lg: 'none' }}
+          src='images/principal-small.jpeg'
+          d={{ base: 'none', lg: 'block' }}
         />
+        <Image src='images/principal.jpeg' d={{ base: 'block', lg: 'none' }} />
       </Flex>
       <Flex flexDir={{ base: 'column', lg: 'row' }}>
         <Image src='images/sam-balye.png' d={{ base: 'none', lg: 'block' }} />
