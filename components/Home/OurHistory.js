@@ -120,7 +120,7 @@ const OurHistory = () => {
               dangerouslySetInnerHTML={{ __html: text }}
             />
           </Container>
-          <Flex mt={20} px={{ base: 10, lg: 0 }} align='center'>
+          <Flex mt={20} px={{ base: 5, lg: 0 }} align='center'>
             <Button {...btnStyle} onClick={_ => handleBack()}>
               <Image src='/images/arrow_left.png' />
             </Button>
