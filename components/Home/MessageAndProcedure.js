@@ -62,6 +62,7 @@ const MessageAndProcedure = ({ handleModal }) => {
       <Flex
         w={{ lg: '50%' }}
         h={{ lg: '611px' }}
+        justify={{ lg: 'flex-end' }}
         flexDir={{ base: 'column', lg: 'row' }}
       >
         <Image src='images/sam-balye.png' d={{ base: 'none', lg: 'block' }} />
