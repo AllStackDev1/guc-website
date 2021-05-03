@@ -58,7 +58,7 @@ const CorePurpose = ({ handleModal }) => {
             fontSize={{ base: '2xl', lg: '2.625rem' }}
             lineHeight='35px'
           >
-            Core GCU Purpose
+            Purpose
           </Heading>
           <Text fontSize='sm' lineHeight='25px' mt={5} mb={6}>
             The educational purpose of GCU is embodied in a programme of

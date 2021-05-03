@@ -1,16 +1,18 @@
 import React from 'react'
 import NextLink from 'next/link'
 import {
-  Image,
+  Box,
   Flex,
   Link,
   Text,
   Icon,
+  Image,
   Heading,
   Divider,
   Container
 } from '@chakra-ui/react'
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
+import { Timeline } from 'react-twitter-widgets'
 
 const Footer = () => {
   return (
@@ -41,9 +43,9 @@ const Footer = () => {
 
         <Heading
           as='h4'
-          mx={{ lg: 'auto' }}
           w={{ lg: 130 }}
           fontWeight='bold'
+          mx={{ lg: 'auto' }}
           textAlign={{ base: 'left', lg: 'center' }}
           fontSize={{ base: '2rem', lg: '3.375rem' }}
           lineHeight={{ base: '51px', lg: '72px' }}
@@ -57,8 +59,23 @@ const Footer = () => {
           </Text>
         </Heading>
 
+        <Box mx='auto' my={{ base: 6, lg: 20 }} w={{ lg: 110 }}>
+          <Timeline
+            tweetId='1381539509834252289'
+            dataSource={{
+              sourceType: 'profile',
+              screenName: 'gcumuahia'
+            }}
+            options={{
+              height: '400'
+            }}
+            renderError={_err => {
+              return <Text>Could not load timeline</Text>
+            }}
+          />
+        </Box>
+
         <Flex
-          mt={{ base: 6, lg: 24 }}
           fontFamily='body'
           fontSize='lg'
           mx={{ lg: 'auto' }}

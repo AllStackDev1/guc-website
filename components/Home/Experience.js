@@ -108,7 +108,7 @@ const Experience = () => {
           </Flex>
 
           <Box
-            bgColor='gcu.100'
+            bgColor='#6A7986'
             textColor='white'
             mt={5}
             border='1px'

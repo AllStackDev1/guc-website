@@ -7,24 +7,31 @@ const MessageAndProcedure = ({ handleModal }) => {
     <Flex
       id='admission'
       py={{ md: 14 }}
-      justifyContent='space-between'
       pos='relative'
       align='center'
-      justify='center'
+      justifyContent='space-between'
       flexDir={{ base: 'column', lg: 'row' }}
     >
-      <Flex flexDir={{ base: 'column-reverse', lg: 'row' }}>
+      <Flex
+        w={{ lg: '50%' }}
+        h={{ lg: '611px' }}
+        flexDir={{ base: 'column', lg: 'row' }}
+      >
+        <Image
+          src='images/principal-small.jpeg'
+          d={{ base: 'none', lg: 'block' }}
+        />
+        <Image src='images/principal.jpeg' d={{ base: 'block', lg: 'none' }} />
         <Flex
           px={8}
-          py={{ base: 20, lg: 'unset' }}
-          my={{ base: 0, lg: 3 }}
-          w={{ lg: 95 }}
+          align='center'
+          bgColor='#000'
           flexDir='column'
           justify='center'
-          align='center'
-          textAlign='center'
-          bgColor='#000'
           textColor='white'
+          textAlign='center'
+          w={{ lg: '462px' }}
+          py={{ base: 24, lg: 'unset' }}
         >
           <Heading
             as='h4'
@@ -33,7 +40,7 @@ const MessageAndProcedure = ({ handleModal }) => {
             lineHeight='45px'
             w={{ lg: 72 }}
           >
-            A Message from the principal
+            A Message from the Principal
           </Heading>
           <Text w={{ lg: '80' }} mt={4} mb={6} fontSize='sm' lineHeight='25px'>
             The continent of Africa and the country of Nigeria is at a
@@ -51,13 +58,12 @@ const MessageAndProcedure = ({ handleModal }) => {
             READ MORE
           </Text>
         </Flex>
-        <Image
-          src='images/principal-small.jpeg'
-          d={{ base: 'none', lg: 'block' }}
-        />
-        <Image src='images/principal.jpeg' d={{ base: 'block', lg: 'none' }} />
       </Flex>
-      <Flex flexDir={{ base: 'column', lg: 'row' }}>
+      <Flex
+        w={{ lg: '50%' }}
+        h={{ lg: '611px' }}
+        flexDir={{ base: 'column', lg: 'row' }}
+      >
         <Image src='images/sam-balye.png' d={{ base: 'none', lg: 'block' }} />
         <Image
           src='images/sam-balye@1x.png'
@@ -65,15 +71,14 @@ const MessageAndProcedure = ({ handleModal }) => {
         />
         <Flex
           px={8}
-          my={{ base: 0, lg: 3 }}
-          w={{ lg: 95 }}
-          py={{ base: 24, lg: 'unset' }}
+          align='center'
+          bgColor='#000'
           flexDir='column'
           justify='center'
-          align='center'
-          textAlign='center'
-          bgColor='#000'
           textColor='white'
+          textAlign='center'
+          w={{ lg: '462px' }}
+          py={{ base: 24, lg: 'unset' }}
         >
           <Heading
             as='h4'
