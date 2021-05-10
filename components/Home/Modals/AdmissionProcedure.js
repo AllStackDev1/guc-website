@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import {
   Box,
   List,
+  Link,
   Text,
   Modal,
   Button,
@@ -111,19 +112,26 @@ const AdmissionProcedure = ({ isOpen, onClose }) => {
           </Text>
 
           <Box mt={12}>
-            <Button
-              rounded='0'
-              color='#fff'
-              boxShadow='lg'
-              h={{ base: 10, md: 12 }}
-              fontWeight={400}
-              w={{ base: 28, md: '9.75rem' }}
-              colorScheme='gcuButton'
-              fontSize='md'
+            <Link
+              href='https://enrollment.thegcu.com'
+              _hover={{ hover: 'none' }}
               _focus={{ outline: 'none' }}
+              rel='noreferrer'
             >
-              Apply Now
-            </Button>
+              <Button
+                rounded='0'
+                color='#fff'
+                boxShadow='lg'
+                h={{ base: 10, md: 12 }}
+                fontWeight={400}
+                w={{ base: 28, md: '9.75rem' }}
+                colorScheme='gcuButton'
+                fontSize='md'
+                _focus={{ outline: 'none' }}
+              >
+                Apply Now
+              </Button>
+            </Link>
           </Box>
         </ModalBody>
       </ModalContent>

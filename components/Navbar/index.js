@@ -40,7 +40,7 @@ const MainNav = () => {
     {
       id: 4,
       title: 'Apply Now',
-      btnLink: '#'
+      btnLink: 'https://enrollment.thegcu.com'
     }
   ]
 

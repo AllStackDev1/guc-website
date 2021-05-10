@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {
   Box,
+  Link,
   Text,
   Modal,
   Button,
@@ -56,20 +57,27 @@ const EnrollModal = ({ isOpen, onClose }) => {
             <Text {...textStyles}>Academic Session</Text>
           </Box>
 
-          <Button
-            className='blink_me'
-            rounded='0'
-            color='#fff'
-            boxShadow='lg'
-            h={{ base: 10, md: 12 }}
-            fontWeight={400}
-            w={{ base: 28, md: '9.75rem' }}
-            colorScheme='gcuButton'
-            fontSize={{ base: 'sm', xl: 'lg' }}
+          <Link
+            href='https://enrollment.thegcu.com'
+            _hover={{ hover: 'none' }}
             _focus={{ outline: 'none' }}
+            rel='noreferrer'
           >
-            Enroll Now
-          </Button>
+            <Button
+              className='blink_me'
+              rounded='0'
+              color='#fff'
+              boxShadow='lg'
+              h={{ base: 10, md: 12 }}
+              fontWeight={400}
+              w={{ base: 28, md: '9.75rem' }}
+              colorScheme='gcuButton'
+              fontSize={{ base: 'sm', xl: 'lg' }}
+              _focus={{ outline: 'none' }}
+            >
+              Enroll Now
+            </Button>
+          </Link>
 
           <Box mt='24'>
             <Heading
