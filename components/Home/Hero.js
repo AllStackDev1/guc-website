@@ -55,7 +55,7 @@ export default function Hero() {
             fontSize={{ base: '1.875rem', lg: '5.313rem' }}
             lineHeight='shorter'
           >
-            The Government College Umuahia
+            Government College Umuahia
           </Text>
           <Center mt={6} height={10} d={{ base: 'flex', lg: 'none' }}>
             <Divider orientation='vertical' borderColor='white' />
@@ -98,12 +98,7 @@ export default function Hero() {
           >
             Educating young boys to men since 1929
           </Text>
-          <Icon
-            as={ArrowBtnRightIcon}
-            ml={4}
-            color='transparent'
-            boxSize={{ base: 6, lg: 10 }}
-          />
+
         </Flex>
         <Flex
           d={{ base: 'none', lg: 'flex' }}
