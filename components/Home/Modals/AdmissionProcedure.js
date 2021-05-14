@@ -113,7 +113,7 @@ const AdmissionProcedure = ({ isOpen, onClose }) => {
 
           <Box mt={12}>
             <Link
-              href='https://enrollment.thegcu.com'
+              href='https://enrollment.gcu.sch.ng'
               _hover={{ hover: 'none' }}
               _focus={{ outline: 'none' }}
               rel='noreferrer'
