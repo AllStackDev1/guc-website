@@ -6,7 +6,7 @@ import { Box } from '@chakra-ui/react'
 import Navbar from '@components/Navbar'
 
 const Layout = ({ children, name, link, image_url = '', description = '' }) => {
-  const main_site_url = 'https://thegcu.com/'
+  const main_site_url = 'https://gcu.sch.ng/'
   const main_site_title = 'The Goverment College Umuahia'
 
   return (

@@ -58,7 +58,7 @@ const EnrollModal = ({ isOpen, onClose }) => {
           </Box>
 
           <Link
-            href='https://enrollment.thegcu.com'
+            href='https://enrollment.gcu.sch.ng'
             _hover={{ hover: 'none' }}
             _focus={{ outline: 'none' }}
             rel='noreferrer'

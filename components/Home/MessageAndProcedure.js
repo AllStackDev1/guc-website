@@ -30,7 +30,7 @@ const MessageAndProcedure = ({ handleModal }) => {
           justify='center'
           textColor='white'
           textAlign='center'
-          w={{ lg: '462px' }}
+          maxW={{ lg: '350px', xxl: '462px' }}
           py={{ base: 24, lg: 'unset' }}
         >
           <Heading
@@ -78,7 +78,7 @@ const MessageAndProcedure = ({ handleModal }) => {
           justify='center'
           textColor='white'
           textAlign='center'
-          w={{ lg: '462px' }}
+          w={{ lg: '350px', xxl: '462px' }}
           py={{ base: 24, lg: 'unset' }}
         >
           <Heading
