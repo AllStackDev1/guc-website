@@ -124,7 +124,7 @@ const AdmissionProcedure = ({ isOpen, onClose }) => {
                 boxShadow='lg'
                 h={{ base: 10, md: 12 }}
                 fontWeight={400}
-                w={{ base: 28, md: '9.75rem' }}
+                w={{ base: '100%', md: '9.75rem' }}
                 colorScheme='gcuButton'
                 fontSize='md'
                 _focus={{ outline: 'none' }}

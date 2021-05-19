@@ -56,7 +56,6 @@ const MainNav = () => {
         align='center'
         borderBottomWidth={1}
         px={{ base: 4, md: 12, xl: 16 }}
-        d={{ xs: 'none', lg: 'flex' }}
         fontSize={{ lg: 'sm', xl: 'md' }}
         h={{ base: 16, md: '4.5rem', xl: 36 }}
       >
@@ -103,7 +102,7 @@ const MainNav = () => {
           align='center'
           mx={{ xl: 5 }}
           pos='absolute'
-          w={{ md: '40%' }}
+          w={{ md: '50%', xxl: '40%' }}
           fontSize='md'
           fontWeight={500}
           justify='flex-end'

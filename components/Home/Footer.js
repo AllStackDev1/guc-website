@@ -46,7 +46,7 @@ const Footer = () => {
           w={{ lg: 130 }}
           fontWeight='bold'
           mx={{ lg: 'auto' }}
-          textAlign={{ base: 'left', lg: 'center' }}
+          textAlign={{ base: 'left', md: 'center' }}
           fontSize={{ base: '2rem', lg: '3.375rem' }}
           lineHeight={{ base: '51px', lg: '72px' }}
         >
@@ -66,9 +66,7 @@ const Footer = () => {
               sourceType: 'profile',
               screenName: 'gcumuahia'
             }}
-            options={{
-              height: '400'
-            }}
+            options={{ height: '400' }}
             renderError={_err => {
               return <Text>Could not load timeline</Text>
             }}
@@ -78,12 +76,12 @@ const Footer = () => {
         <Flex
           fontFamily='body'
           fontSize='lg'
-          mx={{ lg: 'auto' }}
-          w={{ lg: 125 }}
-          h={{ base: 52, lg: 'unset' }}
-          flexDir={{ base: 'column', lg: 'row' }}
+          mx={{ md: 'auto' }}
+          w={{ md: 125 }}
+          h={{ base: 52, md: 'unset' }}
+          flexDir={{ base: 'column', md: 'row' }}
           justify='space-between'
-          align={{ base: 'flex-start', lg: '' }}
+          align={{ base: 'flex-start', md: '' }}
         >
           <NextLink href='#' passHref>
             <Link _focus={{ outline: 'none' }} _hover={{ outline: 'none' }}>
