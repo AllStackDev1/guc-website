@@ -119,3 +119,39 @@ export const CircleCheckIcon = createIcon({
     </>
   )
 })
+
+export const CircleHeartIcon = createIcon({
+  displayName: 'CircleHeartIcon',
+  viewBox: '0 0 80 80',
+  path: (
+    <>
+      <circle opacity='0.4' cx='40' cy='40' r='40' fill='#D6EBE4' />
+      <path
+        d='M51.7862 31.1467C51.1052 30.4653 50.2966 29.9249 49.4066 29.5561C48.5167 29.1874 47.5628 28.9976 46.5995 28.9976C45.6362 28.9976 44.6823 29.1874 43.7924 29.5561C42.9024 29.9249 42.0938 30.4653 41.4128 31.1467L39.9995 32.56L38.5862 31.1467C37.2106 29.7711 35.3449 28.9983 33.3995 28.9983C31.4541 28.9983 29.5884 29.7711 28.2128 31.1467C26.8373 32.5222 26.0645 34.3879 26.0645 36.3333C26.0645 38.2787 26.8373 40.1444 28.2128 41.52L29.6262 42.9333L39.9995 53.3067L50.3728 42.9333L51.7862 41.52C52.4675 40.839 53.008 40.0304 53.3767 39.1405C53.7455 38.2505 53.9353 37.2966 53.9353 36.3333C53.9353 35.37 53.7455 34.4161 53.3767 33.5262C53.008 32.6362 52.4675 31.8277 51.7862 31.1467V31.1467Z'
+        stroke='#20BFA9'
+        strokeWidth='3'
+        fill='transparent'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+    </>
+  )
+})
+
+export const CirclePowerIcon = createIcon({
+  displayName: 'CirclePowerIcon',
+  viewBox: '0 0 80 80',
+  path: (
+    <>
+      <circle opacity='0.4' cx='40' cy='40' r='40' fill='#FAE2DA' />
+      <path
+        d='M41.5 25L26.5 43H40L38.5 55L53.5 37H40L41.5 25Z'
+        stroke='#FF794D'
+        strokeWidth='3'
+        fill='transparent'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+    </>
+  )
+})
