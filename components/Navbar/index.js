@@ -1,7 +1,7 @@
 import React from 'react'
 import NextLink from 'next/link'
 import { Text, Box, Button, Flex, Link, IconButton } from '@chakra-ui/react'
-
+import { useRouter } from 'next/router'
 import useApp from 'context/app'
 
 import { OpenMenuIcon, CloseMenuIcon } from 'theme/Icons'
@@ -10,27 +10,32 @@ import DropDown from './DropDown'
 import MobileDropdown from './MobileDropdown'
 
 const MainNav = () => {
-  const { handleModal, toggleMenu, isMenuOpen } = useApp()
+  const { toggleMenu, isMenuOpen } = useApp()
+  const router = useRouter()
 
   const menus = [
     {
       id: 1,
       title: 'Home',
-      link: '/home'
+      link: '/'
     },
     {
       id: 2,
       title: 'About Us',
-      items: [
-        {
-          title: 'Our History',
-          action: () => handleModal('history')
-        },
-        {
-          title: 'Admissions',
-          action: () => handleModal('procedure')
-        }
-      ]
+      link: '/about-us'
+
+      // items: [
+      //   {
+      //     id: 1,
+      //     title: 'Leadership Team',
+      //     link: '/leadership-team'
+      //   },
+      //   {
+      //     id: 2,
+      //     title: 'Alumini',
+      //     link: '/alumini'
+      //   }
+      // ]
     },
     {
       id: 3,
@@ -39,6 +44,32 @@ const MainNav = () => {
     },
     {
       id: 4,
+      title: 'Boarding',
+      items: [
+        {
+          id: 1,
+          title: 'Leadership Team',
+          link: '/leadership-team'
+        },
+        {
+          id: 2,
+          title: 'Alumini',
+          link: '/alumini'
+        }
+      ]
+    },
+    {
+      id: 5,
+      title: 'Calender',
+      link: '/calender'
+    },
+    {
+      id: 6,
+      title: 'News',
+      link: '/news'
+    },
+    {
+      id: 7,
       title: 'Apply Now',
       btnLink: 'https://enrollment.gcu.sch.ng'
     }
@@ -52,7 +83,7 @@ const MainNav = () => {
         role='nav'
         bg='white'
         pos='fixed'
-        zIndex={60}
+        zIndex={1}
         align='center'
         borderBottomWidth={1}
         px={{ base: 4, md: 12, xl: 16 }}
@@ -102,7 +133,6 @@ const MainNav = () => {
           align='center'
           mx={{ xl: 5 }}
           pos='absolute'
-          w={{ md: '50%', xxl: '40%' }}
           fontSize='md'
           fontWeight={500}
           justify='flex-end'
@@ -112,13 +142,23 @@ const MainNav = () => {
           {menus.map(menu => (
             <React.Fragment key={menu.id}>
               {menu.items && (
-                <DropDown mr={5} data={menu.items} title={menu.title} />
+                <DropDown
+                  mr={8}
+                  color='gcu.100'
+                  data={menu.items}
+                  title={menu.title}
+                />
               )}
 
               {menu.link && (
-                <Box mr={{ xl: 10 }}>
+                <Box mr={8}>
                   <NextLink href={menu.link} passHref>
                     <Link
+                      style={
+                        router.pathname === menu.link
+                          ? { color: '#C82B38' }
+                          : {}
+                      }
                       _focus={{ outline: 'none' }}
                       _hover={{ hover: 'none' }}
                     >

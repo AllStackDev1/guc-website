@@ -1,14 +1,6 @@
 import React from 'react'
-import {
-  Flex,
-  Box,
-  Icon,
-  Text,
-  Center,
-  Divider,
-  Container
-} from '@chakra-ui/react'
-import { ScrollDown, ArrowBtnRightIcon } from '@theme/Icons'
+import { Flex, Box, Text, Center, Divider, Container } from '@chakra-ui/react'
+import { ScrollDown } from '@theme/Icons'
 
 export default function Hero() {
   return (
@@ -98,7 +90,6 @@ export default function Hero() {
           >
             Educating young boys to men since 1929
           </Text>
-
         </Flex>
         <Flex
           d={{ base: 'none', lg: 'flex' }}

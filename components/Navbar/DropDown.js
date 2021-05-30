@@ -1,130 +1,97 @@
+/* eslint-disable react/no-array-index-key */
 import React from 'react'
 import PropTypes from 'prop-types'
-import { AnimatePresence, motion } from 'framer-motion'
-import { Menu } from '@headlessui/react'
 import NextLink from 'next/link'
-import { FiChevronDown, FiChevronUp } from 'react-icons/fi'
-
-import { Box, Icon, Text, Flex, Link } from '@chakra-ui/react'
-
-const MotionBox = motion(Box)
+import {
+  Box,
+  Icon,
+  Text,
+  Flex,
+  Link,
+  Portal,
+  Divider,
+  Popover,
+  PopoverBody,
+  PopoverArrow,
+  PopoverContent,
+  PopoverTrigger
+} from '@chakra-ui/react'
+import { IoIosArrowDropdown, IoIosArrowDropup } from 'react-icons/io'
 
 const DropDown = ({ title, data, color, ...rest }) => {
   return (
-    <Menu as={Box} userSelect='none' {...rest}>
-      {({ open }) => (
+    <Popover>
+      {({ isOpen }) => (
         <>
-          <Menu.Button
-            as={Box}
-            _focus={{ outline: 'none' }}
-            _hover={{ hover: 'none', color: color || 'cf.400' }}
-            cursor='pointer'
-          >
-            <Flex align='center'>
+          <PopoverTrigger>
+            <Flex
+              align='center'
+              style={isOpen ? { color: '#C82B38' } : {}}
+              _focus={{ outline: 'none' }}
+              _hover={{ hover: 'none', color: color || 'cf.400' }}
+              cursor='pointer'
+              {...rest}
+            >
               <Text ml={2}>{title}</Text>
               <Box>
                 <Icon
                   ml={1}
-                  as={open ? FiChevronUp : FiChevronDown}
+                  as={isOpen ? IoIosArrowDropup : IoIosArrowDropdown}
                   boxSize={4}
                 />
               </Box>
             </Flex>
-          </Menu.Button>
-          <AnimatePresence>
-            {open && (
-              <Menu.Items
-                static
-                as={MotionBox}
-                initial={{ opacity: 0, y: -50 }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                  transition: { duration: 0.3 }
-                }}
-                w={60}
-                mt={2}
-                bg='white'
-                rounded='lg'
-                pos='absolute'
-                color='gray.600'
-                borderWidth={1}
-                borderColor='gray.100'
-                _focus={{ outline: 'none' }}
-                exit={{ opacity: 0.2, y: 50 }}
-              >
-                <AnimatePresence>
-                  {data.map((item, i) => (
-                    <Menu.Item
-                      key={item.id}
-                      as={MotionBox}
-                      custom={i}
-                      variants={{
-                        hidden: i => ({
-                          y: -50 * i,
-                          opacity: 0
-                        }),
-                        visible: i => ({
-                          y: 0,
-                          opacity: 1,
-                          transition: {
-                            delay: i * 0.025
-                          }
-                        }),
-                        removed: {
-                          y: 30 * i
-                        }
+          </PopoverTrigger>
+          <Portal>
+            <PopoverContent
+              bgColor='white'
+              shadow='2xl'
+              border='0'
+              borderTop='1px'
+              borderTopColor='gray.400'
+              width={{ lg: 60 }}
+              _focus={{ outline: 'none' }}
+            >
+              <PopoverArrow
+                borderLeft='1px'
+                borderTop='1px'
+                borderColor='gray.500'
+              />
+              <PopoverBody p={0}>
+                {data.map((item, i) => (
+                  <React.Fragment key={i}>
+                    <Box
+                      py={4}
+                      px={4}
+                      cursor='pointer'
+                      _hover={{
+                        textDecor: 'none',
+                        color: 'white',
+                        bg: color
                       }}
-                      initial='hidden'
-                      animate='visible'
-                      exit='removed'
                     >
-                      {({ active }) => {
-                        if (item.link) {
-                          return (
-                            <NextLink href={item.link} passHref>
-                              <Link
-                                py={2}
-                                px={6}
-                                _hover={{
-                                  textDecor: 'none'
-                                }}
-                                bg={active && color}
-                                color={active && 'white'}
-                                d='block'
-                              >
-                                {item.title}
-                              </Link>
-                            </NextLink>
-                          )
-                        }
-                        if (item.action) {
-                          return (
-                            <Text
-                              py={2}
-                              px={6}
-                              _hover={{
-                                color: 'black'
-                              }}
-                              cursor='pointer'
-                              color={active && 'white'}
-                              d='block'
-                              onClick={item.action}
-                            >
-                              {item.title}
-                            </Text>
-                          )
-                        }
-                      }}
-                    </Menu.Item>
-                  ))}
-                </AnimatePresence>
-              </Menu.Items>
-            )}
-          </AnimatePresence>
+                      {item.link && (
+                        <NextLink href={item.link} passHref>
+                          <Link d='block' _hover={{ textDecor: 'none' }}>
+                            {item.title}
+                          </Link>
+                        </NextLink>
+                      )}
+                      {item.action && (
+                        <Text d='block' onClick={item.action}>
+                          {item.title}
+                        </Text>
+                      )}
+                    </Box>
+                    {data.length !== i + 1 && <Divider />}
+                  </React.Fragment>
+                ))}
+              </PopoverBody>
+            </PopoverContent>
+          </Portal>
         </>
       )}
-    </Menu>
+    </Popover>
   )
 }
 
