@@ -42,32 +42,32 @@ const MainNav = () => {
       title: 'Admissions',
       link: '/#admission'
     },
-    {
-      id: 4,
-      title: 'Boarding',
-      items: [
-        {
-          id: 1,
-          title: 'Leadership Team',
-          link: '/leadership-team'
-        },
-        {
-          id: 2,
-          title: 'Alumini',
-          link: '/alumini'
-        }
-      ]
-    },
+    // {
+    //   id: 4,
+    //   title: 'Boarding',
+    //   items: [
+    //     {
+    //       id: 1,
+    //       title: 'Leadership Team',
+    //       link: '/leadership-team'
+    //     },
+    //     {
+    //       id: 2,
+    //       title: 'Alumini',
+    //       link: '/alumini'
+    //     }
+    //   ]
+    // },
     {
       id: 5,
       title: 'Calender',
       link: '/calender'
     },
-    {
-      id: 6,
-      title: 'News',
-      link: '/news'
-    },
+    // {
+    //   id: 6,
+    //   title: 'News',
+    //   link: '/news'
+    // },
     {
       id: 7,
       title: 'Apply Now',
@@ -83,7 +83,7 @@ const MainNav = () => {
         role='nav'
         bg='white'
         pos='fixed'
-        zIndex={1}
+        zIndex={2}
         align='center'
         borderBottomWidth={1}
         px={{ base: 4, md: 12, xl: 16 }}
@@ -97,10 +97,11 @@ const MainNav = () => {
           d={{ base: 'block', xl: 'none' }}
         >
           <IconButton
-            colorScheme='none'
-            aria-label='Open Mobile Menu'
             p={0}
-            minW='unset'
+            w={6}
+            colorScheme='none'
+            _focus={{ outline: 'none' }}
+            aria-label='Open Mobile Menu'
             icon={
               isMenuOpen ? (
                 <CloseMenuIcon boxSize={4} />
@@ -206,7 +207,7 @@ const MainNav = () => {
           pt={16}
           pos='fixed'
           h='100vh'
-          zIndex={50}
+          zIndex={1}
         >
           {menus
             .filter(menu => !menu.btnLink)

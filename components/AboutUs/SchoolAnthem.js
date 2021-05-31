@@ -9,6 +9,7 @@ const SchoolAnthem = () => {
       bgColor='#FDF9F9'
       py={{ lg: 20 }}
       px={{ lg: 10 }}
+      // mx={{ lg: 14 }}
       justifyContent='space-between'
     >
       <Heading

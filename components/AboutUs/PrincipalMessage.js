@@ -6,7 +6,7 @@ const PrincipalMessage = () => {
     <Container
       d='flex'
       maxW='7xl'
-      py={{ lg: 14 }}
+      p={{ lg: 14 }}
       justifyContent='space-between'
     >
       <Image src='/images/principal-2.png' />

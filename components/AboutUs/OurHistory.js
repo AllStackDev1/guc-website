@@ -7,6 +7,7 @@ const OurHistory = () => {
       d='flex'
       maxW='7xl'
       py={{ lg: 10 }}
+      px={{ lg: 14 }}
       justifyContent='space-between'
     >
       <Heading
