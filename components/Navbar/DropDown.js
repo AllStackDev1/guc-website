@@ -29,7 +29,11 @@ const DropDown = ({ title, data, color, withLink, ...rest }) => {
           <PopoverTrigger>
             <Flex
               align='center'
-              style={isOpen ? { color: '#C82B38' } : {}}
+              style={
+                isOpen || router.pathname === withLink
+                  ? { color: '#C82B38' }
+                  : {}
+              }
               _focus={{ outline: 'none' }}
               _hover={{ hover: 'none', color: color || 'cf.400' }}
               cursor='pointer'

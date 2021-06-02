@@ -44,7 +44,7 @@ const MainNav = () => {
     {
       id: 4,
       title: 'Boarding',
-      withLink: 'boarding',
+      withLink: '/boarding',
       items: [
         {
           id: 1,

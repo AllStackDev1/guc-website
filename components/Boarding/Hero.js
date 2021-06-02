@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Text, Container, Heading, Image } from '@chakra-ui/react'
+import { Box, Text, Container, Heading, Image, Flex } from '@chakra-ui/react'
 
 export default function Hero() {
   return (
@@ -24,32 +24,34 @@ export default function Hero() {
           experience.
         </Text>
       </Box>
-      <Box pos='relative'>
-        <Box
-          bottom={0}
-          py={{ base: 2, lg: 10 }}
-          px={{ base: 2, lg: 12 }}
-          pos='absolute'
-          textAlign='left'
-          w={{ base: 52, lg: 124 }}
-          bgColor='gcu.100'
-        >
-          <Text
-            color='white'
-            fontSize={{ base: 'xx-small', lg: '21px' }}
-            lineHeight={{ lg: '32px' }}
-          >
-            “We strive to work closely together with our customers in solving
-            their problems. We value honesty, integrity, and efficiency”
-          </Text>
-        </Box>
+      <Flex>
         <Image
-          w='full'
-          h='full'
-          src='/images/about-us-hero-img.png'
+          w={{ lg: '690px' }}
+          h={{ lg: '440px' }}
+          src='/images/bording-1.png'
           alt='about-us-img'
         />
-      </Box>
+        <Box mx={{ lg: 4 }} />
+        <Box pos='relative'>
+          <Box
+            zIndex={-1}
+            mt={{ lg: 10 }}
+            ml={{ lg: 10 }}
+            bg='gcu.100'
+            pos='absolute'
+            w={{ lg: '480px' }}
+            h={{ lg: '440px' }}
+          />
+          <Box zIndex={1}>
+            <Image
+              w={{ lg: '480px' }}
+              h={{ lg: '440px' }}
+              src='/images/bording-2.png'
+              alt='about-us-img'
+            />
+          </Box>
+        </Box>
+      </Flex>
     </Container>
   )
 }
