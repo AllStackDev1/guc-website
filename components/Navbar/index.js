@@ -27,12 +27,12 @@ const MainNav = () => {
         {
           id: 1,
           title: 'Leadership Team',
-          link: '/leadership-team'
+          link: '/about-us/leadership-team'
         },
         {
           id: 2,
           title: 'Alumini',
-          link: '/alumini'
+          link: '/about-us/alumini'
         }
       ]
     },
@@ -49,12 +49,12 @@ const MainNav = () => {
         {
           id: 1,
           title: 'Pastorial Care',
-          link: '/pastorial-care'
+          link: '/boarding/pastorial-care'
         },
         {
           id: 2,
           title: 'Sports',
-          link: '/sports'
+          link: '/boarding/sports'
         }
       ]
     },
