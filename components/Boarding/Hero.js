@@ -4,25 +4,24 @@ import { Box, Text, Container, Heading, Image } from '@chakra-ui/react'
 export default function Hero() {
   return (
     <Container
-      py={{ lg: 24 }}
       d='flex'
       maxW='7xl'
       flexDir='column'
       textAlign='center'
       alignItems='center'
+      py={{ base: 8, lg: 24 }}
     >
-      <Box mb={{ base: 4, lg: 14 }} w={{ lg: 125 }}>
-        <Heading mb={{ lg: 6 }} fontSize={{ base: '1.875rem', lg: '60px' }}>
-          About GCU
+      <Box mb={{ base: 4, lg: 14 }} w={{ lg: 130 }}>
+        <Heading mb={{ lg: 6 }} fontSize={{ base: '1.5rem', lg: '60px' }}>
+          Boarding is just living with your friends.
         </Heading>
         <Text
           color='#6A7986'
           fontSize={{ base: 'sm', lg: '21px' }}
           lineHeight={{ lg: '32px' }}
         >
-          We are an industry-leading company that values honesty, integrity, and
-          efficiency. Building quality products and caring for the users are
-          what made us stand out since the beginning.
+          The life of the boarding House is at the heart of every pupil’s GCU
+          experience.
         </Text>
       </Box>
       <Box pos='relative'>

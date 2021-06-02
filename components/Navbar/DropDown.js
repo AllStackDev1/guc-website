@@ -2,6 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import NextLink from 'next/link'
+import { useRouter } from 'next/router'
 import {
   Box,
   Icon,
@@ -18,7 +19,9 @@ import {
 } from '@chakra-ui/react'
 import { IoIosArrowDropdown, IoIosArrowDropup } from 'react-icons/io'
 
-const DropDown = ({ title, data, color, ...rest }) => {
+const DropDown = ({ title, data, color, withLink, ...rest }) => {
+  const router = useRouter()
+
   return (
     <Popover>
       {({ isOpen }) => (
@@ -30,6 +33,7 @@ const DropDown = ({ title, data, color, ...rest }) => {
               _focus={{ outline: 'none' }}
               _hover={{ hover: 'none', color: color || 'cf.400' }}
               cursor='pointer'
+              onClick={() => withLink && router.push(withLink)}
               {...rest}
             >
               <Text ml={2}>{title}</Text>
@@ -98,7 +102,8 @@ const DropDown = ({ title, data, color, ...rest }) => {
 DropDown.propTypes = {
   title: PropTypes.string,
   data: PropTypes.array,
-  color: PropTypes.string
+  color: PropTypes.string,
+  withLink: PropTypes.string
 }
 
 export default DropDown

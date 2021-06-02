@@ -22,52 +22,52 @@ const MainNav = () => {
     {
       id: 2,
       title: 'About Us',
-      link: '/about-us'
-
-      // items: [
-      //   {
-      //     id: 1,
-      //     title: 'Leadership Team',
-      //     link: '/leadership-team'
-      //   },
-      //   {
-      //     id: 2,
-      //     title: 'Alumini',
-      //     link: '/alumini'
-      //   }
-      // ]
+      withLink: '/about-us',
+      items: [
+        {
+          id: 1,
+          title: 'Leadership Team',
+          link: '/leadership-team'
+        },
+        {
+          id: 2,
+          title: 'Alumini',
+          link: '/alumini'
+        }
+      ]
     },
     {
       id: 3,
       title: 'Admissions',
       link: '/#admission'
     },
-    // {
-    //   id: 4,
-    //   title: 'Boarding',
-    //   items: [
-    //     {
-    //       id: 1,
-    //       title: 'Leadership Team',
-    //       link: '/leadership-team'
-    //     },
-    //     {
-    //       id: 2,
-    //       title: 'Alumini',
-    //       link: '/alumini'
-    //     }
-    //   ]
-    // },
+    {
+      id: 4,
+      title: 'Boarding',
+      withLink: 'boarding',
+      items: [
+        {
+          id: 1,
+          title: 'Pastorial Care',
+          link: '/pastorial-care'
+        },
+        {
+          id: 2,
+          title: 'Sports',
+          link: '/sports'
+        }
+      ]
+    },
     {
       id: 5,
       title: 'Calender',
       link: '/calender'
     },
-    // {
-    //   id: 6,
-    //   title: 'News',
-    //   link: '/news'
-    // },
+    {
+      id: 6,
+      title: 'News',
+      link: '/news'
+    },
     {
       id: 7,
       title: 'Apply Now',
@@ -148,6 +148,7 @@ const MainNav = () => {
                   color='gcu.100'
                   data={menu.items}
                   title={menu.title}
+                  withLink={menu.withLink}
                 />
               )}
 
