@@ -42,32 +42,32 @@ const MainNav = () => {
       title: 'Admissions',
       link: '/#admission'
     },
-    {
-      id: 4,
-      title: 'Boarding',
-      items: [
-        {
-          id: 1,
-          title: 'Leadership Team',
-          link: '/leadership-team'
-        },
-        {
-          id: 2,
-          title: 'Alumini',
-          link: '/alumini'
-        }
-      ]
-    },
-    {
-      id: 5,
-      title: 'Calender',
-      link: '/calender'
-    },
-    {
-      id: 6,
-      title: 'News',
-      link: '/news'
-    },
+    // {
+    //   id: 4,
+    //   title: 'Boarding',
+    //   items: [
+    //     {
+    //       id: 1,
+    //       title: 'Leadership Team',
+    //       link: '/leadership-team'
+    //     },
+    //     {
+    //       id: 2,
+    //       title: 'Alumini',
+    //       link: '/alumini'
+    //     }
+    //   ]
+    // },
+    // {
+    //   id: 5,
+    //   title: 'Calender',
+    //   link: '/calender'
+    // },
+    // {
+    //   id: 6,
+    //   title: 'News',
+    //   link: '/news'
+    // },
     {
       id: 7,
       title: 'Apply Now',
