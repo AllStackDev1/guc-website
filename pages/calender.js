@@ -1,5 +1,4 @@
 import React from 'react'
-// import { Divider, Container } from '@chakra-ui/react'
 
 import Layout from '@components/Layout'
 import Footer from '@components/Home/Footer'

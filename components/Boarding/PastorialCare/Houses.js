@@ -12,7 +12,7 @@ import {
   Container
 } from '@chakra-ui/react'
 
-export default function Captain() {
+export default function Houses() {
   const houses = [
     'Cozens',
     'Erekosima',

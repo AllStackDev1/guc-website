@@ -1,10 +1,10 @@
 import React from 'react'
-import { Text } from '@chakra-ui/react'
 
 import Layout from '@components/Layout'
 import Footer from '@components/Home/Footer'
 
-import Hero from '@components/AboutUs/Hero'
+import Hero from '@components/AboutUs/LeardershipTeam/Hero'
+import LeadershipAndGovt from '@components/AboutUs/LeadershipAndGovt'
 
 export default function LeadershipTeam() {
   return (
@@ -15,7 +15,7 @@ export default function LeadershipTeam() {
       description='So much of what makes Winchester exceptional is the people who are a part of the school. Also, its beauty - the buildings, the grounds, the setting. Our heritage and archives provide insight into the past, while our community partnerships prepare boys for a future of compassionate leadership.'
     >
       <Hero />
-      <Text>Coming Soon!!!</Text>
+      <LeadershipAndGovt />
       <Footer />
     </Layout>
   )

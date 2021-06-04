@@ -30,7 +30,7 @@ const DropDown = ({ title, data, color, withLink, ...rest }) => {
             <Flex
               align='center'
               style={
-                isOpen || router.pathname === withLink
+                isOpen || router.pathname.match(new RegExp(withLink, 'g'))
                   ? { color: '#C82B38' }
                   : {}
               }

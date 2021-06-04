@@ -39,7 +39,7 @@ const MainNav = () => {
     {
       id: 3,
       title: 'Admissions',
-      link: '/#admission'
+      link: '/admission'
     },
     {
       id: 4,
