@@ -14,9 +14,6 @@ const Location = () => {
       >
         State of the art facilities
       </Heading>
-      {/* <Text w={{ lg: 115 }} mt={4} fontSize='md' lineHeight='32px'>
-        State of the art facilities
-      </Text> */}
       <Grid
         w='100%'
         mt={8}

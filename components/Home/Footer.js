@@ -1,5 +1,6 @@
 import React from 'react'
 import NextLink from 'next/link'
+import PropTypes from 'prop-types'
 import {
   Box,
   Flex,
@@ -14,15 +15,16 @@ import {
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 import { Timeline } from 'react-twitter-widgets'
 
-const Footer = () => {
+const Footer = ({ mt = 8 }) => {
   return (
     <Flex
-      mt={8}
+      mt={mt}
       as='footer'
       py={{ xl: 10 }}
       pos='relative'
       justify='space-between'
       align='flex-end'
+      bgColor='white'
     >
       <Container
         d='flex'
@@ -98,7 +100,7 @@ const Footer = () => {
               FAQ
             </Link>
           </NextLink>
-          <NextLink href='#' passHref>
+          <NextLink href='/careers' passHref>
             <Link _focus={{ outline: 'none' }} _hover={{ outline: 'none' }}>
               Careers
             </Link>
@@ -171,6 +173,10 @@ const Footer = () => {
       </Container>
     </Flex>
   )
+}
+
+Footer.propTypes = {
+  mt: PropTypes.any
 }
 
 export default Footer
