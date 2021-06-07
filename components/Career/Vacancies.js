@@ -124,7 +124,7 @@ export default function Vacancies() {
                 fontFamily='heading'
                 colorScheme='gcuButton'
                 _focus={{ outline: 'none' }}
-                onClick={() => router.push(`career/${i.id}`)}
+                onClick={() => router.push(`careers/${i.id}`)}
               >
                 Apply Now
               </Button>
