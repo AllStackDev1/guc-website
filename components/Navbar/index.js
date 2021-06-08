@@ -10,7 +10,7 @@ import DropDown from './DropDown'
 import MobileDropdown from './MobileDropdown'
 
 const MainNav = () => {
-  const { toggleMenu, isMenuOpen } = useApp()
+  const { handleModal, toggleMenu, isMenuOpen } = useApp()
   const router = useRouter()
 
   const menus = [
@@ -22,52 +22,62 @@ const MainNav = () => {
     {
       id: 2,
       title: 'About Us',
-      withLink: '/about-us',
       items: [
         {
-          id: 1,
-          title: 'Leadership Team',
-          link: '/about-us/leadership-team'
+          title: 'Our History',
+          action: () => handleModal('history')
         },
         {
-          id: 2,
-          title: 'Alumini',
-          link: '/about-us/alumini'
+          title: 'Admissions',
+          action: () => handleModal('procedure')
         }
       ]
+      // withLink: '/about-us'
+      // items: [
+      //   {
+      //     id: 1,
+      //     title: 'Leadership Team',
+      //     link: '/about-us/leadership-team'
+      //   },
+      //   {
+      //     id: 2,
+      //     title: 'Alumini',
+      //     link: '/about-us/alumini'
+      //   }
+      // ]
     },
     {
       id: 3,
       title: 'Admissions',
-      link: '/admission'
+      link: '/#admission'
     },
-    {
-      id: 4,
-      title: 'Boarding',
-      withLink: '/boarding',
-      items: [
-        {
-          id: 1,
-          title: 'Pastorial Care',
-          link: '/boarding/pastorial-care'
-        },
-        {
-          id: 2,
-          title: 'Sports',
-          link: '/boarding/sports'
-        }
-      ]
-    },
-    {
-      id: 5,
-      title: 'Calender',
-      link: '/calender'
-    },
-    {
-      id: 6,
-      title: 'News',
-      link: '/news'
-    },
+    // {
+    //   id: 4,
+    //   title: 'Boarding',
+    //   withLink: '/boarding',
+    //   items: [
+    //     {
+    //       id: 1,
+    //       title: 'Pastorial Care',
+    //       link: '/boarding/pastorial-care'
+    //     },
+    //     {
+    //       id: 2,
+    //       title: 'Sports',
+    //       link: '/boarding/sports'
+    //     }
+    //   ]
+    // },
+    // {
+    //   id: 5,
+    //   title: 'Calender',
+    //   link: '/calender'
+    // },
+    // {
+    //   id: 6,
+    //   title: 'News',
+    //   link: '/news'
+    // },
     {
       id: 7,
       title: 'Apply Now',
