@@ -19,23 +19,38 @@ import CustomDropzone from '@components/Forms/CustomDropzone'
 import { FiArrowRight } from 'react-icons/fi'
 import useApi from 'context/api'
 
+import { fileToBase64 } from '../../mics'
+
+const fileValidation = (size, type) => {
+  return yup
+    .mixed()
+    .required('No file selected!')
+    .test(
+      'fileSize',
+      `File Size is too large <= ${size}mb allowed!`,
+      value => value && value.size <= 1024 * 1024 * size
+    )
+    .test(
+      'fileType',
+      'Unsupported File Format',
+      value => value && type.includes(value.type)
+    )
+}
+
 const validationSchema = yup.object().shape({
-  name: yup.string().required('This field is Required!'),
-  email: yup
-    .string()
-    .email('Invalid email!')
-    .required('This field is Required!'),
-  subject: yup.string().required('This field is Required!'),
-  message: yup.string().required('This field is Required!')
+  fullname: yup.string().required('This field is Required!'),
+  message: yup.string().required('This field is Required!'),
+  resume: fileValidation(1, ['application/pdf']),
+  coverletter: fileValidation(1, ['application/pdf'])
 })
 
-const ApplicationModal = ({ isOpen, onClose }) => {
+const ApplicationModal = ({ jobTitle, isOpen, onClose }) => {
   const toast = useToast()
-  const { contactUs } = useApi()
+  const { jobApplication } = useApi()
   const formik = useFormik({
     initialValues: {
       fullname: '',
-      email: '',
+      message: '',
       resume: undefined,
       coverletter: undefined
     },
@@ -43,13 +58,22 @@ const ApplicationModal = ({ isOpen, onClose }) => {
     onSubmit: async (values, { setSubmitting }) => {
       try {
         setSubmitting(true)
-        const res = await contactUs(values)
+        const res = await jobApplication({
+          jobTitle,
+          fullname: values.fullname,
+          message: values.message,
+          files: [
+            await fileToBase64(values.resume),
+            await fileToBase64(values.coverletter)
+          ]
+        })
         toast({
           description: res.message,
           status: 'success',
           duration: 5000,
           position: 'top-right'
         })
+        onClose()
       } catch (error) {
         toast({
           title: 'Error occured',
@@ -68,6 +92,8 @@ const ApplicationModal = ({ isOpen, onClose }) => {
   })
 
   const {
+    isValid,
+    dirty,
     values,
     errors,
     touched,
@@ -159,7 +185,7 @@ const ApplicationModal = ({ isOpen, onClose }) => {
                 justifyContent='space-between'
                 colorScheme='gcuButton'
                 isLoading={isSubmitting}
-                isDisabled={isSubmitting}
+                isDisabled={isSubmitting || !(isValid && dirty)}
                 _focus={{ outline: 'none' }}
               >
                 Submit
@@ -173,6 +199,7 @@ const ApplicationModal = ({ isOpen, onClose }) => {
 }
 
 ApplicationModal.propTypes = {
+  jobTitle: PropTypes.string.isRequired,
   isOpen: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired
 }

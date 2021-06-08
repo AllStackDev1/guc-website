@@ -16,10 +16,19 @@ export const ApiContextProvider = ({ children }) => {
     })
   }
 
+  const jobApplication = async payload => {
+    return await http.post({
+      url: `${BASE_URL}/job-application`,
+      body: JSON.stringify(payload)
+    })
+  }
+
   //#endregion
 
   return (
-    <ApiContext.Provider value={{ contactUs }}>{children}</ApiContext.Provider>
+    <ApiContext.Provider value={{ contactUs, jobApplication }}>
+      {children}
+    </ApiContext.Provider>
   )
 }
 

@@ -13,39 +13,10 @@ import {
 import { FaMapMarkerAlt, FaCalendar } from 'react-icons/fa'
 import { useRouter } from 'next/router'
 
-export default function Vacancies() {
-  const router = useRouter()
+import vacancies from './data'
 
-  const data = [
-    {
-      id: 1,
-      location: 'New York, USA',
-      title: 'Full-Stact Web Developer',
-      by: 'Chorocon Ltd.',
-      date: '1 Week ago'
-    },
-    {
-      id: 2,
-      location: 'New York, USA',
-      title: 'Full-Stact Web Developer',
-      by: 'Chorocon Ltd.',
-      date: '1 Week ago'
-    },
-    {
-      id: 3,
-      location: 'New York, USA',
-      title: 'Full-Stact Web Developer',
-      by: 'Chorocon Ltd.',
-      date: '1 Week ago'
-    },
-    {
-      id: 4,
-      location: 'New York, USA',
-      title: 'Full-Stact Web Developer',
-      by: 'Chorocon Ltd.',
-      date: '1 Week ago'
-    }
-  ]
+const Vacancies = () => {
+  const router = useRouter()
 
   return (
     <Container maxW='7xl' py={{ base: 8, lg: 24 }}>
@@ -64,22 +35,22 @@ export default function Vacancies() {
       <Grid
         gap={4}
         color='#64646C'
-        templateRows='repeat(2, 1fr)'
-        templateColumns='repeat(3, 1fr)'
+        templateColumns={{ base: 'repeat(1, 1fr)', xl: 'repeat(3, 1fr)' }}
       >
-        {data.map(i => (
+        {vacancies?.map(i => (
           <GridItem
-            p={{ xl: 4 }}
+            p={4}
             pos='relative'
             key={i.id}
             rounded='xl'
-            minH={{ xl: '60' }}
+            minH={60}
             borderWidth={1}
             borderColor='gray.300'
           >
-            <Flex mb={4} align='center' w={32} justify='space-between'>
+            <Flex mb={4} align='center'>
               <Icon as={FaMapMarkerAlt} />
               <Text
+                ml={2}
                 fontFamily='heading'
                 color='#1D263A'
                 fontSize={{ xl: '15px' }}
@@ -105,14 +76,14 @@ export default function Vacancies() {
             </Text>
             <Flex
               pos='absolute'
-              right={{ xl: 4 }}
-              left={{ xl: 4 }}
-              bottom={{ xl: 6 }}
+              right={4}
+              left={4}
+              bottom={6}
               justify='space-between'
             >
-              <Flex align='center' w={28} justify='space-between'>
+              <Flex align='center'>
                 <Icon as={FaCalendar} />
-                <Text>{i.date}</Text>
+                <Text ml={2}>{i.date}</Text>
               </Flex>
               <Button
                 h={12}
@@ -135,3 +106,5 @@ export default function Vacancies() {
     </Container>
   )
 }
+
+export default Vacancies

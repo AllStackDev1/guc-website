@@ -1,5 +1,7 @@
 import React from 'react'
+import ReactPaginate from 'react-paginate'
 import {
+  Box,
   Text,
   Grid,
   Link,
@@ -8,7 +10,7 @@ import {
   GridItem,
   Container
 } from '@chakra-ui/react'
-import { FiPlayCircle } from 'react-icons/fi'
+import { FiPlayCircle, FiChevronRight, FiChevronLeft } from 'react-icons/fi'
 import NextLink from 'next/link'
 
 export default function NewItems() {
@@ -34,6 +36,12 @@ export default function NewItems() {
       title: 'Our telephone support is always available 24 hours a day'
     }
   ]
+
+  const handlePageClick = data => {
+    // let selected = data.selected
+    // let offset = Math.ceil(selected * this.props.perPage)
+  }
+
   return (
     <Container maxW='7xl' py={{ base: 8, lg: 0 }}>
       <Grid mt={8} templateColumns={{ xl: 'repeat(3, 1fr)' }} gap={10}>
@@ -62,6 +70,28 @@ export default function NewItems() {
           </GridItem>
         ))}
       </Grid>
+      <Box mt={{ xl: 10 }} mx='auto' w={{ xl: '45%' }}>
+        <ReactPaginate
+          previousLabel={
+            <Flex w={16} h={16} align='center' rounded='full' justify='center'>
+              <Icon as={FiChevronLeft} />
+            </Flex>
+          }
+          nextLabel={
+            <Flex w={16} h={16} align='center' rounded='full' justify='center'>
+              <Icon as={FiChevronRight} />
+            </Flex>
+          }
+          breakLabel='...'
+          breakClassName='break-me'
+          pageCount={10}
+          marginPagesDisplayed={0}
+          pageRangeDisplayed={2}
+          onPageChange={handlePageClick}
+          containerClassName='pagination'
+          activeClassName='active'
+        />
+      </Box>
     </Container>
   )
 }

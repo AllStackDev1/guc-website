@@ -21,7 +21,7 @@ export default function CareerOptions() {
   const data = [
     {
       title: 'Work from anywhere',
-      text: 'A team of experts passionate <br /> about product management.',
+      text: 'A team of experts passionate about product management.',
       icon: FaBriefcase,
       color: (o = 0.2) => `rgba(240, 64, 55, ${o})`
     },
@@ -39,7 +39,7 @@ export default function CareerOptions() {
     },
     {
       title: 'Paid parental leave',
-      text: 'A team of experts passionate <br /> about product management.',
+      text: 'A team of experts passionate about product management.',
       icon: FaBaby,
       color: (o = 0.2) => `rgba(0, 188, 212, ${o})`
     },
@@ -62,15 +62,22 @@ export default function CareerOptions() {
       <Grid
         gap={4}
         color='#64646C'
-        templateRows='repeat(2, 1fr)'
-        templateColumns='repeat(3, 1fr)'
+        templateColumns={{ base: 'repeat(1, 1fr)', xl: 'repeat(3, 1fr)' }}
       >
-        {data.map(i => (
+        {data.map((i, idx) => (
           <GridItem
             d='flex'
+            rounded='xl'
+            borderWidth={1}
             key={i.title}
+            py={{ base: 2, xl: 4 }}
             alignItems='center'
+            borderColor='gray.200'
             justifyContent='space-around'
+            flexDirection={{
+              base: idx % 2 !== 0 ? 'row-reverse' : '',
+              xl: 'row'
+            }}
           >
             <Flex
               w={16}
@@ -82,7 +89,7 @@ export default function CareerOptions() {
             >
               <Icon as={i.icon} color={i.color(1)} />
             </Flex>
-            <Box w={{ xl: '70%' }} textAlign='left'>
+            <Box w='70%' textAlign='left'>
               <Text
                 fontSize={{ xl: '2xl' }}
                 fontFamily='heading'

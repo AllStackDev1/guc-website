@@ -6,13 +6,14 @@ export default function Build() {
     <Flex
       align='center'
       justify='space-between'
-      pl={{ base: 8, lg: 44 }}
+      flexDir={{ base: 'column-reverse', lg: 'row' }}
+      pl={{ base: 4, lg: 44 }}
       py={{ base: 8, lg: 24 }}
     >
-      <Box w={{ xl: '45%' }}>
+      <Box mt={{ base: 4, lg: 0 }} w={{ xl: '45%' }}>
         <Text
           fontFamily='heading'
-          fontSize={{ lg: '60px' }}
+          fontSize={{ base: 'xl', lg: '60px' }}
           lineHeight={{ lg: '66px' }}
         >
           Build your career in our community
