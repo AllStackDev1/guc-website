@@ -1,4 +1,5 @@
 import React from 'react'
+import moment from 'moment'
 import { useRouter } from 'next/router'
 import {
   Box,
@@ -57,37 +58,46 @@ const VacancyDetail = () => {
             mx='auto'
             w={{ xl: 125 }}
             align='center'
-            justify='center'
+            justify={{ base: 'space-around', lg: 'center' }}
           >
-            <Flex align='center' justify='space-between'>
+            <Flex
+              fontSize={{ base: 'sm', xl: 'md' }}
+              align='center'
+              justify='space-between'
+            >
               <Icon as={FaMapMarkerAlt} color='gcu.100' />
-              <Text ml={2} fontSize={{ xl: 'lg' }}>
-                Remote
-              </Text>
+              <Text ml={{ base: 1, lg: 2 }}>{details.location}</Text>
             </Flex>
-            <Flex align='center' justify='space-between' mx={{ xl: 4 }}>
+            <Flex
+              fontSize={{ base: 'sm', xl: 'md' }}
+              align='center'
+              justify='space-between'
+              mx={{ xl: 4 }}
+            >
               <Icon as={FaBriefcase} color='gcu.100' />
-              <Text ml={2} fontSize={{ xl: 'lg' }}>
-                Full-time
-              </Text>
+              <Text ml={{ base: 1, lg: 2 }}>Full-time</Text>
             </Flex>
-            <Flex align='center' justify='space-between'>
+            <Flex
+              fontSize={{ base: 'sm', xl: 'md' }}
+              align='center'
+              justify='space-between'
+            >
               <Icon as={FaClock} color='gcu.100' />
-              <Text ml={2} fontSize={{ xl: 'lg' }}>
-                Posted 8 hours ago
+              <Text ml={{ base: 1, lg: 2 }}>
+                {moment(details.date).fromNow()}
               </Text>
             </Flex>
           </Flex>
         </Box>
         <Container maxW='3xl' py={{ base: 8, lg: 24 }}>
-          <Box mb={{ lg: 8 }}>
+          <Box mb={8}>
             <Heading fontSize={{ base: '1.5rem', lg: '21px' }}>
               Role overview:
             </Heading>
             <Box my={{ lg: 3 }}>
               <Text
                 mb={{ xl: 4 }}
-                fontSize={{ xl: 'lg' }}
+                fontSize={{ base: 'sm', xl: 'lg' }}
                 lineHeight={{ xl: '30px' }}
                 dangerouslySetInnerHTML={{
                   __html: details?.description
@@ -95,27 +105,33 @@ const VacancyDetail = () => {
               />
             </Box>
           </Box>
-          <Box mb={{ lg: 8 }}>
+          <Box mb={8}>
             <Heading fontSize={{ base: '1.5rem', lg: '21px' }}>
               Main responsibilities:
             </Heading>
             <Box
               my={{ lg: 3 }}
               ml={{ lg: 6 }}
+              fontSize={{ base: 'sm', xl: 'md' }}
               dangerouslySetInnerHTML={{
                 __html: details?.responsibilities
               }}
             />
           </Box>
           {details?.skills && (
-            <Box mb={{ lg: 8 }}>
+            <Box mb={8}>
               <Heading fontSize={{ base: '1.5rem', lg: '21px' }}>
                 Skills & Qualifications
               </Heading>
               <Box my={{ lg: 3 }}>
                 <List spacing={3}>
                   {details?.skills?.map(item => (
-                    <ListItem key={item} d='flex' alignItems='center'>
+                    <ListItem
+                      fontSize={{ base: 'sm', xl: 'md' }}
+                      key={item}
+                      d='flex'
+                      alignItems='center'
+                    >
                       <ListIcon as={BsDot} boxSize={10} />
                       {item}
                     </ListItem>
@@ -125,12 +141,15 @@ const VacancyDetail = () => {
             </Box>
           )}
 
-          <Box mb={{ lg: 8 }}>
+          <Box mb={8}>
             <Heading fontSize={{ base: '1.5rem', lg: '21px' }}>
               How to apply
             </Heading>
             <Box my={{ lg: 3 }}>
-              <Text fontSize={{ xl: 'lg' }} lineHeight={{ xl: '30px' }}>
+              <Text
+                fontSize={{ base: 'sm', xl: 'lg' }}
+                lineHeight={{ xl: '30px' }}
+              >
                 Please submit your CV to{' '}
                 <Link
                   href={`mailto:admin@gcu.sch.ng?subject=Application for the role of ${details.title}`}

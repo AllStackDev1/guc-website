@@ -16,7 +16,6 @@ export default function AboutUs() {
     >
       <Hero />
       <CalTable />
-
       <Footer />
     </Layout>
   )

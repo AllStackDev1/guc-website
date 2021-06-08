@@ -7,10 +7,11 @@ const SchoolAnthem = () => {
       d='flex'
       maxW='7xl'
       bgColor='#FDF9F9'
-      py={{ lg: 20 }}
-      px={{ lg: 10 }}
-      // mx={{ lg: 14 }}
-      justifyContent='space-between'
+      py={{ base: 6, lg: 20 }}
+      px={{ base: 4, lg: 10 }}
+      alignItems={{ base: 'center', xl: 'flex-start' }}
+      flexDir={{ base: 'column', xl: 'row' }}
+      justifyContent={{ xl: 'space-between' }}
     >
       <Heading
         as='h4'
@@ -22,22 +23,22 @@ const SchoolAnthem = () => {
         SCHOOL ANTHEM
       </Heading>
       <Box w={{ lg: '60%' }}>
-        <Heading as='h4' color='#0A083B' fontSize={{ base: 'md', lg: '2xl' }}>
+        <Heading
+          as='h4'
+          color='#0A083B'
+          mt={{ base: 4, xl: 0 }}
+          fontSize={{ base: 'md', lg: '2xl' }}
+        >
           THE WILL TO SHINE AS ONE
         </Heading>
         <Grid
-          color='#64646C'
-          templateRows='repeat(2, 1fr)'
-          templateColumns='repeat(2, 1fr)'
           gap={4}
+          color='#64646C'
           mb={{ lg: 10 }}
+          templateColumns={{ xl: 'repeat(2, 1fr)' }}
         >
-          <GridItem mt={4} mb={6}>
-            <Heading
-              as='h4'
-              color='#0A083B'
-              fontSize={{ base: 'md', lg: 'lg' }}
-            >
+          <GridItem mt={6}>
+            <Heading as='h4' color='#0A083B' fontSize='lg'>
               Verse One
             </Heading>
             <Text fontSize='lg' lineHeight='28px'>
@@ -45,12 +46,8 @@ const SchoolAnthem = () => {
               To grant us through Thy Son Adored The will to shine as one.
             </Text>
           </GridItem>
-          <GridItem mt={4} mb={6}>
-            <Heading
-              as='h4'
-              color='#0A083B'
-              fontSize={{ base: 'md', lg: 'lg' }}
-            >
+          <GridItem mt={6}>
+            <Heading as='h4' color='#0A083B' fontSize='lg'>
               Verse Two
             </Heading>
             <Text fontSize='lg' lineHeight='28px'>
@@ -59,12 +56,8 @@ const SchoolAnthem = () => {
               shine as one.
             </Text>
           </GridItem>
-          <GridItem mt={4} mb={6}>
-            <Heading
-              as='h4'
-              color='#0A083B'
-              fontSize={{ base: 'md', lg: 'lg' }}
-            >
+          <GridItem mt={6}>
+            <Heading as='h4' color='#0A083B' fontSize='lg'>
               Verse Three
             </Heading>
             <Text fontSize='lg' lineHeight='28px'>
@@ -72,12 +65,8 @@ const SchoolAnthem = () => {
               all may seek this gift Thy Light The will to shine as one.
             </Text>
           </GridItem>
-          <GridItem mt={4} mb={6}>
-            <Heading
-              as='h4'
-              color='#0A083B'
-              fontSize={{ base: 'md', lg: 'lg' }}
-            >
+          <GridItem mt={6}>
+            <Heading as='h4' color='#0A083B' fontSize='lg'>
               Verse Four
             </Heading>
             <Text fontSize='lg' lineHeight='28px'>
@@ -87,11 +76,12 @@ const SchoolAnthem = () => {
           </GridItem>
         </Grid>
         <Text
-          textAlign='right'
+          color='#0A083B'
           fontStyle='heading'
           fontWeight='semibold'
-          fontSize='20px'
-          color='#0A083B'
+          mt={{ base: 4, xl: 0 }}
+          fontSize={{ base: 'sm', xl: '20px' }}
+          textAlign={{ base: 'center', xl: 'right' }}
         >
           By Edward Chukwukere ’47
         </Text>

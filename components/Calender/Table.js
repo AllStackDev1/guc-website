@@ -83,26 +83,44 @@ export default function CalTable() {
   return (
     <Container maxW='6xl'>
       {data.map((i, idx) => (
-        <Box key={i.session} mt={!!idx && { lg: 20 }}>
+        <Box key={i.session} mt={!!idx && { base: 10, lg: 20 }}>
           <Heading mb={{ lg: 6 }} fontSize={{ base: '1.875rem', lg: '32px' }}>
             {i.session} Session
           </Heading>
-          <Table size='lg' fontSize='lg' {...borderStyle}>
+          <Table size='lg' fontSize={{ base: 'sm', xl: 'lg' }} {...borderStyle}>
             <Tbody>
-              {i.data.map(i => (
-                <Tr key={i.date} {...borderStyle}>
-                  <Td p={{ lg: 10 }} {...borderStyle}>
-                    <Text fontWeight='bold'>{i.date}</Text>
-                  </Td>
-                  <Td {...borderStyle}>
-                    <Text
-                      lineHeight='22px'
-                      dangerouslySetInnerHTML={{
-                        __html: i.title
-                      }}
-                    />
-                  </Td>
-                </Tr>
+              {i.data.map((ii, idx) => (
+                <React.Fragment key={ii.date}>
+                  <Tr d={{ base: 'none', xl: 'block' }} {...borderStyle}>
+                    <Td p={{ lg: 10 }} {...borderStyle}>
+                      <Text fontWeight='bold'>{ii.date}</Text>
+                    </Td>
+                    <Td {...borderStyle}>
+                      <Text
+                        lineHeight='22px'
+                        dangerouslySetInnerHTML={{
+                          __html: ii.title
+                        }}
+                      />
+                    </Td>
+                  </Tr>
+                  <Tr d={{ base: 'block', xl: 'none' }}>
+                    <Td
+                      d='block'
+                      borderColor={
+                        i.data?.length === idx + 1 ? 'inherit' : 'gray.300'
+                      }
+                    >
+                      <Text fontWeight='bold'>{ii.date}</Text>
+                      <Text
+                        lineHeight='22px'
+                        dangerouslySetInnerHTML={{
+                          __html: ii.title
+                        }}
+                      />
+                    </Td>
+                  </Tr>
+                </React.Fragment>
               ))}
             </Tbody>
           </Table>

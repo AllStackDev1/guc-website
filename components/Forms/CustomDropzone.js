@@ -41,7 +41,7 @@ const CustomDropzone = ({
         </FormLabel>
       )}
       <Flex
-        h={48}
+        h={{ base: 32, xl: 48 }}
         my={5}
         w='full'
         rounded='md'
@@ -57,7 +57,7 @@ const CustomDropzone = ({
             </Flex>
           ) : (
             <>
-              <Icon as={IoMdCloudUpload} boxSize={10} />
+              <Icon as={IoMdCloudUpload} boxSize={{ base: 8, xl: 10 }} />
               <Text fontSize='sm'>Select or Drag a file to upload</Text>
             </>
           )}

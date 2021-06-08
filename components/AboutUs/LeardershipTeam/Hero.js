@@ -9,10 +9,13 @@ export default function Hero() {
       flexDir='column'
       textAlign='center'
       alignItems='center'
-      py={{ base: 8, lg: 24 }}
+      py={{ base: 10, lg: 24 }}
     >
-      <Box mb={{ base: 4, lg: 14 }} w={{ lg: 129 }}>
-        <Heading mb={{ lg: 6 }} fontSize={{ base: '1.5rem', lg: '60px' }}>
+      <Box mb={{ base: 10, lg: 14 }} w={{ lg: 129 }}>
+        <Heading
+          mb={{ base: 3, lg: 6 }}
+          fontSize={{ base: '1.5rem', lg: '60px' }}
+        >
           Leadership & Governance
         </Heading>
         <Text
@@ -20,15 +23,24 @@ export default function Hero() {
           fontSize={{ base: 'sm', lg: '21px' }}
           lineHeight={{ lg: '32px' }}
         >
-          We are an industry-leading company that values honesty, integrity, and
-          efficiency. Building quality products and caring for the users are
-          what made us stand out since the beginning.
+          Welcome to Government College Umuahia, a boarding school for boys aged
+          between 13 and 18 and a world class residential all boys secondary
+          school located on Ikot - Ekpene Road, Umuahia in Abia State which
+          offers a combination of British and Nigerian curricula.
         </Text>
       </Box>
       <Image
         w='full'
         h='full'
+        d={{ base: 'none', xl: 'block' }}
         src='/images/leadership-team-hero.png'
+        alt='calender img'
+      />
+      <Image
+        w='full'
+        h='full'
+        d={{ base: 'block', xl: 'none' }}
+        src='/images/leadership-team-hero-mobile.png'
         alt='calender img'
       />
     </Container>

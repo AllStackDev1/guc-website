@@ -20,8 +20,8 @@ export default function Hero() {
           lineHeight={{ lg: '32px' }}
           fontSize={{ base: 'sm', lg: '21px' }}
         >
-          We offer an effective combination of broad customer service expertise
-          and deep product knowledge to ensure customer experience
+          We’re on a mission to build great minds, kids that would contribute to
+          building a greater future for everyone.
         </Text>
       </Box>
     </Container>

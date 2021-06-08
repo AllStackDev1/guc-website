@@ -4,14 +4,14 @@ import { Box, Text, Container, Heading, Image } from '@chakra-ui/react'
 export default function Hero() {
   return (
     <Container
-      py={{ lg: 24 }}
       d='flex'
       maxW='7xl'
       flexDir='column'
       textAlign='center'
       alignItems='center'
+      py={{ base: 10, lg: 24 }}
     >
-      <Box mb={{ base: 4, lg: 14 }} w={{ lg: 125 }}>
+      <Box mb={{ base: 10, lg: 14 }} w={{ base: '95%', lg: 125 }}>
         <Heading mb={{ lg: 6 }} fontSize={{ base: '1.875rem', lg: '60px' }}>
           About GCU
         </Heading>
@@ -20,26 +20,30 @@ export default function Hero() {
           fontSize={{ base: 'sm', lg: '21px' }}
           lineHeight={{ lg: '32px' }}
         >
-          We are an industry-leading company that values honesty, integrity, and
-          efficiency. Building quality products and caring for the users are
-          what made us stand out since the beginning.
+          Welcome to Government College Umuahia, a boarding school for boys aged
+          between 13 and 18 and a world class residential all boys secondary
+          school located on Ikot -Ekpene Road, Umuahia in Abia State which
+          offers a combination of British and Nigerian curricula.
         </Text>
       </Box>
       <Box pos='relative'>
+        <Image
+          w='full'
+          h='full'
+          d={{ base: 'block', xl: 'none' }}
+          src='/images/about-us-hero-img-mobile.png'
+          alt='about-us-img'
+        />
         <Box
-          bottom={0}
-          py={{ base: 2, lg: 10 }}
-          px={{ base: 2, lg: 12 }}
-          pos='absolute'
+          bottom={{ xl: 0 }}
+          py={{ base: 8, lg: 10 }}
+          px={{ base: 6, lg: 12 }}
+          pos={{ xl: 'absolute' }}
           textAlign='left'
-          w={{ base: 52, lg: 124 }}
+          w={{ lg: 124 }}
           bgColor='gcu.100'
         >
-          <Text
-            color='white'
-            fontSize={{ base: 'xx-small', lg: '21px' }}
-            lineHeight={{ lg: '32px' }}
-          >
+          <Text color='white' fontSize='21px' lineHeight={{ lg: '32px' }}>
             “We strive to work closely together with our customers in solving
             their problems. We value honesty, integrity, and efficiency”
           </Text>
@@ -47,6 +51,7 @@ export default function Hero() {
         <Image
           w='full'
           h='full'
+          d={{ base: 'none', xl: 'block' }}
           src='/images/about-us-hero-img.png'
           alt='about-us-img'
         />

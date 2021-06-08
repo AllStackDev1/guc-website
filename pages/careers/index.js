@@ -5,7 +5,7 @@ import Footer from '@components/Home/Footer'
 
 import Hero from '@components/Career/Hero'
 import Build from '@components/Career/Build'
-import CareerOptions from '@components/Career/CareerOptions'
+// import CareerOptions from '@components/Career/CareerOptions'
 import Vacancies from '@components/Career/Vacancies'
 
 export default function Career() {
@@ -18,7 +18,7 @@ export default function Career() {
     >
       <Hero />
       <Build />
-      <CareerOptions />
+      {/* <CareerOptions /> */}
       <Vacancies />
       <Footer />
     </Layout>

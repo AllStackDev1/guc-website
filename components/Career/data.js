@@ -1,7 +1,7 @@
 module.exports = [
   {
     id: 1,
-    location: 'School premises',
+    location: 'School Premises',
     title: 'VICE Principal Admin',
     by: 'Chinedu',
     description: `School Administrators are capable planners, possess good judgment, and 
@@ -40,11 +40,11 @@ module.exports = [
         <li>Help shape and uphold the vision of the school</li>
       </ol>
       `,
-    date: 'today'
+    date: '2021-06-08T06:05:22.324+00:00'
   },
   {
     id: 2,
-    location: 'School premises',
+    location: 'School Premises',
     title: 'Chife Financial Officer',
     by: 'Chinedu',
     description: `To be responsible for the General Management and Administration of the day to day financial, personnel
@@ -84,11 +84,11 @@ module.exports = [
       'Effective time management and organizational skills',
       'Strong leadership and planning skills'
     ],
-    date: 'today'
+    date: '2021-06-08T06:05:22.324+00:00'
   },
   {
     id: 3,
-    location: 'School premises',
+    location: 'School Premises',
     title: 'Facilities Manager',
     by: 'Chinedu',
     description: `The Facility Manager would be responsible for the management of all academic & non-academic facilities
@@ -137,11 +137,11 @@ module.exports = [
       'He / she must possess excellent negotiating skills',
       'A working knowledge of the environment will be an added advantage'
     ],
-    date: 'today'
+    date: '2021-06-08T06:05:22.324+00:00'
   },
   {
     id: 4,
-    location: 'School premises',
+    location: 'School Premises',
     title: 'Chief Security Officer',
     by: 'Chinedu',
     description: `The Chief Security Officer (CSO) is the executive in charge of the management of security of the school
@@ -178,6 +178,6 @@ module.exports = [
       'Leadership skills;',
       'Flexible scheduling'
     ],
-    date: 'today'
+    date: '2021-06-08T06:05:22.324+00:00'
   }
 ]

@@ -1,4 +1,5 @@
 import React from 'react'
+import moment from 'moment'
 import {
   Box,
   Text,
@@ -29,7 +30,7 @@ const Vacancies = () => {
           fontSize={{ base: 'sm', lg: 'lg' }}
           lineHeight={{ lg: '30px' }}
         >
-          Check our featured jobs from popular companies. Start applying now.
+          Start applying now.
         </Text>
       </Box>
       <Grid
@@ -68,12 +69,12 @@ const Vacancies = () => {
               {i.title}
             </Text>
 
-            <Text fontWeight='bold' color='#7F828A' fontSize={{ xl: '17px' }}>
+            {/* <Text fontWeight='bold' color='#7F828A' fontSize={{ xl: '17px' }}>
               By{' '}
               <Text color='#F04037' as='span'>
                 {i.by}
               </Text>
-            </Text>
+            </Text> */}
             <Flex
               pos='absolute'
               right={4}
@@ -83,7 +84,7 @@ const Vacancies = () => {
             >
               <Flex align='center'>
                 <Icon as={FaCalendar} />
-                <Text ml={2}>{i.date}</Text>
+                <Text ml={2}>{moment(i.date).fromNow()}</Text>
               </Flex>
               <Button
                 h={12}
