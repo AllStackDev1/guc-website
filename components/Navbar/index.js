@@ -23,29 +23,29 @@ const MainNav = () => {
     {
       id: 2,
       title: 'About Us',
-      // items: [
-      //   {
-      //     title: 'Our History',
-      //     action: () => handleModal('history')
-      //   },
-      //   {
-      //     title: 'Admissions',
-      //     action: () => handleModal('procedure')
-      //   }
-      // ]
-      withLink: '/about-us',
       items: [
         {
-          id: 1,
-          title: 'Leadership Team',
-          link: '/about-us/leadership-team'
+          title: 'Our History',
+          action: () => handleModal('history')
         },
         {
-          id: 2,
-          title: 'Alumini',
-          link: '/about-us/alumini'
+          title: 'Admissions',
+          action: () => handleModal('procedure')
         }
       ]
+      // withLink: '/about-us',
+      // items: [
+      //   {
+      //     id: 1,
+      //     title: 'Leadership Team',
+      //     link: '/about-us/leadership-team'
+      //   },
+      //   {
+      //     id: 2,
+      //     title: 'Alumini',
+      //     link: '/about-us/alumini'
+      //   }
+      // ]
     },
     {
       id: 3,
