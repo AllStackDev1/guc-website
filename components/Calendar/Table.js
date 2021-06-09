@@ -18,6 +18,10 @@ export default function CalTable() {
       session: '2021/2022',
       data: [
         {
+          date: 'Jul 3rd, 2021',
+          title: 'Prospective Students Townhall Meeting'
+        },
+        {
           date: 'Jul 7th - Aug 7th, 2021',
           title: 'Application Open Session 2021/2022',
           link: () => (
@@ -29,10 +33,6 @@ export default function CalTable() {
               Apply Now
             </Link>
           )
-        },
-        {
-          date: 'Sept 3rd, 2021',
-          title: 'Prospective Students Townhall Meeting'
         },
         {
           date: 'Sept 6th, 2021',

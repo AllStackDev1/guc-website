@@ -76,8 +76,8 @@ const MainNav = () => {
     // },
     {
       id: 6,
-      title: 'Calender',
-      link: '/calender'
+      title: 'Calendar',
+      link: '/calendar'
     },
     // {
     //   id: 7,
