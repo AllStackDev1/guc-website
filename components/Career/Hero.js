@@ -20,7 +20,7 @@ export default function Hero() {
           lineHeight={{ lg: '32px' }}
           fontSize={{ base: 'sm', lg: '21px' }}
         >
-          We’re on a mission to build great minds, kids that would contribute to
+          We’re on a mission to build great minds, boys that would contribute to
           building a greater future for everyone.
         </Text>
       </Box>

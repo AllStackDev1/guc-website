@@ -2,7 +2,7 @@ module.exports = [
   {
     id: 1,
     location: 'School Premises',
-    title: 'VICE Principal Admin',
+    title: 'Vice Principal Admin',
     by: 'Chinedu',
     description: `School Administrators are capable planners, possess good judgment, and 
     are skilled in handling relations with various people (staff, parents, students, regulatory bodies and the public). 
@@ -45,7 +45,7 @@ module.exports = [
   {
     id: 2,
     location: 'School Premises',
-    title: 'Chife Financial Officer',
+    title: 'Chief Financial Officer',
     by: 'Chinedu',
     description: `To be responsible for the General Management and Administration of the day to day financial, personnel
     management and advising on general financial policy within Government College Umuahia. The CFO will normally

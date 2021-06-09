@@ -3,6 +3,7 @@ import {
   Tr,
   Td,
   Box,
+  Link,
   Text,
   Table,
   Tbody,
@@ -17,63 +18,56 @@ export default function CalTable() {
       session: '2021/2022',
       data: [
         {
-          date: 'Thu, Aug 13 – Tue, Aug 18',
-          title: 'Great Beginnings Classes for New First-Year Students'
+          date: 'Jul 7th - Aug 7th, 2021',
+          title: 'Application Open Session 2021/2022',
+          link: () => (
+            <Link
+              color='gcu.100'
+              target='_blank'
+              href='https://enrollment.gcu.sch.ng/'
+            >
+              Apply Now
+            </Link>
+          )
         },
         {
-          date: 'Sun, Aug 16 – Tue, Aug 18',
-          title: 'Great Beginnings Classes for Transfer Students'
+          date: 'Sept 3rd, 2021',
+          title: 'Prospective Students Townhall Meeting'
         },
         {
-          date: 'Mon, Aug 17',
-          title: 'Enrollment Confirmation'
+          date: 'Sept 6th, 2021',
+          title: 'School Resumes'
         },
         {
-          date: 'Tue, Aug 18',
-          title: `Sophomore Class Meeting, 8:30 a.m.<br/> 
-                        Junior Class Meeting, 9:45 a.m <br/> 
-                        Senior Class Meeting, 11 a.m. <br/> 
-                        All meetings in Clayton Center, Nutt Theatre`
+          date: 'Dec 24th - 26th, 2021',
+          title: `Christmas Eve <br/>
+                  Christmas Day <br/>
+                  Boxing Day <br/>
+          `
         },
         {
-          date: 'Wed, Aug 19',
-          title: 'Fall Semester Classes Begin'
+          date: 'Dec 31th, 2021',
+          title: "New Year's Eve"
         },
         {
-          date: 'Thu, Aug 20',
-          title: 'Opening Convocation'
-        }
-      ]
-    },
-    {
-      session: '2022/2023',
-      data: [
-        {
-          date: 'Thu, Aug 13 – Tue, Aug 18',
-          title: 'Great Beginnings Classes for New First-Year Students'
+          date: 'Jan 1st, 2022',
+          title: "New Year's Day"
         },
         {
-          date: 'Sun, Aug 16 – Tue, Aug 18',
-          title: 'Great Beginnings Classes for Transfer Students'
+          date: 'May 1st, 2022',
+          title: 'Workers Day'
         },
         {
-          date: 'Mon, Aug 17',
-          title: 'Enrollment Confirmation'
+          date: 'Jun 12th, 2022',
+          title: 'Democracy Day'
         },
         {
-          date: 'Tue, Aug 18',
-          title: `Sophomore Class Meeting, 8:30 a.m.<br/> 
-                        Junior Class Meeting, 9:45 a.m <br/> 
-                        Senior Class Meeting, 11 a.m. <br/> 
-                        All meetings in Clayton Center, Nutt Theatre`
+          date: 'Jul 7th - Aug 7th, 2022',
+          title: 'Application Open Session 2022/2023'
         },
         {
-          date: 'Wed, Aug 19',
-          title: 'Fall Semester Classes Begin'
-        },
-        {
-          date: 'Thu, Aug 20',
-          title: 'Opening Convocation'
+          date: 'Oct 1st, 2022',
+          title: 'Independence Day'
         }
       ]
     }
@@ -103,6 +97,7 @@ export default function CalTable() {
                           __html: ii.title
                         }}
                       />
+                      {ii.link && ii.link()}
                     </Td>
                   </Tr>
                   <Tr d={{ base: 'table-row', xl: 'none' }}>
