@@ -7,7 +7,8 @@ import {
   Table,
   Tbody,
   Heading,
-  Container
+  Container,
+  Divider
 } from '@chakra-ui/react'
 
 export default function CalTable() {
@@ -104,7 +105,7 @@ export default function CalTable() {
                       />
                     </Td>
                   </Tr>
-                  <Tr d={{ base: 'block', xl: 'none' }}>
+                  <Tr d={{ base: 'table-row', xl: 'none' }}>
                     <Td
                       d='block'
                       borderColor={
@@ -112,6 +113,7 @@ export default function CalTable() {
                       }
                     >
                       <Text fontWeight='bold'>{ii.date}</Text>
+                      <Divider my={2} />
                       <Text
                         lineHeight='22px'
                         dangerouslySetInnerHTML={{
