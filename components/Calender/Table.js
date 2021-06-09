@@ -91,7 +91,7 @@ export default function CalTable() {
             <Tbody>
               {i.data.map((ii, idx) => (
                 <React.Fragment key={ii.date}>
-                  <Tr d={{ base: 'none', xl: 'block' }} {...borderStyle}>
+                  <Tr d={{ base: 'none', xl: 'table-row' }}>
                     <Td p={{ lg: 10 }} {...borderStyle}>
                       <Text fontWeight='bold'>{ii.date}</Text>
                     </Td>
