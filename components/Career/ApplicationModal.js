@@ -21,27 +21,27 @@ import useApi from 'context/api'
 
 import { fileToBase64 } from '../../mics'
 
-const fileValidation = (size, type) => {
-  return yup
+const validationSchema = yup.object().shape({
+  fullname: yup.string().required('This field is Required!'),
+  message: yup.string(),
+  resume: yup
     .mixed()
     .required('No file selected!')
     .test(
       'fileSize',
-      `File Size is too large <= ${size}mb allowed!`,
-      value => value && value.size <= 1024 * 1024 * size
+      'File Size is too large <= 1mb allowed!',
+      value => value && value.size <= 1024 * 1024
     )
     .test(
       'fileType',
       'Unsupported File Format',
-      value => value && type.includes(value.type)
+      value => value && ['application/pdf'].includes(value.type)
+    ),
+  coverletter: yup
+    .mixed()
+    .test('fileType', 'Unsupported File Format', value =>
+      value ? ['application/pdf'].includes(value.type) : true
     )
-}
-
-const validationSchema = yup.object().shape({
-  fullname: yup.string().required('This field is Required!'),
-  message: yup.string().required('This field is Required!'),
-  resume: fileValidation(1, ['application/pdf']),
-  coverletter: fileValidation(1, ['application/pdf'])
 })
 
 const ApplicationModal = ({ jobTitle, isOpen, onClose }) => {
@@ -55,17 +55,26 @@ const ApplicationModal = ({ jobTitle, isOpen, onClose }) => {
       coverletter: undefined
     },
     validationSchema,
-    onSubmit: async (values, { setSubmitting }) => {
+    onSubmit: async (values, { setSubmitting, resetForm }) => {
       try {
         setSubmitting(true)
+        const files = [
+          {
+            filename: 'resume.pdf',
+            data: await fileToBase64(values.resume)
+          }
+        ]
+        if (values.coverletter) {
+          files.push({
+            filename: 'cover-letter.pdf',
+            data: await fileToBase64(values.coverletter)
+          })
+        }
         const res = await jobApplication({
-          jobTitle,
           fullname: values.fullname,
           message: values.message,
-          files: [
-            await fileToBase64(values.resume),
-            await fileToBase64(values.coverletter)
-          ]
+          jobTitle,
+          files
         })
         toast({
           description: res.message,
@@ -73,6 +82,7 @@ const ApplicationModal = ({ jobTitle, isOpen, onClose }) => {
           duration: 5000,
           position: 'top-right'
         })
+        resetForm({})
         onClose()
       } catch (error) {
         toast({
@@ -134,7 +144,6 @@ const ApplicationModal = ({ jobTitle, isOpen, onClose }) => {
             />
             <Box mt={4}>
               <CustomTextarea
-                isRequired
                 rows={8}
                 name='message'
                 label='Personal Message'
@@ -160,7 +169,6 @@ const ApplicationModal = ({ jobTitle, isOpen, onClose }) => {
             </Box>
             <Box mt={4}>
               <CustomDropzone
-                isRequired
                 id='coverletter'
                 label='Upload Cover Letter'
                 error={errors.coverletter}
