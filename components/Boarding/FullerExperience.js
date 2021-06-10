@@ -38,7 +38,7 @@ export default function FullerExperience() {
           w='full'
           h='full'
           src='/images/boarding-3.png'
-          alt='calender img'
+          alt='calendar img'
         />
       </Box>
     </Container>

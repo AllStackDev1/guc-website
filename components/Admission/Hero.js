@@ -28,8 +28,8 @@ export default function Hero() {
       <Image
         w='full'
         h='full'
-        src='/images/calender-hero.png'
-        alt='calender img'
+        src='/images/calendar-hero.png'
+        alt='calendar img'
       />
     </Container>
   )

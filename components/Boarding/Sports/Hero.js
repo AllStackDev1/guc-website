@@ -28,7 +28,7 @@ export default function Hero() {
         w='full'
         h='full'
         src='/images/sport-hero.png'
-        alt='calender img'
+        alt='calendar img'
       />
     </Container>
   )

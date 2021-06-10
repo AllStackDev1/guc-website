@@ -64,7 +64,7 @@ export default function Hero() {
             w='full'
             h='full'
             src='/images/alumni-hero.png'
-            alt='calender img'
+            alt='calendar img'
           />
         </Box>
       </Flex>

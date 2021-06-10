@@ -34,14 +34,14 @@ export default function Hero() {
         h='full'
         d={{ base: 'none', xl: 'block' }}
         src='/images/leadership-team-hero.png'
-        alt='calender img'
+        alt='calendar img'
       />
       <Image
         w='full'
         h='full'
         d={{ base: 'block', xl: 'none' }}
         src='/images/leadership-team-hero-mobile.png'
-        alt='calender img'
+        alt='calendar img'
       />
     </Container>
   )

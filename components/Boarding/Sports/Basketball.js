@@ -34,7 +34,7 @@ export default function Basketball() {
           w='full'
           h='full'
           src='/images/basketball.png'
-          alt='calender img'
+          alt='calendar img'
         />
       </Box>
     </Container>
