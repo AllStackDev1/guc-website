@@ -9,7 +9,7 @@ import { theme } from 'theme/theme'
 import '../styles/globals.css'
 
 const tagManagerArgs = {
-  gtmId: process.env.NEXT_PUBLIC_GTM_TRACKING_ID
+  gtmId: 'GTM-NGVKN2K'
 }
 
 const MyApp = ({ Component, pageProps }) => {
