@@ -20,7 +20,7 @@ export default function Hero() {
           fontSize={{ base: 'sm', lg: '21px' }}
           lineHeight={{ lg: '32px' }}
         >
-          The life of the boarding House is at the heart of every pupil’s GCU
+          The life of the boarding house is at the heart of every pupil’s GCU
           experience.
         </Text>
       </Box>
