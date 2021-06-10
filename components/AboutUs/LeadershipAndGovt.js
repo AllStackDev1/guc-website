@@ -46,21 +46,29 @@ const LeadershipAndGovt = () => {
     <Container
       d='flex'
       maxW='7xl'
-      py={{ lg: 20 }}
-      px={{ lg: 14 }}
-      justifyContent='space-between'
+      py={{ base: 10, lg: 20 }}
+      px={{ base: 4, lg: 14 }}
+      alignItems={{ base: 'center', xl: 'flex-start' }}
+      flexDir={{ base: 'column', xl: 'row' }}
+      justifyContent={{ xl: 'space-between' }}
     >
       <Heading
         as='h4'
         color='#0A083B'
         fontWeight='normal'
         fontSize={{ base: '2xl', lg: '42px' }}
-        lineHeight='59px'
+        lineHeight={{ base: '40px', xl: '59px' }}
+        textAlign={{ base: 'center', xl: 'left' }}
       >
         LEADERSHIP AND GOVERNANCE
       </Heading>
       <Box w={{ lg: '60%' }}>
-        <Text mt={4} mb={6} fontSize='lg' lineHeight='32px'>
+        <Text
+          mt={4}
+          mb={6}
+          fontSize={{ base: 'sm', xl: 'lg' }}
+          lineHeight='32px'
+        >
           Salesian College Chadstone is a public company limited by guarantee
           that was established to take over the operations of the unincorporated
           college from 1 January 2021. The College’s Board of Directors is
@@ -69,7 +77,12 @@ const LeadershipAndGovt = () => {
           Incorporated (VIC)).
         </Text>
 
-        <Text mt={4} mb={6} fontSize='lg' lineHeight='32px'>
+        <Text
+          mt={4}
+          mb={6}
+          fontSize={{ base: 'sm', xl: 'lg' }}
+          lineHeight='32px'
+        >
           The College Leadership Team is the key decision making body at
           Salesian College. The Principal chairs the Leadership Team, which
           consists of the following members:
@@ -77,8 +90,12 @@ const LeadershipAndGovt = () => {
 
         <List spacing={3}>
           {lists.map(item => (
-            <ListItem key={item.color}>
-              <ListIcon as={AiTwotoneRightSquare} color={item.color} />
+            <ListItem key={item.color} d='flex' alignItems='center'>
+              <ListIcon
+                as={AiTwotoneRightSquare}
+                color={item.color}
+                boxSize={{ base: 2, xl: '' }}
+              />
               {item.text}
             </ListItem>
           ))}

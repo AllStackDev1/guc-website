@@ -3,6 +3,18 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 import React from 'react'
 
 class MyDocument extends Document {
+  static async getInitialProps(context) {
+    const renderPage = () =>
+      context.renderPage({
+        enhanceApp: App => props => <App {...props} />
+      })
+
+    const initialProps = await Document.getInitialProps({
+      ...context,
+      renderPage
+    })
+    return { ...initialProps }
+  }
   render() {
     return (
       <Html lang='en'>

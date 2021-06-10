@@ -1,5 +1,6 @@
 import React from 'react'
 import NextLink from 'next/link'
+import PropTypes from 'prop-types'
 import {
   Box,
   Flex,
@@ -14,15 +15,16 @@ import {
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 import { Timeline } from 'react-twitter-widgets'
 
-const Footer = () => {
+const Footer = ({ mt = 8 }) => {
   return (
     <Flex
-      mt={8}
+      mt={mt}
       as='footer'
       py={{ xl: 10 }}
       pos='relative'
       justify='space-between'
       align='flex-end'
+      bgColor='white'
     >
       <Container
         d='flex'
@@ -75,10 +77,10 @@ const Footer = () => {
 
         <Flex
           fontFamily='body'
-          fontSize='lg'
+          fontSize={{ base: 'sm', xl: 'lg' }}
           mx={{ md: 'auto' }}
           w={{ md: 125 }}
-          h={{ base: 52, md: 'unset' }}
+          h={{ base: 36, md: 'unset' }}
           flexDir={{ base: 'column', md: 'row' }}
           justify='space-between'
           align={{ base: 'flex-start', md: '' }}
@@ -98,7 +100,7 @@ const Footer = () => {
               FAQ
             </Link>
           </NextLink>
-          <NextLink href='#' passHref>
+          <NextLink href='/careers' passHref>
             <Link _focus={{ outline: 'none' }} _hover={{ outline: 'none' }}>
               Careers
             </Link>
@@ -148,7 +150,7 @@ const Footer = () => {
                 href='https://www.facebook.com/GCUOBANational'
                 rel='noreferrer'
               >
-                <Icon as={FaFacebook} color='#ADADAD' boxSize={6} />
+                <Icon as={FaFacebook} color='#4267B2' boxSize={6} />
               </Link>
               <Link
                 mx={8}
@@ -156,14 +158,14 @@ const Footer = () => {
                 href='https://www.twitter.com/gcumuahia'
                 rel='noreferrer'
               >
-                <Icon as={FaTwitter} color='#ADADAD' boxSize={6} />
+                <Icon as={FaTwitter} color='#1DA1F2' boxSize={6} />
               </Link>
               <Link
                 isExternal
                 href='https://www.instagram.com/gcu.umuahia'
                 rel='noreferrer'
               >
-                <Icon as={FaInstagram} color='#ADADAD' boxSize={6} />
+                <Icon as={FaInstagram} color='#833AB4' boxSize={6} />
               </Link>
             </Flex>
           </Flex>
@@ -171,6 +173,10 @@ const Footer = () => {
       </Container>
     </Flex>
   )
+}
+
+Footer.propTypes = {
+  mt: PropTypes.any
 }
 
 export default Footer

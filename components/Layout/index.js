@@ -5,7 +5,14 @@ import { Box } from '@chakra-ui/react'
 
 import Navbar from '@components/Navbar'
 
-const Layout = ({ children, name, link, image_url = '', description = '' }) => {
+const Layout = ({
+  children,
+  name,
+  link,
+  image_url = '',
+  description = '',
+  ...rest
+}) => {
   const main_site_url = 'https://gcu.sch.ng/'
   const main_site_title = 'The Goverment College Umuahia'
 
@@ -43,6 +50,7 @@ const Layout = ({ children, name, link, image_url = '', description = '' }) => {
         fontFamily='body'
         aria-labelledby='main'
         mt={{ base: 16, md: '4.5rem', xl: 36 }}
+        {...rest}
       >
         {children}
       </Box>

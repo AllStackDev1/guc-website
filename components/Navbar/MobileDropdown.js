@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import NextLink from 'next/link'
+import { useRouter } from 'next/router'
 import { Box, Flex, Link, Text, Icon } from '@chakra-ui/react'
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi'
 
-const MobileDropdown = ({ item }) => {
+const MobileDropdown = ({ item, toggleMenu }) => {
   const [toggleMenus, setToggleMenus] = React.useState(false)
+  const router = useRouter()
 
   return (
     <Box>
@@ -19,7 +21,14 @@ const MobileDropdown = ({ item }) => {
       >
         {item.items ? (
           <>
-            <Text>{item.title}</Text>
+            <Text
+              onClick={() => {
+                item.withLink && router.push(item.withLink)
+                return toggleMenu()
+              }}
+            >
+              {item.title}
+            </Text>
             <Box
               as='button'
               role='button'
@@ -35,7 +44,11 @@ const MobileDropdown = ({ item }) => {
           </>
         ) : (
           <NextLink href={item.link} passHref>
-            <Link _hover={{ textDecor: 'none' }} d='block'>
+            <Link
+              _hover={{ textDecor: 'none' }}
+              d='block'
+              onClick={() => toggleMenu()}
+            >
               {item.title}
             </Link>
           </NextLink>
@@ -46,7 +59,13 @@ const MobileDropdown = ({ item }) => {
           if (item.link) {
             return (
               <NextLink href={item.link} key={item.title} passHref>
-                <Link _hover={{ textDecor: 'none' }} d='block' ml={6} py={1}>
+                <Link
+                  _hover={{ textDecor: 'none' }}
+                  d='block'
+                  ml={6}
+                  py={1}
+                  onClick={() => toggleMenu()}
+                >
                   {item.title}
                 </Link>
               </NextLink>
@@ -62,7 +81,10 @@ const MobileDropdown = ({ item }) => {
                 }}
                 cursor='pointer'
                 d='block'
-                onClick={item.action}
+                onClick={() => {
+                  item.action()
+                  toggleMenu()
+                }}
               >
                 {item.title}
               </Text>
@@ -75,7 +97,8 @@ const MobileDropdown = ({ item }) => {
 }
 
 MobileDropdown.propTypes = {
-  item: PropTypes.object
+  item: PropTypes.object,
+  toggleMenu: PropTypes.func
 }
 
 export default MobileDropdown
