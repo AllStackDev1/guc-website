@@ -13,7 +13,7 @@ export default function Hero() {
     >
       <Box mb={{ base: 4, lg: 14 }} w={{ lg: 125 }}>
         <Heading mb={{ lg: 6 }} fontSize={{ base: '1.5rem', lg: '60px' }}>
-          Academic Calender
+          Academic Calendar
         </Heading>
         <Text
           color='#6A7986'
@@ -27,8 +27,8 @@ export default function Hero() {
       <Image
         w='full'
         h='full'
-        src='/images/calender-hero.png'
-        alt='calender img'
+        src='/images/calendar-hero.png'
+        alt='calendar img'
       />
     </Container>
   )

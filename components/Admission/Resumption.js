@@ -30,7 +30,7 @@ export default function Resumption() {
           w='full'
           h='full'
           src='/images/resumption-image.png'
-          alt='calender img'
+          alt='calendar img'
         />
       </Box>
     </Container>
