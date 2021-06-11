@@ -9,16 +9,16 @@ export default function Hero() {
       flexDir='column'
       textAlign='center'
       alignItems='center'
-      py={{ base: 8, lg: 24 }}
+      py={{ base: 14, lg: 24 }}
     >
-      <Box mb={{ base: 4, lg: 14 }} w={{ lg: 125 }}>
-        <Heading mb={{ lg: 6 }} fontSize={{ base: '1.5rem', lg: '60px' }}>
+      <Box mb={14} w={{ lg: 125 }}>
+        <Heading mb={{ base: 3, lg: 6 }} fontSize={{ base: '2xl', lg: '60px' }}>
           Your Journey to GCU
         </Heading>
         <Text
           color='#6A7986'
           fontSize={{ base: 'sm', lg: '21px' }}
-          lineHeight={{ lg: '32px' }}
+          lineHeight={{ base: '27px', lg: '32px' }}
         >
           We are an industry-leading company that values honesty, integrity, and
           efficiency. Building quality products and caring for the users are
@@ -28,8 +28,16 @@ export default function Hero() {
       <Image
         w='full'
         h='full'
+        src='/images/calendar-hero-mobile.png'
+        alt='calendar img'
+        d={{ base: 'block', xl: 'none' }}
+      />
+      <Image
+        w='full'
+        h='full'
         src='/images/calendar-hero.png'
         alt='calendar img'
+        d={{ base: 'none', xl: 'block' }}
       />
     </Container>
   )

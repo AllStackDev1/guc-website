@@ -39,12 +39,17 @@ export default function Onwards() {
         <Text
           mb={{ lg: 8 }}
           fontFamily='heading'
-          fontSize={{ lg: '42px' }}
           lineHeight={{ lg: '60px' }}
+          fontSize={{ base: '2xl', lg: '42px' }}
+          textAlign={{ base: 'center', lg: 'left' }}
         >
           GCU ONWARDS
         </Text>
-        <Text mb={{ lg: 5 }} lineHeight={{ lg: '32px' }}>
+        <Text
+          mb={{ base: 3, lg: 5 }}
+          fontSize={{ base: 'sm', lg: 'md' }}
+          lineHeight={{ base: '27px', lg: '32px' }}
+        >
           The People Of This Country are Amazed At The Number Of Its Influential
           Citizens Who Owe Allegiance To This School, watch videos from some of
           our top GCU old boys.
@@ -57,7 +62,7 @@ export default function Onwards() {
               align='center'
               justify='center'
               bgColor='#F7F7F7'
-              h={{ xl: 60 }}
+              h={60}
               mb={{ xl: 4 }}
             >
               <Icon as={FiPlayCircle} color='#DADADA' boxSize={28} />
@@ -66,15 +71,10 @@ export default function Onwards() {
               fontFamily='sans-serif'
               fontWeight='bold'
               fontSize={{ xl: 'xl' }}
-              lineHeight='32px'
             >
               {i.name}
             </Text>
-            <Text
-              fontFamily='sans-serif'
-              fontSize={{ xl: '20px' }}
-              lineHeight='32px'
-            >
+            <Text fontFamily='sans-serif' fontSize={{ xl: '20px' }}>
               {i.title}
             </Text>
           </GridItem>

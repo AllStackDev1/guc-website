@@ -54,44 +54,44 @@ export default function Applications() {
   )
 
   return (
-    <Container maxW='full'>
+    <Container px={{ base: 0 }} maxW='full'>
       <Flex
         d='flex'
         bg='gcu.350'
         px={{ lg: 20 }}
         py={{ lg: 10 }}
-        justifyContent='space-between'
+        flexDir={{ base: 'column', xl: 'row' }}
+        justifyContent={{ xl: 'space-between' }}
       >
-        <Box py={{ lg: 10 }} fontSize={{ lg: 'lg' }} w={{ lg: '55%' }}>
+        <Box
+          px={{ base: 4, lg: 0 }}
+          py={{ base: 14, lg: 10 }}
+          fontSize={{ base: 'sm', lg: 'md' }}
+          w={{ lg: '55%' }}
+        >
           <Heading
-            mb={{ lg: 4 }}
+            mb={{ base: 6, lg: 4 }}
             fontFamily='heading'
             fontWeight='normal'
-            fontSize={{ lg: '42px' }}
+            fontSize={{ base: '2xl', lg: '42px' }}
+            textAlign={{ base: 'center', xl: 'left' }}
           >
             APPLICATIONS
           </Heading>
-          <Text
-            mb={{ lg: 4 }}
-            fontSize={{ lg: 'md' }}
-            lineHeight={{ lg: '25px' }}
-          >
+          <Text mb={{ lg: 4 }} lineHeight={{ lg: '25px' }}>
             We are currently admitting JSS1/Year 7 students. To be eligible for
             admission, prospective students must be between 10.5 and 11.5 years
             of age by September in the year of admission.
           </Text>
-          <Text fontSize={{ lg: 'md' }} lineHeight={{ lg: '25px' }}>
+          <br />
+          <Text lineHeight={{ lg: '25px' }}>
             Purchase the electronic online application form for{' '}
             <Text as='span' color='gcu.100'>
               ₦10,000
             </Text>{' '}
             by clicking on the button below.
           </Text>
-          <Text
-            fontSize={{ lg: 'md' }}
-            mt={{ lg: 4 }}
-            lineHeight={{ lg: '25px' }}
-          >
+          <Text mt={{ lg: 4 }} lineHeight={{ lg: '25px' }}>
             Submit the completed application form with the following documents:
           </Text>
           <List my={{ base: 4, lg: 6 }} spacing={3}>
@@ -104,7 +104,7 @@ export default function Applications() {
               </ListItem>
             ))}
           </List>
-          <Text fontSize={{ lg: 'md' }} lineHeight={{ lg: '25px' }}>
+          <Text lineHeight={{ lg: '25px' }}>
             Applicants will undergo a test according to their age category,
             please click here (GL assessments link)
           </Text>
