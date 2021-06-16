@@ -17,6 +17,6 @@ export const getformattedDate = date => {
 }
 
 export const fetchStrapiContent = async path => {
-  const response = await fetch(`https://gcu-csm-strapi.herokuapp.com${path}`)
+  const response = await fetch(`https://gcu-csm-strapi.herokuapp.com/${path}`)
   return await response.json()
 }
