@@ -173,7 +173,8 @@ const MainNav = () => {
                   <NextLink href={menu.link} passHref>
                     <Link
                       style={
-                        router.pathname === menu.link
+                        router.pathname.split('/')[1] ===
+                        menu.link.split('/')[1]
                           ? { color: '#C82B38' }
                           : {}
                       }

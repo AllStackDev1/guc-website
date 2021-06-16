@@ -31,8 +31,11 @@ const DropDown = ({ title, data, color, withLink, ...rest }) => {
               align='center'
               cursor='pointer'
               _focus={{ outline: 'none' }}
-              style={isOpen ? { color: '#C82B38' } : {}}
-              // router.pathname.match(new RegExp(withLink, 'g'))
+              style={
+                isOpen || router.pathname.match(new RegExp(withLink, 'g'))
+                  ? { color: '#C82B38' }
+                  : {}
+              }
               _hover={{ hover: 'none', color: color || 'cf.400' }}
               onClick={() => withLink && router.push(withLink)}
               {...rest}
