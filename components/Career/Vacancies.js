@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import moment from 'moment'
 import {
   Box,
@@ -14,9 +15,7 @@ import {
 import { FaMapMarkerAlt, FaCalendar } from 'react-icons/fa'
 import { useRouter } from 'next/router'
 
-import vacancies from './data'
-
-const Vacancies = () => {
+const Vacancies = ({ vacancies }) => {
   const router = useRouter()
 
   return (
@@ -84,7 +83,7 @@ const Vacancies = () => {
             >
               <Flex align='center'>
                 <Icon as={FaCalendar} />
-                <Text ml={2}>{moment(i.date).fromNow()}</Text>
+                <Text ml={2}>{moment(i.published_at).fromNow()}</Text>
               </Flex>
               <Button
                 h={12}
@@ -106,6 +105,10 @@ const Vacancies = () => {
       </Grid>
     </Container>
   )
+}
+
+Vacancies.propTypes = {
+  vacancies: PropTypes.array.isRequired
 }
 
 export default Vacancies

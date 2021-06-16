@@ -15,3 +15,8 @@ export const getformattedDate = date => {
     year: 'numeric'
   })
 }
+
+export const fetchStrapiContent = async path => {
+  const response = await fetch(`http://localhost:1337/${path}`)
+  return await response.json()
+}

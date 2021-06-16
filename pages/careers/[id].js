@@ -1,6 +1,6 @@
 import React from 'react'
 import moment from 'moment'
-import { useRouter } from 'next/router'
+import PropTypes from 'prop-types'
 import {
   Box,
   Link,
@@ -10,31 +10,20 @@ import {
   Heading,
   Flex,
   Button,
-  List,
-  ListIcon,
-  ListItem,
   useDisclosure
 } from '@chakra-ui/react'
 import { FaMapMarkerAlt, FaBriefcase, FaClock } from 'react-icons/fa'
-import { BsDot } from 'react-icons/bs'
 
 import Layout from '@components/Layout'
 import Footer from '@components/Home/Footer'
 
 import ApplicationModal from '@components/Career/ApplicationModal'
-import vacancies from '@components/Career/data'
 
-const VacancyDetail = () => {
-  const [details, setDetails] = React.useState({})
+import { fetchStrapiContent } from 'mics'
+import marked from 'marked'
+
+const VacancyDetail = ({ details }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const router = useRouter()
-  const { id: _id } = router.query
-
-  React.useEffect(() => {
-    if (_id) {
-      setDetails(vacancies.find(({ id }) => id * 1 === _id * 1))
-    }
-  }, [_id])
 
   return (
     <Layout
@@ -84,7 +73,7 @@ const VacancyDetail = () => {
             >
               <Icon as={FaClock} color='gcu.100' />
               <Text ml={{ base: 1, lg: 2 }}>
-                {moment(details.date).fromNow()}
+                {moment(details.published_at).fromNow()}
               </Text>
             </Flex>
           </Flex>
@@ -100,7 +89,7 @@ const VacancyDetail = () => {
                 fontSize={{ base: 'sm', xl: 'lg' }}
                 lineHeight={{ xl: '30px' }}
                 dangerouslySetInnerHTML={{
-                  __html: details?.description
+                  __html: marked(details?.description)
                 }}
               />
             </Box>
@@ -114,7 +103,7 @@ const VacancyDetail = () => {
               ml={{ lg: 6 }}
               fontSize={{ base: 'sm', xl: 'md' }}
               dangerouslySetInnerHTML={{
-                __html: details?.responsibilities
+                __html: marked(details?.responsibilities)
               }}
             />
           </Box>
@@ -123,21 +112,14 @@ const VacancyDetail = () => {
               <Heading fontSize={{ base: '1.5rem', lg: '21px' }}>
                 Skills & Qualifications
               </Heading>
-              <Box my={{ lg: 3 }}>
-                <List spacing={3}>
-                  {details?.skills?.map(item => (
-                    <ListItem
-                      fontSize={{ base: 'sm', xl: 'md' }}
-                      key={item}
-                      d='flex'
-                      alignItems='center'
-                    >
-                      <ListIcon as={BsDot} boxSize={10} />
-                      {item}
-                    </ListItem>
-                  ))}
-                </List>
-              </Box>
+              <Box
+                my={{ lg: 3 }}
+                ml={{ lg: 6 }}
+                fontSize={{ base: 'sm', xl: 'md' }}
+                dangerouslySetInnerHTML={{
+                  __html: marked(details?.skills)
+                }}
+              />
             </Box>
           )}
 
@@ -188,4 +170,26 @@ const VacancyDetail = () => {
   )
 }
 
+VacancyDetail.propTypes = {
+  details: PropTypes.object.isRequired
+}
+
 export default VacancyDetail
+
+export async function getStaticPaths() {
+  const vacancies = await fetchStrapiContent('careers')
+
+  const paths = vacancies.map(({ _id: id }) => ({ params: { id } }))
+
+  return { paths, fallback: false }
+}
+
+export const getStaticProps = async ({ params: { id } }) => {
+  const details = await fetchStrapiContent(`careers/${id}`)
+
+  return {
+    props: {
+      details
+    }
+  }
+}
