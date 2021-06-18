@@ -1,11 +1,13 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import Layout from '@components/Layout'
 import Footer from '@components/Home/Footer'
 
 import Hero from '@components/News/Hero'
+import { fetchStrapiContent } from 'mics'
 
-export default function NewsDetail() {
+export default function NewsDetail({ details }) {
   return (
     <Layout
       name='News Detail'
@@ -18,4 +20,26 @@ export default function NewsDetail() {
       <Footer />
     </Layout>
   )
+}
+
+NewsDetail.propTypes = {
+  details: PropTypes.object.isRequired
+}
+
+export async function getStaticPaths() {
+  const news = await fetchStrapiContent('blog-posts')
+
+  const paths = news.map(({ _id: id }) => ({ params: { id } }))
+
+  return { paths, fallback: false }
+}
+
+export const getStaticProps = async ({ params: { id } }) => {
+  const details = await fetchStrapiContent(`blog-posts/${id}`)
+
+  return {
+    props: {
+      details
+    }
+  }
 }

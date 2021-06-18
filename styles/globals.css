@@ -45,7 +45,7 @@ html, body {
   border-radius: var(--chakra-radii-full);
 }
 
-.pagination .previous div, .pagination .next div {
+.pagination .previous div, .pagination .next div, .pagination .active {
   background-color: #175CFF;
   color: #fff;
 }
