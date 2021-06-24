@@ -9,18 +9,17 @@ export default function MissionVision() {
       color: '#20BFA9',
       title: 'Mission',
       icon: CircleHeartIcon,
-      text: `We are an industry-leading company that values honesty, integrity,
-      and efficiency. Building quality products and caring for the users
-      are what made us stand out since the beginning.`
+      text: `Our mission statement is to educate young men with ethical values,
+      self-respect, respect for others and a desire to serve their country
+      and the world.`
     },
     {
       id: 2,
       color: '#FF794C',
       title: 'Vision',
       icon: CirclePowerIcon,
-      text: `We’re a team of highly skilled professionals with years of
-      experience in different fields vowed to revolutionize the people’s
-      web experience.`
+      text: `Rooted in the legacy of the old Government College Umuahia, the
+      modern GCU offers an internationally minded educational programme...`
     }
   ]
   return (

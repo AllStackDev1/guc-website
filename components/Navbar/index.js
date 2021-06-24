@@ -39,12 +39,12 @@ const MainNav = () => {
           id: 1,
           title: 'Leadership Team',
           link: '/about-us/leadership-team'
-        },
-        {
-          id: 2,
-          title: 'Alumini',
-          link: '/about-us/alumini'
         }
+        //, {
+        //   id: 2,
+        //   title: 'Alumini',
+        //   link: '/about-us/alumini'
+        // }
       ]
     },
     {
@@ -79,11 +79,11 @@ const MainNav = () => {
       title: 'Calendar',
       link: '/calendar'
     },
-    {
-      id: 7,
-      title: 'News',
-      link: '/news'
-    },
+    // {
+    //   id: 7,
+    //   title: 'News',
+    //   link: '/news'
+    // },
     {
       id: 8,
       title: 'Apply Now',

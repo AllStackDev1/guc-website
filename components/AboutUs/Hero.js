@@ -43,9 +43,15 @@ export default function Hero() {
           w={{ lg: 124 }}
           bgColor='gcu.100'
         >
-          <Text color='white' fontSize='21px' lineHeight={{ lg: '32px' }}>
-            “We strive to work closely together with our customers in solving
-            their problems. We value honesty, integrity, and efficiency”
+          <Text
+            color='white'
+            fontSize={{ lg: 'lg' }}
+            lineHeight={{ lg: '32px' }}
+          >
+            “GCU, as the “Eton of the East”, strives towards excellence. We
+            provide a conducive learning environment, and offer our students the
+            right knowledge, skills, creativity and dispositions to thrive in a
+            world of constant change.”
           </Text>
         </Box>
         <Image

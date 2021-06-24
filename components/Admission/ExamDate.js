@@ -25,17 +25,19 @@ export default function ExamDate() {
           lineHeight={{ lg: '60px' }}
           fontSize={{ base: '2xl', lg: '42px' }}
           textAlign={{ base: 'center', lg: 'left' }}
+          textTransform='uppercase'
         >
-          ENTRANCE EXAM START DATE
+          Boarding arrangements
         </Text>
         <Text
           mb={5}
           fontSize={{ base: 'sm', lg: 'md' }}
           lineHeight={{ base: '27px', lg: '32px' }}
         >
-          The Housemaster takes primary responsibility for the pastoral care of
-          every boy in his house. He has a detailed understanding of each boy’s
-          life at the school, from his mental and physical health to his
+          On resumption, the well-trained housemaster takes primary
+          responsibility for the pastoral care of every boy in his house. He
+          develops an elaborate understanding of the life of each boy at the
+          school, caring for his mental wellness, physical health and his
           academic and extra-curricular profile.
         </Text>
       </Box>

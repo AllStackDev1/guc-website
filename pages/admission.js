@@ -22,7 +22,6 @@ export default function Admission() {
       <ExamDate />
       <Resumption />
       <Onwards />
-
       <Footer />
     </Layout>
   )

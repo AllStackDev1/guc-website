@@ -20,9 +20,11 @@ export default function Hero() {
           fontSize={{ base: 'sm', lg: '21px' }}
           lineHeight={{ base: '27px', lg: '32px' }}
         >
-          We are an industry-leading company that values honesty, integrity, and
-          efficiency. Building quality products and caring for the users are
-          what made us stand out since the beginning.
+          At GCU, we are committed to bringing out the great potential in our
+          students. With Excellence as our watchword, be rest assured of a
+          propitious and promising future for your wards. We help all students
+          build honesty, integrity, diligence, self-motivation, creativity,
+          leadership skills and much more lifelong skills.
         </Text>
       </Box>
       <Image

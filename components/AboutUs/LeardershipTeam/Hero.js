@@ -23,10 +23,9 @@ export default function Hero() {
           fontSize={{ base: 'sm', lg: '21px' }}
           lineHeight={{ lg: '32px' }}
         >
-          Welcome to Government College Umuahia, a boarding school for boys aged
-          between 13 and 18 and a world class residential all boys secondary
-          school located on Ikot - Ekpene Road, Umuahia in Abia State which
-          offers a combination of British and Nigerian curricula.
+          Government College Umuahia is owned and managed by Fisher Educational
+          Development Trust (FEDT). We are keenly interested in maintaining the
+          quality education that made us stand out since the beginning, in 1929.
         </Text>
       </Box>
       <Image

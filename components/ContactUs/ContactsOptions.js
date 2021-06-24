@@ -6,17 +6,17 @@ export default function ContactsOptions() {
   const data = [
     {
       title: 'Visit us',
-      text: '34 Madison Street, <br /> NY, USA 10005',
+      text: 'Ikot-Ekpene Road, Umuahia',
       icon: FaMapMarkerAlt
     },
     {
       title: 'Call us',
-      text: '+1-492-4918-395 <br /> +14-394-409-591',
+      text: '+234 (0) 9060203678 <br /> +234 (0) 9131056805',
       icon: FaPhoneAlt
     },
     {
       title: 'Email us',
-      text: 'info@mail.com <br /> support@mail.com',
+      text: 'admin@gcu.sch.ng <br /> principal@gcu.sch.ng',
       icon: FaEnvelope
     }
   ]
