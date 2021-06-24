@@ -1,0 +1,46 @@
+import React from 'react'
+import { Box, Text, Container, Heading, Image } from '@chakra-ui/react'
+
+export default function Hero() {
+  return (
+    <Container
+      d='flex'
+      maxW='7xl'
+      flexDir='column'
+      textAlign='center'
+      alignItems='center'
+      py={{ base: 14, lg: 24 }}
+    >
+      <Box mb={14} w={{ lg: 125 }}>
+        <Heading mb={{ base: 3, lg: 6 }} fontSize={{ base: '2xl', lg: '60px' }}>
+          Your Journey to GCU
+        </Heading>
+        <Text
+          color='#6A7986'
+          fontSize={{ base: 'sm', lg: '21px' }}
+          lineHeight={{ base: '27px', lg: '32px' }}
+        >
+          At GCU, we are committed to bringing out the great potential in our
+          students. With Excellence as our watchword, be rest assured of a
+          propitious and promising future for your wards. We help all students
+          build honesty, integrity, diligence, self-motivation, creativity,
+          leadership skills and much more lifelong skills.
+        </Text>
+      </Box>
+      <Image
+        w='full'
+        h='full'
+        src='/images/calendar-hero-mobile.png'
+        alt='calendar img'
+        d={{ base: 'block', xl: 'none' }}
+      />
+      <Image
+        w='full'
+        h='full'
+        src='/images/calendar-hero.png'
+        alt='calendar img'
+        d={{ base: 'none', xl: 'block' }}
+      />
+    </Container>
+  )
+}

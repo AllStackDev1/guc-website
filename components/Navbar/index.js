@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import NextLink from 'next/link'
 import { Text, Box, Button, Flex, Link, IconButton } from '@chakra-ui/react'
@@ -10,7 +11,7 @@ import DropDown from './DropDown'
 import MobileDropdown from './MobileDropdown'
 
 const MainNav = () => {
-  const { toggleMenu, isMenuOpen } = useApp()
+  const { handleModal, toggleMenu, isMenuOpen } = useApp()
   const router = useRouter()
 
   const menus = [
@@ -22,24 +23,37 @@ const MainNav = () => {
     {
       id: 2,
       title: 'About Us',
-      link: '/about-us'
-
       // items: [
       //   {
-      //     id: 1,
-      //     title: 'Leadership Team',
-      //     link: '/leadership-team'
+      //     title: 'Our History',
+      //     action: () => handleModal('history')
       //   },
       //   {
-      //     id: 2,
-      //     title: 'Alumini',
-      //     link: '/alumini'
+      //     title: 'Admissions',
+      //     action: () => handleModal('procedure')
       //   }
       // ]
+<<<<<<< HEAD
+=======
+      withLink: '/about-us',
+      items: [
+        {
+          id: 1,
+          title: 'Leadership Team',
+          link: '/about-us/leadership-team'
+        }
+        //, {
+        //   id: 2,
+        //   title: 'Alumini',
+        //   link: '/about-us/alumini'
+        // }
+      ]
+>>>>>>> main
     },
     {
       id: 3,
       title: 'Admissions',
+<<<<<<< HEAD
       link: '/#admission'
     },
     // {
@@ -65,11 +79,44 @@ const MainNav = () => {
     // },
     // {
     //   id: 6,
+=======
+      link: '/admission'
+    },
+    {
+      id: 4,
+      title: 'Careers',
+      link: '/careers'
+    },
+    // {
+    //   id: 5,
+    //   title: 'Boarding',
+    //   withLink: '/boarding',
+    //   items: [
+    //     {
+    //       id: 1,
+    //       title: 'Pastorial Care',
+    //       link: '/boarding/pastorial-care'
+    //     },
+    //     {
+    //       id: 2,
+    //       title: 'Sports',
+    //       link: '/boarding/sports'
+    //     }
+    //   ]
+    // },
+    {
+      id: 6,
+      title: 'Calendar',
+      link: '/calendar'
+    },
+    // {
+    //   id: 7,
+>>>>>>> main
     //   title: 'News',
     //   link: '/news'
     // },
     {
-      id: 7,
+      id: 8,
       title: 'Apply Now',
       btnLink: 'https://enrollment.gcu.sch.ng'
     }
@@ -83,7 +130,7 @@ const MainNav = () => {
         role='nav'
         bg='white'
         pos='fixed'
-        zIndex={1}
+        zIndex={2}
         align='center'
         borderBottomWidth={1}
         px={{ base: 4, md: 12, xl: 16 }}
@@ -97,10 +144,11 @@ const MainNav = () => {
           d={{ base: 'block', xl: 'none' }}
         >
           <IconButton
-            colorScheme='none'
-            aria-label='Open Mobile Menu'
             p={0}
-            minW='unset'
+            w={6}
+            colorScheme='none'
+            _focus={{ outline: 'none' }}
+            aria-label='Open Mobile Menu'
             icon={
               isMenuOpen ? (
                 <CloseMenuIcon boxSize={4} />
@@ -147,6 +195,7 @@ const MainNav = () => {
                   color='gcu.100'
                   data={menu.items}
                   title={menu.title}
+                  withLink={menu.withLink}
                 />
               )}
 
@@ -155,7 +204,8 @@ const MainNav = () => {
                   <NextLink href={menu.link} passHref>
                     <Link
                       style={
-                        router.pathname === menu.link
+                        router.pathname.split('/')[1] ===
+                        menu.link.split('/')[1]
                           ? { color: '#C82B38' }
                           : {}
                       }
@@ -206,19 +256,21 @@ const MainNav = () => {
           pt={16}
           pos='fixed'
           h='100vh'
-          zIndex={50}
+          zIndex={1}
         >
           {menus
             .filter(menu => !menu.btnLink)
             .map(menu => (
-              <MobileDropdown key={menu.id} {...{ item: menu }} />
+              <MobileDropdown
+                key={menu.id}
+                {...{ item: menu }}
+                toggleMenu={toggleMenu}
+              />
             ))}
         </Box>
       )}
     </Box>
   )
 }
-
-MainNav.propTypes = {}
 
 export default MainNav

@@ -18,3 +18,39 @@ html, body {
     opacity: 0;
   }
 }
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  cursor: pointer;
+}
+
+.pagination ul {
+  display: inline-block;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.pagination li {
+  display: flex;
+  color: #000;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  background-color: #F4F4F4;
+  width: var(--chakra-sizes-16);
+  height: var(--chakra-sizes-16);
+  border-radius: var(--chakra-radii-full);
+}
+
+.pagination .previous div, .pagination .next div, .pagination .active {
+  background-color: #175CFF;
+  color: #fff;
+}
+
+.pagination .previous.disabled div, .pagination .next.disabled div {
+  background-color: #F4F4F4;
+  color: #000;
+}

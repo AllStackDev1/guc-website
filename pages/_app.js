@@ -3,12 +3,13 @@ import PropTypes from 'prop-types'
 import TagManager from 'react-gtm-module'
 import { Box, ChakraProvider } from '@chakra-ui/react'
 import { AppContextProvider } from 'context/app'
+import { ApiContextProvider } from 'context/api'
 import { theme } from 'theme/theme'
 
 import '../styles/globals.css'
 
 const tagManagerArgs = {
-  gtmId: process.env.NEXT_PUBLIC_GTM_TRACKING_ID
+  gtmId: 'GTM-NGVKN2K'
 }
 
 const MyApp = ({ Component, pageProps }) => {
@@ -19,9 +20,11 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <ChakraProvider theme={theme} resetCSS>
       <AppContextProvider>
-        <Box fontFamily='body' overflowX='hidden'>
-          <Component {...pageProps} />
-        </Box>
+        <ApiContextProvider>
+          <Box fontFamily='body' overflowX='hidden'>
+            <Component {...pageProps} />
+          </Box>
+        </ApiContextProvider>
       </AppContextProvider>
     </ChakraProvider>
   )

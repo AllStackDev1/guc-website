@@ -90,7 +90,7 @@ const EnrollModal = ({ isOpen, onClose }) => {
               FOR MORE INFORMATION
             </Heading>
             <Text {...textStyles} fontWeight='500'>
-              gcu.umuahia@gmail.com
+              admin@gcu.sch.ng
             </Text>
           </Box>
         </ModalBody>
