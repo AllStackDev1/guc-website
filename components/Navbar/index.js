@@ -33,8 +33,6 @@ const MainNav = () => {
       //     action: () => handleModal('procedure')
       //   }
       // ]
-<<<<<<< HEAD
-=======
       withLink: '/about-us',
       items: [
         {
@@ -48,38 +46,10 @@ const MainNav = () => {
         //   link: '/about-us/alumini'
         // }
       ]
->>>>>>> main
     },
     {
       id: 3,
       title: 'Admissions',
-<<<<<<< HEAD
-      link: '/#admission'
-    },
-    // {
-    //   id: 4,
-    //   title: 'Boarding',
-    //   items: [
-    //     {
-    //       id: 1,
-    //       title: 'Leadership Team',
-    //       link: '/leadership-team'
-    //     },
-    //     {
-    //       id: 2,
-    //       title: 'Alumini',
-    //       link: '/alumini'
-    //     }
-    //   ]
-    // },
-    // {
-    //   id: 5,
-    //   title: 'Calender',
-    //   link: '/calender'
-    // },
-    // {
-    //   id: 6,
-=======
       link: '/admission'
     },
     {
@@ -111,7 +81,6 @@ const MainNav = () => {
     },
     // {
     //   id: 7,
->>>>>>> main
     //   title: 'News',
     //   link: '/news'
     // },
