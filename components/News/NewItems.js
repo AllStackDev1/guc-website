@@ -1,15 +1,15 @@
-/* eslint-disable no-console */
-/* eslint-disable no-unused-vars */
 import React from 'react'
 import PropTypes from 'prop-types'
 import ReactPaginate from 'react-paginate'
 import {
   Box,
+  Tag,
   Text,
   Grid,
   Link,
   Icon,
   Flex,
+  Image,
   GridItem,
   Container
 } from '@chakra-ui/react'
@@ -45,19 +45,39 @@ const NewItems = ({ news }) => {
     <Container maxW='7xl' py={{ base: 8, lg: 0 }}>
       <Grid mt={8} templateColumns={{ xl: 'repeat(3, 1fr)' }} gap={10}>
         {dataToDisplay?.map(i => (
-          <GridItem key={i.id} w={{ xl: 80 }}>
-            <Box as='iframe' src={i.media} h={{ xl: 80 }} mb={{ xl: 4 }} />
-            <Text fontSize='sm' color='gray.300' lineHeight='20px'>
-              {i.tag}
-            </Text>
-            <Text fontWeight='500' fontSize={{ xl: 'xl' }} lineHeight='34px'>
+          <GridItem
+            key={i.id}
+            w={{ xl: 80 }}
+            border='1px'
+            px={{ xl: 3 }}
+            pb={{ xl: 3 }}
+            borderColor='gray.200'
+            rounded='md'
+          >
+            <Image src={i.thumbnail?.[0]?.url} h={{ xl: 80 }} />
+            <Flex
+              mb={2}
+              d='inline-flex'
+              flexWrap='wrap'
+              sx={{ gap: '6px' }}
+              justify='space-between'
+            >
+              {i.tags.split(',').map(e => (
+                <Tag key={e} fontSize='sm' color='gray.300'>
+                  {e}
+                </Tag>
+              ))}
+            </Flex>
+            <Text fontWeight='500' fontSize={{ xl: 'xl' }} lineHeight='24px'>
               {i.title}
             </Text>
-            <NextLink href={`/news/${i.id}`} passHref>
-              <Link fontWeight='500' color='gcu.100' fontSize={{ xl: 'sm' }}>
-                READ MORE
-              </Link>
-            </NextLink>
+            <Flex w='full' justify='flex-end'>
+              <NextLink href={`/news/${i.id}`} passHref>
+                <Link fontWeight='500' color='gcu.100' fontSize={{ xl: 'xs' }}>
+                  READ MORE
+                </Link>
+              </NextLink>
+            </Flex>
           </GridItem>
         ))}
       </Grid>
