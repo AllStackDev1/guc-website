@@ -143,13 +143,12 @@ const OurHistory = () => {
 
         <Flex
           mt={{ lg: 8 }}
-          mb={{ lg: 14 }}
+          mb={{ lg: 10 }}
           lineHeight='59px'
           fontSize='48px'
           color='gcu.100'
           justify='space-between'
           align={{ base: 'center', xl: 'initial' }}
-          // flexWrap={{ base: 'wrap', xl: 'nowrap' }}
         >
           <Box
             w={{ base: '50%', xl: '25%' }}
@@ -167,7 +166,7 @@ const OurHistory = () => {
             </Text>
           </Box>
           <Box w={{ base: '50%', xl: '25%' }} lineHeight='28px'>
-            <Text as='h2'>50k</Text>
+            <Text as='h2'>20k</Text>
             <Text as='span' lineHeight='0' fontSize={{ base: 'sm', xl: 'lg' }}>
               Alumni <br /> Worldwide
             </Text>
@@ -175,38 +174,13 @@ const OurHistory = () => {
           <Box w={{ base: '50%', xl: '25%' }} lineHeight='28px'>
             <Text as='h2'>100+</Text>
             <Text as='span' lineHeight='0' fontSize={{ base: 'sm', xl: 'lg' }}>
-              CEOs & <br /> Chief Judges
+              Great <br /> Leaders
             </Text>
           </Box>
           <Box w={{ base: '50%', xl: '25%' }} lineHeight='28px'>
             <Text as='h2'>92</Text>
             <Text as='span' lineHeight='0' fontSize={{ base: 'sm', xl: 'lg' }}>
               years of <br /> breeding leaders
-            </Text>
-          </Box>
-        </Flex>
-        <Flex
-          mt={{ lg: 8 }}
-          lineHeight='59px'
-          fontSize='48px'
-          color='gcu.100'
-          justify='space-between'
-          align={{ base: 'center', xl: 'initial' }}
-        >
-          <Box
-            w={{ base: '50%', xl: '25%' }}
-            mb={{ base: 3, xl: 0 }}
-            lineHeight='28px'
-          >
-            <Text as='h2'>2</Text>
-            <Text
-              mt={-10}
-              lineHeight='0'
-              as='span'
-              fontSize={{ base: 'sm', xl: 'lg' }}
-            >
-              British-Nigerian
-              <br /> Curriculum
             </Text>
           </Box>
         </Flex>

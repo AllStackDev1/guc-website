@@ -21,10 +21,13 @@ export default function Hero() {
           lineHeight={{ base: '27px', lg: '32px' }}
         >
           At GCU, we are committed to bringing out the great potential in our
-          students. With Excellence as our watchword, be rest assured of a
-          propitious and promising future for your wards. We help all students
-          build honesty, integrity, diligence, self-motivation, creativity,
-          leadership skills and much more lifelong skills.
+          students. With{' '}
+          <b>
+            <em>Excellence</em>
+          </b>{' '}
+          as our watchword, we can assure you of a propitious and promising
+          future for your wards. We help all students build honesty, integrity,
+          diligence, self-motivation, creativity, leadership skills.
         </Text>
       </Box>
       <Image

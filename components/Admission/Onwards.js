@@ -12,14 +12,14 @@ export default function Onwards() {
     },
     {
       id: 2,
-      name: 'Mr. Okechukwu Enelamah',
+      name: 'Dr. Okechukwu Enelamah',
       title: 'CHAIRMAN, AFRICAN CAPITAL ALLIANCE',
       media:
         'https://drive.google.com/file/d/1xbbJPjC7isHuu5i8PDY8zX6G7LQoVqF1/preview'
     },
     {
       id: 3,
-      name: 'Reginal Ihejiahi',
+      name: 'Mr. Reginald Ihejiahi',
       title: 'FORMER MD/CEO, FIDELITY BANK PLC ',
       media:
         'https://drive.google.com/file/d/1Dww3_PM68axS54fe3ST8kYChpOgK8LLS/preview'
@@ -43,7 +43,7 @@ export default function Onwards() {
     <Container maxW='7xl' py={{ base: 8, lg: 14 }}>
       <Box pt={{ lg: 32 }} w={{ xl: 138 }}>
         <Text
-          mb={{ lg: 8 }}
+          mb={{ lg: 6 }}
           fontFamily='heading'
           lineHeight={{ lg: '60px' }}
           fontSize={{ base: '2xl', lg: '42px' }}
@@ -56,8 +56,8 @@ export default function Onwards() {
           fontSize={{ base: 'sm', lg: 'md' }}
           lineHeight={{ base: '27px', lg: '32px' }}
         >
-          The People Of This Country are Amazed At The Number Of Its Influential
-          Citizens Who Owe Allegiance To This School, watch videos from some of
+          The People of this country are amazed at the number of its influential
+          citizens who owe allegiance to this school, watch videos from some of
           our top GCU old boys.
         </Text>
       </Box>

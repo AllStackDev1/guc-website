@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Box, Flex, Text, IconButton, Divider } from '@chakra-ui/react'
 import marked from 'marked'
-import DOMPurify from 'isomorphic-dompurify'
+import sanitizeHtml from 'sanitize-html'
 
 import Layout from '@components/Layout'
 import Footer from '@components/Home/Footer'
@@ -37,7 +37,7 @@ export default function NewsDetail({ prev, next, posts, details }) {
             fontSize={{ base: 'sm', xl: 'lg' }}
             className='blog-post-content'
             dangerouslySetInnerHTML={{
-              __html: DOMPurify?.sanitize(marked(details?.content))
+              __html: sanitizeHtml(marked(details?.content))
             }}
           />
           <Flex my={10} align='center'>
