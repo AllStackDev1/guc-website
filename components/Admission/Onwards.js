@@ -6,35 +6,35 @@ export default function Onwards() {
     {
       id: 1,
       name: 'Mr. David Ifezulike',
-      title: 'CHAIRMAN, NESTLE FOODS NIGERIA PLC',
+      title: 'Chairman, Nestle Foods Nigeria PLC',
       media:
         'https://drive.google.com/file/d/1ptvP8NHC1C-MyM_QoTX8oo129VO8tH1h/preview'
     },
     {
       id: 2,
       name: 'Dr. Okechukwu Enelamah',
-      title: 'CHAIRMAN, AFRICAN CAPITAL ALLIANCE',
+      title: 'Chairman, Africa Capital Alliance',
       media:
         'https://drive.google.com/file/d/1xbbJPjC7isHuu5i8PDY8zX6G7LQoVqF1/preview'
     },
     {
       id: 3,
       name: 'Mr. Reginald Ihejiahi',
-      title: 'FORMER MD/CEO, FIDELITY BANK PLC ',
+      title: 'Former MD/CEO, Fidelity Bank PLC ',
       media:
         'https://drive.google.com/file/d/1Dww3_PM68axS54fe3ST8kYChpOgK8LLS/preview'
     },
     {
       id: 4,
       name: 'Mr. Kelechi Nwosu',
-      title: 'MD/CEO, TBWA CONCEPT',
+      title: 'MD/CEO, TBWA Concept',
       media:
         'https://drive.google.com/file/d/1ulgmYcifVR19zdvLR5QS6SE65Q9jzqaV/preview'
     },
     {
       id: 5,
       name: 'Mr. Chukwuemeka Ifezulike',
-      title: 'MANAGING PARTNER, KCBC PARTNERS',
+      title: 'Managing Partner, KCBC Partners',
       media:
         'https://drive.google.com/file/d/1JF3W5M7aEmnpMIAN5LNs_IgYUnQq0egs/preview'
     }
