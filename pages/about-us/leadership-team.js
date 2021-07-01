@@ -4,7 +4,8 @@ import Layout from '@components/Layout'
 import Footer from '@components/Home/Footer'
 
 import Hero from '@components/AboutUs/LeardershipTeam/Hero'
-import LeadershipAndGovt from '@components/AboutUs/LeadershipAndGovt'
+import LeadershipAndGovt from '@components/AboutUs/LeardershipTeam/LeadershipAndGovt'
+import SeniorLeaderTeam from '@components/AboutUs/LeardershipTeam/SeniorLeaderTeam'
 
 export default function LeadershipTeam() {
   return (
@@ -16,6 +17,7 @@ export default function LeadershipTeam() {
     >
       <Hero />
       <LeadershipAndGovt />
+      <SeniorLeaderTeam />
       <Footer />
     </Layout>
   )

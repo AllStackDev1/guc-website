@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import moment from 'moment'
 import {
   Box,
@@ -14,9 +15,7 @@ import {
 import { FaMapMarkerAlt, FaCalendar } from 'react-icons/fa'
 import { useRouter } from 'next/router'
 
-import vacancies from './data'
-
-const Vacancies = () => {
+const Vacancies = ({ vacancies = [] }) => {
   const router = useRouter()
 
   return (
@@ -38,74 +37,79 @@ const Vacancies = () => {
         color='#64646C'
         templateColumns={{ base: 'repeat(1, 1fr)', xl: 'repeat(3, 1fr)' }}
       >
-        {vacancies?.map(i => (
-          <GridItem
-            p={4}
-            pos='relative'
-            key={i.id}
-            rounded='xl'
-            minH={60}
-            borderWidth={1}
-            borderColor='gray.300'
-          >
-            <Flex mb={4} align='center'>
-              <Icon as={FaMapMarkerAlt} />
-              <Text
-                ml={2}
-                fontFamily='heading'
-                color='#1D263A'
-                fontSize={{ xl: '15px' }}
-              >
-                {i.location}
-              </Text>
-            </Flex>
-            <Text
-              mb={3}
-              color='#1D263A'
-              fontWeight='bold'
-              fontFamily='heading'
-              fontSize={{ xl: '2xl' }}
+        {vacancies &&
+          vacancies?.map(i => (
+            <GridItem
+              p={4}
+              pos='relative'
+              key={i.id}
+              rounded='xl'
+              minH={60}
+              borderWidth={1}
+              borderColor='gray.300'
             >
-              {i.title}
-            </Text>
+              <Flex mb={4} align='center'>
+                <Icon as={FaMapMarkerAlt} />
+                <Text
+                  ml={2}
+                  fontFamily='heading'
+                  color='#1D263A'
+                  fontSize={{ xl: '15px' }}
+                >
+                  {i.location}
+                </Text>
+              </Flex>
+              <Text
+                mb={3}
+                color='#1D263A'
+                fontWeight='bold'
+                fontFamily='heading'
+                fontSize={{ xl: '2xl' }}
+              >
+                {i.title}
+              </Text>
 
-            {/* <Text fontWeight='bold' color='#7F828A' fontSize={{ xl: '17px' }}>
+              {/* <Text fontWeight='bold' color='#7F828A' fontSize={{ xl: '17px' }}>
               By{' '}
               <Text color='#F04037' as='span'>
                 {i.by}
               </Text>
             </Text> */}
-            <Flex
-              pos='absolute'
-              right={4}
-              left={4}
-              bottom={6}
-              justify='space-between'
-            >
-              <Flex align='center'>
-                <Icon as={FaCalendar} />
-                <Text ml={2}>{moment(i.date).fromNow()}</Text>
-              </Flex>
-              <Button
-                h={12}
-                rounded='lg'
-                color='#fff'
-                boxShadow='lg'
-                fontSize='15px'
-                fontWeight={600}
-                fontFamily='heading'
-                colorScheme='gcuButton'
-                _focus={{ outline: 'none' }}
-                onClick={() => router.push(`careers/${i.id}`)}
+              <Flex
+                pos='absolute'
+                right={4}
+                left={4}
+                bottom={6}
+                justify='space-between'
               >
-                Apply Now
-              </Button>
-            </Flex>
-          </GridItem>
-        ))}
+                <Flex align='center'>
+                  <Icon as={FaCalendar} />
+                  <Text ml={2}>{moment(i.published_at).fromNow()}</Text>
+                </Flex>
+                <Button
+                  h={12}
+                  rounded='lg'
+                  color='#fff'
+                  boxShadow='lg'
+                  fontSize='15px'
+                  fontWeight={600}
+                  fontFamily='heading'
+                  colorScheme='gcuButton'
+                  _focus={{ outline: 'none' }}
+                  onClick={() => router.push(`careers/${i.id}`)}
+                >
+                  Apply Now
+                </Button>
+              </Flex>
+            </GridItem>
+          ))}
       </Grid>
     </Container>
   )
+}
+
+Vacancies.propTypes = {
+  vacancies: PropTypes.array.isRequired
 }
 
 export default Vacancies

@@ -105,6 +105,11 @@ const Footer = ({ mt = 8 }) => {
               Careers
             </Link>
           </NextLink>
+          <NextLink href='/contact-us' passHref>
+            <Link _focus={{ outline: 'none' }} _hover={{ outline: 'none' }}>
+              Contact Us
+            </Link>
+          </NextLink>
         </Flex>
 
         <Flex

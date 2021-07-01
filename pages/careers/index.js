@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import Layout from '@components/Layout'
 import Footer from '@components/Home/Footer'
@@ -8,7 +9,9 @@ import Build from '@components/Career/Build'
 import CareerOptions from '@components/Career/CareerOptions'
 import Vacancies from '@components/Career/Vacancies'
 
-export default function Career() {
+import { fetchStrapiContent } from 'mics'
+
+const Career = ({ vacancies }) => {
   return (
     <Layout
       name='Careers'
@@ -19,8 +22,24 @@ export default function Career() {
       <Hero />
       <Build />
       <CareerOptions />
-      <Vacancies />
+      <Vacancies {...{ vacancies }} />
       <Footer />
     </Layout>
   )
+}
+
+Career.propTypes = {
+  vacancies: PropTypes.array.isRequired
+}
+
+export default Career
+
+export const getStaticProps = async () => {
+  const vacancies = await fetchStrapiContent('careers')
+
+  return {
+    props: {
+      vacancies
+    }
+  }
 }

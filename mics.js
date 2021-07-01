@@ -15,3 +15,11 @@ export const getformattedDate = date => {
     year: 'numeric'
   })
 }
+
+export const STRAPI_API_URL =
+  process.env.NEXT_PUBLIC_STRAPI_API || 'https://gcu-csm-strapi.herokuapp.com'
+
+export const fetchStrapiContent = async path => {
+  const response = await fetch(`${STRAPI_API_URL}/${path}`)
+  return await response.json()
+}

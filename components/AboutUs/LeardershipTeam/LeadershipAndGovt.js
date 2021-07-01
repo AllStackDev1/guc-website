@@ -17,27 +17,27 @@ const LeadershipAndGovt = () => {
       color: '#2D9CDB'
     },
     {
-      text: 'College Rector',
+      text: 'Vice Principal Admin',
       color: '#333333'
     },
     {
-      text: 'Business Manager',
+      text: 'Vice Principal Academics',
       color: '#9B51E0'
     },
     {
-      text: 'Assistant Principal: Faith and Mission',
+      text: 'Vice Principal Head of Boarding',
       color: '#2F80ED'
     },
     {
-      text: 'Assistant Principal: Students',
+      text: 'Administrative Officers',
       color: '#27AE60'
     },
     {
-      text: 'Assistant Principal: Organization',
+      text: 'Heads of Departments',
       color: '#F2994A'
     },
     {
-      text: 'Assistant Principal: Learning, Teaching & Innovation',
+      text: 'Pastoral Staff',
       color: '#C82B38'
     }
   ]
@@ -69,12 +69,9 @@ const LeadershipAndGovt = () => {
           fontSize={{ base: 'sm', xl: 'lg' }}
           lineHeight='32px'
         >
-          Salesian College Chadstone is a public company limited by guarantee
-          that was established to take over the operations of the unincorporated
-          college from 1 January 2021. The College’s Board of Directors is
-          responsible for the operation of the College. Ownership remains with
-          the Salesians of Don Bosco (legally known as the Salesian Society
-          Incorporated (VIC)).
+          Government College Umuahia is a private institution that was
+          established in 1929. Reverend Robert William Fisher was appointed as
+          the first Principal of the College.
         </Text>
 
         <Text
@@ -84,8 +81,8 @@ const LeadershipAndGovt = () => {
           lineHeight='32px'
         >
           The College Leadership Team is the key decision making body at
-          Salesian College. The Principal chairs the Leadership Team, which
-          consists of the following members:
+          Government College Umuahia. The Principal chairs the Leadership Team,
+          which consists of the following members:
         </Text>
 
         <List spacing={3}>

@@ -30,7 +30,7 @@ const ContactUsForm = () => {
       message: ''
     },
     validationSchema,
-    onSubmit: async (values, { setSubmitting }) => {
+    onSubmit: async (values, { setSubmitting, resetForm }) => {
       try {
         setSubmitting(true)
         const res = await contactUs(values)
@@ -40,6 +40,7 @@ const ContactUsForm = () => {
           duration: 5000,
           position: 'top-right'
         })
+        resetForm({})
       } catch (error) {
         toast({
           title: 'Error occured',

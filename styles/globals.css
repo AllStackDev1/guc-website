@@ -45,7 +45,7 @@ html, body {
   border-radius: var(--chakra-radii-full);
 }
 
-.pagination .previous div, .pagination .next div {
+.pagination .previous div, .pagination .next div, .pagination .active {
   background-color: #175CFF;
   color: #fff;
 }
@@ -53,4 +53,42 @@ html, body {
 .pagination .previous.disabled div, .pagination .next.disabled div {
   background-color: #F4F4F4;
   color: #000;
+}
+
+.blog-post-content h4 {
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 21px;
+}
+
+.blog-post-content blockquote {
+  background: #C82B38;
+  color: white;
+  margin: 1.5em 0;
+  padding: 2em 3.5em;
+  quotes: "\201C""\201D""\2018""\2019";
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.blog-post-content blockquote:before {
+  color: rgba(255, 255, 255, 0.3);
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  vertical-align: -0.4em;
+}
+
+.blog-post-content blockquote p {
+  display: inline;
+}
+
+.blog-post-content p {
+  margin-top: 10px;
+  line-height: 30px;
+}
+
+.blog-post-content p:nth-child(1) {
+  margin-top: 0px;
 }

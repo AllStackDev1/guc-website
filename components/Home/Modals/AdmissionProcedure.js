@@ -108,10 +108,10 @@ const AdmissionProcedure = ({ isOpen, onClose }) => {
 
           <Text {...textStyle}>
             Applicants will undergo a test according to their age category,
-            please click here (GL assessments link)
+            please click here below
           </Text>
 
-          <Box mt={12}>
+          <Box mt={8}>
             <Link
               href='https://enrollment.gcu.sch.ng'
               _hover={{ hover: 'none' }}

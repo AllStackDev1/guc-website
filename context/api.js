@@ -7,6 +7,7 @@ const ApiContext = createContext()
 
 export const ApiContextProvider = ({ children }) => {
   const BASE_URL = 'https://api.thegcu.com/api/v1'
+  // const BASE_URL = 'http://localhost:8009/api/v1'
 
   //#region ADMIN API
   const contactUs = async payload => {

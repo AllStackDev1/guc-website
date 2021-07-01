@@ -6,26 +6,30 @@ export default function Resumption() {
     <Container
       d='flex'
       maxW='7xl'
-      justifyContent='space-between'
       py={{ base: 8, lg: 14 }}
+      flexDir={{ base: 'column', lg: 'row' }}
+      justifyContent={{ lg: 'space-between' }}
     >
       <Box w={{ lg: '45%' }} pt={{ lg: 32 }}>
         <Text
-          mb={{ lg: 8 }}
+          mb={{ base: 3, lg: 8 }}
           fontFamily='heading'
-          fontSize={{ lg: '42px' }}
           lineHeight={{ lg: '60px' }}
+          fontSize={{ base: '2xl', lg: '42px' }}
+          textAlign={{ base: 'center', lg: 'left' }}
         >
           RESUMPTION DATE
         </Text>
-        <Text mb={{ lg: 5 }} lineHeight={{ lg: '32px' }}>
-          The Housemaster takes primary responsibility for the pastoral care of
-          every boy in his house. He has a detailed understanding of each boy’s
-          life at the school, from his mental and physical health to his
-          academic and extra-curricular profile.
+        <Text
+          mb={{ lg: 5 }}
+          fontSize={{ base: 'sm', lg: 'md' }}
+          lineHeight={{ base: '27px', lg: '32px' }}
+        >
+          The proposed reopening and resumption date of the 2021/2022 session
+          will be communicated to the parents via text and email.
         </Text>
       </Box>
-      <Box w={{ lg: '40%' }} fontSize={{ lg: 'lg' }}>
+      <Box w={{ lg: '40%' }} pt={{ base: 10, lg: 0 }} fontSize={{ lg: 'lg' }}>
         <Image
           w='full'
           h='full'

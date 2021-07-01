@@ -21,9 +21,9 @@ export default function Hero() {
           lineHeight={{ lg: '32px' }}
         >
           Welcome to Government College Umuahia, a boarding school for boys aged
-          between 13 and 18 and a world class residential all boys secondary
-          school located on Ikot -Ekpene Road, Umuahia in Abia State which
-          offers a combination of British and Nigerian curricula.
+          between 13 and 18 and a world-class residential all-boys secondary
+          school. GCU is located on Ikot-Ekpene Road, Umuahia in Abia State
+          which offers a combination of British and Nigerian curricula.
         </Text>
       </Box>
       <Box pos='relative'>
@@ -43,9 +43,15 @@ export default function Hero() {
           w={{ lg: 124 }}
           bgColor='gcu.100'
         >
-          <Text color='white' fontSize='21px' lineHeight={{ lg: '32px' }}>
-            “We strive to work closely together with our customers in solving
-            their problems. We value honesty, integrity, and efficiency”
+          <Text
+            color='white'
+            fontSize={{ lg: 'lg' }}
+            lineHeight={{ lg: '32px' }}
+          >
+            “GCU, as the “Eton of the East”, strives towards excellence. We
+            provide a conducive learning environment, and offer our students the
+            right knowledge, skills, creativity and dispositions to thrive in a
+            world of constant change.”
           </Text>
         </Box>
         <Image

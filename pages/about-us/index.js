@@ -9,7 +9,6 @@ import MissionVision from '@components/AboutUs/MissionVision'
 import PrincipalMessage from '@components/AboutUs/PrincipalMessage'
 import OurHistory from '@components/AboutUs/OurHistory'
 import SchoolAnthem from '@components/AboutUs/SchoolAnthem'
-import LeadershipAndGovt from '@components/AboutUs/LeadershipAndGovt'
 
 export default function AboutUs() {
   return (
@@ -30,7 +29,6 @@ export default function AboutUs() {
         <Divider borderColor='gray.300' mb={8} />
       </Container>
       <SchoolAnthem />
-      <LeadershipAndGovt />
       <Footer />
     </Layout>
   )
