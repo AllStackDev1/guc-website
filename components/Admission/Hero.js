@@ -27,7 +27,7 @@ export default function Hero() {
           </b>{' '}
           as our watchword, we can assure you of a propitious and promising
           future for your wards. We help all students build honesty, integrity,
-          diligence, self-motivation, creativity, leadership skills.
+          diligence, self-motivation, creativity, and leadership skills.
         </Text>
       </Box>
       <Image

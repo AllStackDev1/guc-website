@@ -79,11 +79,11 @@ const MainNav = () => {
       title: 'Calendar',
       link: '/calendar'
     },
-    {
-      id: 7,
-      title: 'News',
-      link: '/news'
-    },
+    // {
+    //   id: 7,
+    //   title: 'News',
+    //   link: '/news'
+    // },
     {
       id: 8,
       title: 'Apply Now',
