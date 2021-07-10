@@ -15,20 +15,25 @@ export default function ChallengeBalance() {
           fontSize={{ lg: '42px' }}
           lineHeight={{ lg: '59px' }}
         >
-          Challenge & balance
+          Challenge & Balance
         </Text>
       </Box>
       <Box w={{ lg: '50%' }} fontSize={{ lg: 'lg' }}>
-        <Text mb={{ lg: 4 }} lineHeight={{ lg: '32px' }}>
-          Sport brings challenge, and a vital balance to academic life. Every
-          afternoon, boys can participate in a wide range of sporting
-          opportunities.
+        <Text lineHeight={{ lg: '32px' }}>
+          Here at Government College Umuahia, we challenge our students both in
+          academic and extra-curricular space. We provide several possibilities
+          for students to master new abilities and kindle new interests outside
+          of the traditional framework of any educational system.
+        </Text>
+        <Text my={{ lg: 4 }} lineHeight={{ lg: '32px' }}>
+          Extracurricular activities are an integral component of any child’s
+          physical and psychological development. They are well-structured to
+          enhance our students’ team bonding, educational retainment, cultural
+          exposure, and building their interpersonal relationship.
         </Text>
         <Text lineHeight={{ lg: '32px' }}>
-          Our coaching staff consists of former international sportsmen and
-          professionals, as well as current county and district level coaches.
-          Their expertise and enthusiasm readies boys to represent their sport
-          at regional, county, national and international level.
+          At GCU, our extra-curricular activities are segmented into three
+          layers: sports, intellectual and cultural activities.
         </Text>
       </Box>
     </Container>

@@ -13,15 +13,15 @@ export default function Hero() {
     >
       <Box mb={{ base: 4, lg: 14 }} w={{ lg: 130 }}>
         <Heading mb={{ lg: 6 }} fontSize={{ base: '1.5rem', lg: '60px' }}>
-          Boarding is just living with your friends.
+          Boarding goes beyond living with your friends.
         </Heading>
         <Text
           color='#6A7986'
           fontSize={{ base: 'sm', lg: '21px' }}
           lineHeight={{ lg: '32px' }}
         >
-          The life of the boarding house is at the heart of every pupil’s GCU
-          experience.
+          We create fantastic memories and our students have an everlasting
+          boarding experience.
         </Text>
       </Box>
       <Flex>

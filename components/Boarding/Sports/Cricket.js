@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Text, Image, Container } from '@chakra-ui/react'
 
-export default function Basketball() {
+export default function Cricket() {
   return (
     <Container
       d='flex'
@@ -16,14 +16,17 @@ export default function Basketball() {
           fontSize={{ lg: '42px' }}
           lineHeight={{ lg: '60px' }}
         >
-          BASKETBALL
+          CRICKET
+        </Text>
+        <Text mb={{ lg: 5 }} lineHeight={{ lg: '32px' }}>
+          GCU has a vast land for students to play cricket. The game, cricket,
+          is meant to encourage our students’ team spirit, foster discipline,
+          and improve their leadership qualities.
         </Text>
         <Text lineHeight={{ lg: '32px' }}>
-          GCU enjoys training its students on how to play basketball to
-          strengthen their endurance and develop fundamental movement skills.
-          Basketball would help our students to develop self-confidence in
-          different situations, and this will help them create more freedom from
-          destructive thoughts.
+          Being a part of the cricket team would help our students to learn how
+          to compromise, how to collaborate and how they can transfer the skills
+          to real-life situations.
         </Text>
       </Box>
       <Box w={{ lg: '40%' }} fontSize={{ lg: 'lg' }}>

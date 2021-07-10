@@ -19,18 +19,17 @@ export default function FullerExperience() {
           How do we achieve a fuller experience?
         </Text>
         <Text mb={{ lg: 5 }} lineHeight={{ lg: '32px' }}>
-          Boarding is perhaps an inaccurate term for the personal atmosphere at
-          Winchester. Every House here is its own family. It is extensive in
-          number (a Winchester house has about sixty boys), and diverse in its
-          influences (Winchester boys are from many countries and their parents
-          from many walks of life). Most of all, it is abundant in facilities,
-          opportunities and professionalism.
+          Government College Umuahia provides the best comfort and safe
+          environment to its students. Being a boarding school, we combine
+          academic & non-academic activities, motivational lectures & debates,
+          mentorship and social development.
         </Text>
-        <Text mb={{ lg: 5 }} lineHeight={{ lg: '32px' }}>
-          We believe that a great education should be experienced to the full
-          and fullness is what a boarding education offers. Full boarding may be
-          a tradition, but in reality, at Winchester, it is a way of life - and
-          we are unashamedly proud of it.
+        <Text lineHeight={{ lg: '32px' }}>
+          Each boarding house contains comfortable bedrooms with
+          air-conditioning, study rooms, modern showers & toilet facilities,
+          fire alarms and fire exits. Security guards, house masters and medical
+          practitioners are also with the students to provide care and make
+          their experience worthwhile.
         </Text>
       </Box>
       <Box w={{ lg: '40%' }} fontSize={{ lg: 'lg' }}>

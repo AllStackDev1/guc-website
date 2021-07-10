@@ -21,19 +21,14 @@ export default function Life() {
       </Box>
       <Box w={{ lg: '50%' }} fontSize={{ lg: 'lg' }}>
         <Text mb={{ lg: 5 }} lineHeight={{ lg: '32px' }}>
-          Boys are thrown together in groups of 10 or 11 as 13-year-olds, and
-          they grow up together over the next five intense and action-packed
-          years. Friendships built up during this period and will last for the
-          whole of a person’s life.
+          Government College Umuahia affords the opportunity to build
+          everlasting relationships and create a solid foundation for adulthood.
+          We also instill the habits of independence and self-responsibility in
+          our students.
         </Text>
-        <Text mb={{ lg: 5 }} lineHeight={{ lg: '32px' }}>
-          The roles of House Master and Dame are complex and varied. No manual
-          can fully prepare the members of staff who take them on, and the jobs
-          make huge demands on them. However, the task of steering young people
-          through this critical phase in their life is an immensely rewarding,
-          important and worthwhile one. House staff make lasting relationships
-          with many of the pupils who have been in their care and with some of
-          their parents too.
+        <Text lineHeight={{ lg: '32px' }}>
+          We build “a family” through our boarding and extra-curricular
+          experiences in a way that will build long- lasting relationships.
         </Text>
       </Box>
     </Container>

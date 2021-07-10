@@ -16,12 +16,13 @@ export default function Hero() {
           How do we support each boy?
         </Heading>
         <Text
-          color='#6A7986'
+          color='gray.600'
+          fontWeight={800}
           fontSize={{ base: 'sm', lg: '21px' }}
           lineHeight={{ lg: '32px' }}
         >
-          The life of the boarding house is at the heart of every pupil’s GCU
-          experience.
+          “We are always at the front-line of ensuring our students’ personal,
+          psychological growth and wellbeing are a top priority.”
         </Text>
       </Box>
       <Image

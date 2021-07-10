@@ -15,23 +15,23 @@ export default function Responsibility() {
           fontSize={{ lg: '42px' }}
           lineHeight={{ lg: '59px' }}
         >
-          Taking responsibility seriously
+          Taking Responsibility Seriously
         </Text>
       </Box>
       <Box w={{ lg: '50%' }} fontSize={{ lg: 'lg' }}>
         <Text lineHeight={{ lg: '32px' }}>
-          Throughout their time at Winchester, boys are supported by an
-          extensive network of staff who are responsible for their emotional and
-          physical wellbeing.
+          Government College Umuahia is a full boarding school; this allows
+          students to offer a variety of activities to help develop their
+          skills, develop cordial relationships and have a well-rounded
+          experience.
+        </Text>
+        <Text my={{ lg: 4 }} lineHeight={{ lg: '32px' }}>
+          We cater for the well-being of our students in the school environment
+          and beyond by providing a safe, nurturing and healthy environment.
         </Text>
         <Text lineHeight={{ lg: '32px' }}>
-          This network includes all of the teaching staff, the majority of whom
-          are house tutors.
-        </Text>
-        <Text lineHeight={{ lg: '32px' }}>
-          On joining the school, they are closely monitored to ensure that they
-          are settling in to life at Winchester, with any early worries quickly
-          spotted and addressed.
+          We provide adequate care and attention that meet the full range of
+          students’ needs – personal, social, emotional and intellectual.
         </Text>
       </Box>
     </Container>

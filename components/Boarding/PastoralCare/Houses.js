@@ -73,16 +73,12 @@ export default function Houses() {
                 >
                   HOUSEMASTER
                 </Heading>
-                <Text mb={{ lg: 4 }} lineHeight={{ lg: '32px' }}>
-                  The Housemaster takes primary responsibility for the pastoral
-                  care of every boy in his house. He has a detailed
-                  understanding of each boy’s life at the school, from his
-                  mental and physical health to his academic and
-                  extra-curricular profile.
-                </Text>
                 <Text lineHeight={{ lg: '32px' }}>
-                  The principal role of the Housemaster is to help boys to find
-                  their place and to thrive within the school community.
+                  Government College Umuahia empowers the housemaster to take
+                  the prime responsibility of each student’s care in the house.
+                  He has the full information and understanding of each
+                  student’s life on campus – ranging from physical and mental
+                  health to academic and non-academic performance.
                 </Text>
               </Box>
               <Box w={{ lg: '30%' }}>
