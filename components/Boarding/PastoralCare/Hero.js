@@ -13,7 +13,7 @@ export default function Hero() {
     >
       <Box mb={{ base: 4, lg: 14 }} w={{ lg: 125 }}>
         <Heading mb={{ lg: 6 }} fontSize={{ base: '1.5rem', lg: '60px' }}>
-          How do we support each boy?
+          How do we support each boy
         </Heading>
         <Text
           color='gray.600'

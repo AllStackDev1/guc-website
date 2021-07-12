@@ -9,23 +9,23 @@ export default function Hero() {
       flexDir='column'
       textAlign='center'
       alignItems='center'
-      py={{ base: 8, lg: 24 }}
+      py={{ base: 0, lg: 24 }}
     >
       <Flex
         flexDir='column'
         align='center'
         justify='center'
         mb={{ base: 4, lg: 14 }}
-        // w={{ lg: 135 }}
       >
         <Heading
-          w={{ lg: 125 }}
-          mb={{ lg: 6 }}
+          w={{ base: '80%', lg: 125 }}
+          mb={{ base: 4, lg: 6 }}
           fontSize={{ base: '1.5rem', lg: '60px' }}
         >
           Why is sport so important?
         </Heading>
         <Text
+          textAlign={{ base: 'justify', lg: 'inherit' }}
           color='#6A7986'
           fontSize={{ base: 'sm', lg: '21px' }}
           lineHeight={{ lg: '32px' }}

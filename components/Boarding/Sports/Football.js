@@ -7,21 +7,31 @@ export default function Tennis() {
       d='flex'
       maxW='7xl'
       justifyContent='space-between'
+      flexDir={{ base: 'column', lg: 'row' }}
       py={{ base: 8, lg: 14 }}
     >
-      <Box w={{ lg: '40%' }} fontSize={{ lg: 'lg' }}>
-        <Image w='full' h='full' src='/images/tennis.png' alt='calendar img' />
+      <Box w={{ lg: '40%' }} mb={{ base: 5, lg: 0 }}>
+        <Image
+          w='full'
+          h='full'
+          src='/images/football.jpeg'
+          alt='calendar img'
+        />
       </Box>
       <Box w={{ lg: '55%' }} pt={{ lg: 32 }}>
         <Text
           mb={{ lg: 8 }}
           fontFamily='heading'
-          fontSize={{ lg: '42px' }}
+          fontSize={{ base: '21px', lg: '42px' }}
           lineHeight={{ lg: '60px' }}
         >
           FOOTBALL
         </Text>
-        <Text lineHeight={{ lg: '32px' }}>
+        <Text
+          textAlign={{ base: 'justify', lg: 'inherit' }}
+          fontSize={{ base: 'sm', lg: 'lg' }}
+          lineHeight={{ base: '25px', lg: '32px' }}
+        >
           At GCU, football has been a part of the school's sports since its
           inception in 1929. We engage in constant football training and prepare
           our students for intra and inter-football competitions. We,

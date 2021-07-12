@@ -80,12 +80,11 @@ const Footer = ({ mt = 8 }) => {
           fontSize={{ base: 'sm', xl: 'lg' }}
           mx={{ md: 'auto' }}
           w={{ md: 125 }}
-          h={{ base: 36, md: 'unset' }}
-          flexDir={{ base: 'column', md: 'row' }}
-          justify='space-between'
-          align={{ base: 'flex-start', md: '' }}
+          h={{ base: 20, md: 'unset' }}
+          justify='space-evenly'
+          align='center'
         >
-          <NextLink href='#' passHref>
+          {/* <NextLink href='#' passHref>
             <Link _focus={{ outline: 'none' }} _hover={{ outline: 'none' }}>
               Terms & Condition
             </Link>
@@ -99,7 +98,7 @@ const Footer = ({ mt = 8 }) => {
             <Link _focus={{ outline: 'none' }} _hover={{ outline: 'none' }}>
               FAQ
             </Link>
-          </NextLink>
+          </NextLink> */}
           <NextLink href='/careers' passHref>
             <Link _focus={{ outline: 'none' }} _hover={{ outline: 'none' }}>
               Careers

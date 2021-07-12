@@ -7,6 +7,7 @@ export default function Tennis() {
       d='flex'
       maxW='7xl'
       justifyContent='space-between'
+      flexDir={{ base: 'column', lg: 'row' }}
       py={{ base: 8, lg: 14 }}
     >
       <Box w={{ lg: '40%' }} fontSize={{ lg: 'lg' }}>
@@ -16,7 +17,7 @@ export default function Tennis() {
         <Text
           mb={{ lg: 8 }}
           fontFamily='heading'
-          fontSize={{ lg: '42px' }}
+          fontSize={{ base: '21px', lg: '42px' }}
           lineHeight={{ lg: '60px' }}
         >
           TENNIS

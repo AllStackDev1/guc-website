@@ -20,8 +20,9 @@ export default function Hero() {
           fontSize={{ base: 'sm', lg: '21px' }}
           lineHeight={{ lg: '32px' }}
         >
-          We create fantastic memories and our students have an everlasting
-          boarding experience.
+          We create fantastic memories and instill our students with an
+          unforgettable boarding experience equipping them with the necessary
+          life skills to thrive.
         </Text>
       </Box>
       <Flex>

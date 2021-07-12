@@ -14,91 +14,92 @@ import {
   Popover,
   PopoverBody,
   PopoverArrow,
+  useDisclosure,
   PopoverContent,
   PopoverTrigger
 } from '@chakra-ui/react'
 import { IoIosArrowDropdown, IoIosArrowDropup } from 'react-icons/io'
+import useHover from 'hooks/useHover'
 
 const DropDown = ({ title, data, color, withLink, ...rest }) => {
+  const { onOpen, onClose, isOpen } = useDisclosure()
+  const [ref, hovered] = useHover()
   const router = useRouter()
 
   return (
-    <Popover>
-      {({ isOpen }) => (
-        <>
-          <PopoverTrigger>
-            <Flex
-              align='center'
-              cursor='pointer'
-              _focus={{ outline: 'none' }}
-              style={
-                isOpen || router.pathname.match(new RegExp(withLink, 'g'))
-                  ? { color: '#C82B38' }
-                  : {}
-              }
-              _hover={{ hover: 'none', color: color || 'cf.400' }}
+    <Popover isOpen={isOpen || hovered} onOpen={onOpen} onClose={onClose}>
+      <PopoverTrigger>
+        <Flex {...rest}>
+          <Box
+            ref={ref}
+            role='button'
+            _focus={{ outline: 'none' }}
+            style={
+              isOpen || router.pathname.match(new RegExp(withLink, 'g'))
+                ? { color: '#C82B38' }
+                : {}
+            }
+            _hover={{ hover: 'none', color: color || 'cf.400' }}
+          >
+            <Text ml={2}>{title}</Text>
+          </Box>
+          <Box role='button'>
+            <Icon
+              ml={1}
+              as={isOpen ? IoIosArrowDropup : IoIosArrowDropdown}
+              boxSize={4}
               onClick={() => withLink && router.push(withLink)}
-              {...rest}
-            >
-              <Text ml={2}>{title}</Text>
-              <Box>
-                <Icon
-                  ml={1}
-                  as={isOpen ? IoIosArrowDropup : IoIosArrowDropdown}
-                  boxSize={4}
-                />
-              </Box>
-            </Flex>
-          </PopoverTrigger>
-          <Portal>
-            <PopoverContent
-              bgColor='white'
-              shadow='2xl'
-              border='0'
-              borderTop='1px'
-              borderTopColor='gray.400'
-              width={{ lg: 60 }}
-              _focus={{ outline: 'none' }}
-            >
-              <PopoverArrow
-                borderLeft='1px'
-                borderTop='1px'
-                borderColor='gray.500'
-              />
-              <PopoverBody p={0}>
-                {data.map((item, i) => (
-                  <React.Fragment key={i}>
-                    <Box
-                      py={4}
-                      px={4}
-                      cursor='pointer'
-                      _hover={{
-                        textDecor: 'none',
-                        color: 'white',
-                        bg: color
-                      }}
-                    >
-                      {item.link && (
-                        <NextLink href={item.link} passHref>
-                          <Link d='block' _hover={{ textDecor: 'none' }}>
-                            {item.title}
-                          </Link>
-                        </NextLink>
-                      )}
-                      {item.action && (
-                        <Text d='block' onClick={item.action}>
-                          {item.title}
-                        </Text>
-                      )}
-                    </Box>
-                    {data.length !== i + 1 && <Divider />}
-                  </React.Fragment>
-                ))}
-              </PopoverBody>
-            </PopoverContent>
-          </Portal>
-        </>
-      )}
+            />
+          </Box>
+        </Flex>
+      </PopoverTrigger>
+      <Portal>
+        <PopoverContent
+          bgColor='white'
+          shadow='2xl'
+          border='0'
+          borderTop='1px'
+          borderTopColor='gray.400'
+          width={{ lg: 60 }}
+          _focus={{ outline: 'none' }}
+        >
+          <PopoverArrow
+            borderLeft='1px'
+            borderTop='1px'
+            borderColor='gray.500'
+          />
+          <PopoverBody p={0}>
+            {data.map((item, i) => (
+              <React.Fragment key={i}>
+                <Box
+                  py={4}
+                  px={4}
+                  cursor='pointer'
+                  _hover={{
+                    textDecor: 'none',
+                    color: 'white',
+                    bg: color
+                  }}
+                >
+                  {item.link && (
+                    <NextLink href={item.link} passHref>
+                      <Link d='block' _hover={{ textDecor: 'none' }}>
+                        {item.title}
+                      </Link>
+                    </NextLink>
+                  )}
+                  {item.action && (
+                    <Text d='block' onClick={item.action}>
+                      {item.title}
+                    </Text>
+                  )}
+                </Box>
+                {data.length !== i + 1 && <Divider />}
+              </React.Fragment>
+            ))}
+          </PopoverBody>
+        </PopoverContent>
+      </Portal>
     </Popover>
   )
 }
