@@ -5,7 +5,6 @@ import Layout from '@components/Layout'
 import Footer from '@components/Home/Footer'
 
 import Hero from '@components/ContactUs/Hero'
-// import MapWithControlledZoom from '@components/ContactUs/Map'
 import ContactsOptions from '@components/ContactUs/ContactsOptions'
 
 export default function ContactUs() {
@@ -18,8 +17,7 @@ export default function ContactUs() {
       bgColor='gray.50'
     >
       <Hero />
-      {/* <MapWithControlledZoom /> */}
-      <Box>
+      <Box d={{ base: 'none', xl: 'inherit' }}>
         <Image src='/images/school-map.png' />
       </Box>
       <ContactsOptions />
