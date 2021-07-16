@@ -23,17 +23,23 @@ export default function ContactsOptions() {
 
   return (
     <Box bgColor='white'>
-      <Flex px={{ xl: 32 }} py={{ xl: 20 }} justify='space-between'>
+      <Flex
+        px={{ base: 5, xl: 32 }}
+        py={{ base: 10, xl: 20 }}
+        flexDir={{ base: 'column', lg: 'row' }}
+        justify={{ lg: 'space-between' }}
+      >
         {data.map(i => (
           <Flex
             w={{ xl: 80 }}
             key={i.title}
             align='center'
-            justify='space-between'
+            justify={{ lg: 'space-between' }}
           >
             <Flex
               w={14}
               h={14}
+              mr={{ base: 5, lg: 0 }}
               align='center'
               rounded='full'
               justify='center'

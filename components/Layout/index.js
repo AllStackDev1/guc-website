@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { NextSeo } from 'next-seo'
 import { Box } from '@chakra-ui/react'
+import { Fade } from 'react-awesome-reveal'
 
 import Navbar from '@components/Navbar'
 
@@ -14,7 +15,7 @@ const Layout = ({
   ...rest
 }) => {
   const main_site_url = 'https://gcu.sch.ng/'
-  const main_site_title = 'The Goverment College Umuahia'
+  const main_site_title = 'The Government College Umuahia'
 
   return (
     <>
@@ -42,6 +43,7 @@ const Layout = ({
           cardType: 'summary_large_image'
         }}
       />
+
       <Navbar />
       <Box
         h='100%'
@@ -52,7 +54,9 @@ const Layout = ({
         mt={{ base: 16, md: '4.5rem', xl: 36 }}
         {...rest}
       >
-        {children}
+        <Fade cascade delay={100}>
+          {children}
+        </Fade>
       </Box>
     </>
   )

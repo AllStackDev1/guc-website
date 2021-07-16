@@ -42,8 +42,8 @@ const MainNav = () => {
         }
         //, {
         //   id: 2,
-        //   title: 'Alumini',
-        //   link: '/about-us/alumini'
+        //   title: 'Alumin',
+        //   link: '/about-us/alumin'
         // }
       ]
     },
@@ -57,23 +57,23 @@ const MainNav = () => {
       title: 'Careers',
       link: '/careers'
     },
-    // {
-    //   id: 5,
-    //   title: 'Boarding',
-    //   withLink: '/boarding',
-    //   items: [
-    //     {
-    //       id: 1,
-    //       title: 'Pastorial Care',
-    //       link: '/boarding/pastorial-care'
-    //     },
-    //     {
-    //       id: 2,
-    //       title: 'Sports',
-    //       link: '/boarding/sports'
-    //     }
-    //   ]
-    // },
+    {
+      id: 5,
+      title: 'Boarding',
+      withLink: '/boarding',
+      items: [
+        {
+          id: 1,
+          title: 'Pastoral Care',
+          link: '/boarding/pastoral-care'
+        },
+        {
+          id: 2,
+          title: 'Sports',
+          link: '/boarding/sports'
+        }
+      ]
+    },
     {
       id: 6,
       title: 'Calendar',

@@ -70,8 +70,9 @@ const ContactUsForm = () => {
 
   return (
     <Box
-      w={{ xl: '40%' }}
-      pos='absolute'
+      mt={{ base: 5, lg: 0 }}
+      w={{ base: '100%', xl: '40%' }}
+      pos={{ base: '', lg: 'absolute' }}
       bgColor='white'
       rounded='xl'
       shadow='2xl'
@@ -79,7 +80,7 @@ const ContactUsForm = () => {
       right={0}
       zIndex={{ xl: 1 }}
     >
-      <form onSubmit={handleSubmit}>
+      <Box as='form' p={5} onSubmit={handleSubmit}>
         <CustomInput
           type='text'
           isRequired
@@ -155,7 +156,7 @@ const ContactUsForm = () => {
             Submit
           </Button>
         </Box>
-      </form>
+      </Box>
     </Box>
   )
 }

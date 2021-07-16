@@ -7,28 +7,38 @@ export default function ChallengeBalance() {
       d='flex'
       maxW='7xl'
       justifyContent='space-between'
+      flexDir={{ base: 'column', lg: 'row' }}
       py={{ base: 8, lg: 14 }}
     >
-      <Box w={{ lg: '40%' }}>
+      <Box w={{ lg: '40%' }} textAlign={{ base: 'center', lg: 'inherit' }}>
         <Text
           fontFamily='heading'
-          fontSize={{ lg: '42px' }}
+          fontSize={{ base: '21px', lg: '42px' }}
           lineHeight={{ lg: '59px' }}
         >
-          Challenge & balance
+          Challenge & Balance
         </Text>
       </Box>
-      <Box w={{ lg: '50%' }} fontSize={{ lg: 'lg' }}>
-        <Text mb={{ lg: 4 }} lineHeight={{ lg: '32px' }}>
-          Sport brings challenge, and a vital balance to academic life. Every
-          afternoon, boys can participate in a wide range of sporting
-          opportunities.
+      <Box
+        textAlign={{ base: 'justify', lg: 'inherit' }}
+        w={{ lg: '50%' }}
+        fontSize={{ base: 'sm', lg: 'lg' }}
+      >
+        <Text lineHeight={{ base: '25px', lg: '32px' }}>
+          Here at Government College Umuahia, we challenge our students both
+          academically and extra-curricularly. We provide several possibilities
+          for students to master new abilities and kindle new interests outside
+          of the traditional framework of any educational system.
         </Text>
-        <Text lineHeight={{ lg: '32px' }}>
-          Our coaching staff consists of former international sportsmen and
-          professionals, as well as current county and district level coaches.
-          Their expertise and enthusiasm readies boys to represent their sport
-          at regional, county, national and international level.
+        <Text my={4} lineHeight={{ base: '25px', lg: '32px' }}>
+          Extracurricular activities are an integral component of any child’s
+          physical and psychological development. They are well-structured to
+          enhance our students’ team bonding, educational retainment, cultural
+          exposure, and interpersonal skills.
+        </Text>
+        <Text lineHeight={{ base: '25px', lg: '32px' }}>
+          At GCU, our extra-curricular activities are segmented into three
+          layers: sports, intellectual and cultural activities.
         </Text>
       </Box>
     </Container>

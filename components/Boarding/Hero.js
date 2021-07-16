@@ -13,22 +13,23 @@ export default function Hero() {
     >
       <Box mb={{ base: 4, lg: 14 }} w={{ lg: 130 }}>
         <Heading mb={{ lg: 6 }} fontSize={{ base: '1.5rem', lg: '60px' }}>
-          Boarding is just living with your friends.
+          Boarding goes beyond living with your friends.
         </Heading>
         <Text
           color='#6A7986'
           fontSize={{ base: 'sm', lg: '21px' }}
           lineHeight={{ lg: '32px' }}
         >
-          The life of the boarding house is at the heart of every pupil’s GCU
-          experience.
+          We create fantastic memories and instill our students with an
+          unforgettable boarding experience equipping them with the necessary
+          life skills to thrive.
         </Text>
       </Box>
       <Flex>
         <Image
           w={{ lg: '690px' }}
           h={{ lg: '440px' }}
-          src='/images/bording-1.png'
+          src='/images/boys-hostels.jpeg'
           alt='about-us-img'
         />
         <Box mx={{ lg: 4 }} />
@@ -46,7 +47,7 @@ export default function Hero() {
             <Image
               w={{ lg: '480px' }}
               h={{ lg: '440px' }}
-              src='/images/bording-2.png'
+              src='/images/emty-room.jpeg'
               alt='about-us-img'
             />
           </Box>

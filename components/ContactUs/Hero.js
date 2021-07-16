@@ -8,15 +8,16 @@ export default function Hero() {
     <Container
       d='flex'
       maxW='7xl'
-      py={{ xl: 20 }}
+      py={{ base: 5, xl: 20 }}
       pos='relative'
+      flexDir={{ base: 'column', lg: 'row' }}
       justifyContent='space-between'
     >
       <Box w={{ xl: '55%' }}>
         <Text
           fontFamily='heading'
           color='gcu.100'
-          fontSize={{ lg: '42px' }}
+          fontSize={{ base: '21px', lg: '42px' }}
           lineHeight={{ lg: '59px' }}
         >
           Contact Us

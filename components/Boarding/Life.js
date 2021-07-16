@@ -6,34 +6,34 @@ export default function Life() {
     <Container
       d='flex'
       maxW='7xl'
-      justifyContent='space-between'
+      flexDir={{ base: 'column', lg: 'row' }}
       py={{ base: 8, lg: 14 }}
+      justifyContent='space-between'
     >
-      <Box w={{ lg: '40%' }}>
+      <Box
+        textAlign={{ base: 'center', lg: 'inherit' }}
+        w={{ lg: '40%' }}
+        mb={{ base: 5, lg: 0 }}
+      >
         <Text
           fontFamily='heading'
-          fontSize={{ lg: '42px' }}
+          fontSize={{ base: '21px', lg: '42px' }}
           lineHeight={{ lg: '59px' }}
         >
-          The life of the boarding house is at the heart of every pupil’s Eton
+          The life of the boarding house is at the heart of every pupil’s GCU
           experience.
         </Text>
       </Box>
-      <Box w={{ lg: '50%' }} fontSize={{ lg: 'lg' }}>
-        <Text mb={{ lg: 5 }} lineHeight={{ lg: '32px' }}>
-          Boys are thrown together in groups of 10 or 11 as 13-year-olds, and
-          they grow up together over the next five intense and action-packed
-          years. Friendships built up during this period and will last for the
-          whole of a person’s life.
+      <Box w={{ lg: '50%' }} fontSize={{ base: 'sm', lg: 'lg' }}>
+        <Text mb={{ base: 4, lg: 5 }} lineHeight={{ base: '25px', lg: '32px' }}>
+          Government College Umuahia affords the opportunity to build
+          everlasting relationships and create a solid foundation for adulthood.
+          We also instill the habits of independence and self-responsibility in
+          our students.
         </Text>
-        <Text mb={{ lg: 5 }} lineHeight={{ lg: '32px' }}>
-          The roles of House Master and Dame are complex and varied. No manual
-          can fully prepare the members of staff who take them on, and the jobs
-          make huge demands on them. However, the task of steering young people
-          through this critical phase in their life is an immensely rewarding,
-          important and worthwhile one. House staff make lasting relationships
-          with many of the pupils who have been in their care and with some of
-          their parents too.
+        <Text lineHeight={{ base: '25px', lg: '32px' }}>
+          We build “a family” through our boarding and extra-curricular
+          experiences in a way that will build long- lasting relationships.
         </Text>
       </Box>
     </Container>
