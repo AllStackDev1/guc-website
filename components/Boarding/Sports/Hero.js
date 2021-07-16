@@ -22,7 +22,7 @@ export default function Hero() {
           mb={{ base: 4, lg: 6 }}
           fontSize={{ base: '1.5rem', lg: '60px' }}
         >
-          Why is sport so important?
+          Why sports are important
         </Heading>
         <Text
           textAlign={{ base: 'justify', lg: 'inherit' }}
@@ -30,13 +30,13 @@ export default function Hero() {
           fontSize={{ base: 'sm', lg: '21px' }}
           lineHeight={{ lg: '32px' }}
         >
-          Government College Umuahia operates on the premise of this popular
-          saying, “a healthy mind resides in a healthy body.” We believe that
-          sports provide children with the required skills they need to live a
-          healthy lifestyle while influencing their physical and mental
-          development. Sports activities are essential to us because they teach
-          our students lifelong qualities such as endurance, leadership,
-          teamwork, and social skills as well increases their higher levels of
+          Government College Umuahia believes that the health of a human being
+          is a state of complete harmony of the body, mind and spirit. We
+          believe that sports provide children with the required skills they
+          need to live a healthy lifestyle while influencing their physical and
+          mental development. Sports activities are essential to us because they
+          teach our students lifelong qualities such as endurance, leadership,
+          teamwork, and social skills as well increases their levels of
           confidence, self-esteem and self-worth.
         </Text>
       </Flex>

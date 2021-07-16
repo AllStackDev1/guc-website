@@ -29,7 +29,7 @@ export default function Hero() {
         <Image
           w={{ lg: '690px' }}
           h={{ lg: '440px' }}
-          src='/images/bording-1.png'
+          src='/images/boys-hostels.jpeg'
           alt='about-us-img'
         />
         <Box mx={{ lg: 4 }} />
@@ -47,7 +47,7 @@ export default function Hero() {
             <Image
               w={{ lg: '480px' }}
               h={{ lg: '440px' }}
-              src='/images/bording-2.png'
+              src='/images/emty-room.jpeg'
               alt='about-us-img'
             />
           </Box>

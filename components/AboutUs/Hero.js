@@ -21,7 +21,7 @@ export default function Hero() {
           lineHeight={{ lg: '32px' }}
         >
           Welcome to Government College Umuahia, a boarding school for boys aged
-          between 13 and 18 and a world-class residential all-boys secondary
+          between 10 and 17 and a world-class residential all-boys secondary
           school. GCU is located on Ikot-Ekpene Road, Umuahia in Abia State
           which offers a combination of British and Nigerian curricula.
         </Text>

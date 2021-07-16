@@ -20,7 +20,7 @@ export default function Life() {
           fontSize={{ base: '21px', lg: '42px' }}
           lineHeight={{ lg: '59px' }}
         >
-          The life of the boarding house is at the heart of every pupil’s Eton
+          The life of the boarding house is at the heart of every pupil’s GCU
           experience.
         </Text>
       </Box>
