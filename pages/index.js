@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react'
+import { Fade } from 'react-reveal'
+
 import Layout from '@components/Layout'
 import Hero from '@components/Home/Hero'
 import About from '@components/Home/About'
@@ -51,8 +53,14 @@ export default function Home() {
       description='So much of what makes Winchester exceptional is the people who are a part of the school. Also, its beauty - the buildings, the grounds, the setting. Our heritage and archives provide insight into the past, while our community partnerships prepare boys for a future of compassionate leadership.'
     >
       {getModal(modalType)}
-      <Hero />
-      <About />
+
+      <Fade left>
+        <Hero />
+      </Fade>
+      <Fade right>
+        <About />
+      </Fade>
+
       <OurHistory handleModal={handleModal} />
       <MessageAndProcedure handleModal={handleModal} />
       <CorePurpose handleModal={handleModal} />

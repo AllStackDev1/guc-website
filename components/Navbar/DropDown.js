@@ -41,14 +41,15 @@ const DropDown = ({ title, data, color, withLink, ...rest }) => {
             }
             _hover={{ hover: 'none', color: color || 'cf.400' }}
           >
-            <Text ml={2}>{title}</Text>
+            <Text ml={2} onClick={() => withLink && router.push(withLink)}>
+              {title}
+            </Text>
           </Box>
           <Box role='button'>
             <Icon
               ml={1}
               as={isOpen ? IoIosArrowDropup : IoIosArrowDropdown}
               boxSize={4}
-              onClick={() => withLink && router.push(withLink)}
             />
           </Box>
         </Flex>

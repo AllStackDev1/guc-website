@@ -2,9 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { NextSeo } from 'next-seo'
 import { Box } from '@chakra-ui/react'
-import { Fade } from 'react-awesome-reveal'
+import config from 'react-reveal/globals'
 
 import Navbar from '@components/Navbar'
+
+config({ ssrFadeout: true })
 
 const Layout = ({
   children,
@@ -54,9 +56,7 @@ const Layout = ({
         mt={{ base: 16, md: '4.5rem', xl: 36 }}
         {...rest}
       >
-        <Fade cascade delay={100}>
-          {children}
-        </Fade>
+        {children}
       </Box>
     </>
   )

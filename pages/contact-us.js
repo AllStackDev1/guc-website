@@ -1,4 +1,5 @@
 import React from 'react'
+import { Fade } from 'react-reveal'
 import { Box, Image } from '@chakra-ui/react'
 
 import Layout from '@components/Layout'
@@ -16,7 +17,9 @@ export default function ContactUs() {
       description='So much of what makes Winchester exceptional is the people who are a part of the school. Also, its beauty - the buildings, the grounds, the setting. Our heritage and archives provide insight into the past, while our community partnerships prepare boys for a future of compassionate leadership.'
       bgColor='gray.50'
     >
-      <Hero />
+      <Fade left>
+        <Hero />
+      </Fade>
       <Box d={{ base: 'none', xl: 'inherit' }}>
         <Image src='/images/school-map.png' />
       </Box>

@@ -1,4 +1,5 @@
 import React from 'react'
+import Pulse from 'react-reveal/Pulse'
 import { Box, Text, Container, Heading } from '@chakra-ui/react'
 
 export default function Hero() {
@@ -12,9 +13,12 @@ export default function Hero() {
       py={{ base: 8, lg: 24 }}
     >
       <Box mb={{ base: 4, lg: 14 }} w={{ lg: 125 }}>
-        <Heading mb={{ lg: 6 }} fontSize={{ base: '1.5rem', lg: '60px' }}>
-          Career & Opportunities
-        </Heading>
+        <Pulse>
+          <Heading mb={{ lg: 6 }} fontSize={{ base: '1.5rem', lg: '60px' }}>
+            Career & Opportunities
+          </Heading>
+        </Pulse>
+
         <Text
           color='#6A7986'
           lineHeight={{ lg: '32px' }}

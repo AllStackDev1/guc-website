@@ -30,13 +30,11 @@ const AdmissionProcedure = ({ isOpen, onClose }) => {
     },
     {
       id: 1,
-      text:
-        'Photocopy of candidate’s birth certificate or international passport data page'
+      text: 'Photocopy of candidate’s birth certificate or international passport data page'
     },
     {
       id: 1,
-      text:
-        'Immunization record and medical report (after the admission is offered)'
+      text: 'Immunization record and medical report (after the admission is offered)'
     }
   ]
 
