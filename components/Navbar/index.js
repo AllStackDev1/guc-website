@@ -9,10 +9,12 @@ import { OpenMenuIcon, CloseMenuIcon } from 'theme/Icons'
 
 import DropDown from './DropDown'
 import MobileDropdown from './MobileDropdown'
+import useHover from 'hooks/useHover'
 
 const MainNav = () => {
   const { handleModal, toggleMenu, isMenuOpen } = useApp()
   const router = useRouter()
+  const [ref, hovered] = useHover()
 
   const menus = [
     {
@@ -92,7 +94,7 @@ const MainNav = () => {
   ]
 
   return (
-    <Box pos='relative'>
+    <Box pos='relative' ref={ref}>
       <Flex
         as='nav'
         w='100%'
@@ -164,6 +166,7 @@ const MainNav = () => {
                   color='gcu.100'
                   data={menu.items}
                   title={menu.title}
+                  isNavHovered={hovered}
                   withLink={menu.withLink}
                 />
               )}
