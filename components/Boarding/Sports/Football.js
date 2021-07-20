@@ -14,8 +14,9 @@ export default function Tennis() {
         <Image
           w='full'
           h='full'
-          src='/images/football.jpeg'
           alt='calendar img'
+          // src='/images/football.jpeg'
+          src={require('/public/images/football.jpeg')}
         />
       </Box>
       <Box w={{ lg: '55%' }} pt={{ lg: 32 }}>

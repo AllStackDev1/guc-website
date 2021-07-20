@@ -57,9 +57,7 @@ export default function Home() {
       <Fade left>
         <Hero />
       </Fade>
-      <Fade right>
-        <About />
-      </Fade>
+      <About />
 
       <OurHistory handleModal={handleModal} />
       <MessageAndProcedure handleModal={handleModal} />

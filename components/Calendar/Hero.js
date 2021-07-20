@@ -34,8 +34,8 @@ export default function Hero() {
         <Image
           w='full'
           h='full'
-          src='/images/calendar-hero.png'
           alt='calendar img'
+          src={require('/public/images/calendar-hero.png')}
         />
       </Fade>
     </Container>

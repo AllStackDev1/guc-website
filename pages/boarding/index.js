@@ -25,8 +25,8 @@ export default function Boarding() {
         <Image
           w='full'
           h='full'
-          src='/images/calendar-hero.png'
           alt='calendar img'
+          src={require('/public/images/calendar-hero.png')}
         />
       </Container>
       <FullerExperience />

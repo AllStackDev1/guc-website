@@ -29,8 +29,8 @@ export default function Hero() {
         <Image
           w={{ lg: '690px' }}
           h={{ lg: '440px' }}
-          src='/images/boys-hostels.jpeg'
           alt='about-us-img'
+          src={require('/public/images/boys-hostels.jpeg')}
         />
         <Box mx={{ lg: 4 }} />
         <Box pos='relative'>
@@ -47,8 +47,8 @@ export default function Hero() {
             <Image
               w={{ lg: '480px' }}
               h={{ lg: '440px' }}
-              src='/images/emty-room.jpeg'
               alt='about-us-img'
+              src={require('/public/images/emty-room.jpeg')}
             />
           </Box>
         </Box>

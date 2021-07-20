@@ -21,13 +21,11 @@ export default function Applications() {
     },
     {
       id: 1,
-      text:
-        'Photocopy of candidate’s birth certificate or international passport data page'
+      text: 'Photocopy of candidate’s birth certificate or international passport data page'
     },
     {
       id: 1,
-      text:
-        'Immunization record and medical report (after the admission is offered)'
+      text: 'Immunization record and medical report (after the admission is offered)'
     }
   ]
 
@@ -135,8 +133,8 @@ export default function Applications() {
           <Image
             w={{ lg: 'full' }}
             h={{ lg: 'full' }}
-            src='/images/houses-img.png'
             alt='about-us-img'
+            src={require('/public/images/houses-img.png')}
           />
         </Box>
       </Flex>

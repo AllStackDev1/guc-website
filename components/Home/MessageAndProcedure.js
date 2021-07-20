@@ -18,10 +18,16 @@ const MessageAndProcedure = ({ handleModal }) => {
         flexDir={{ base: 'column', lg: 'row' }}
       >
         <Image
-          src='images/principal-small.jpeg'
+          alt='Principal Picture'
           d={{ base: 'none', lg: 'block' }}
+          // src='images/principal-small.jpeg'
+          src={require('/public/images/principal-small.jpeg')}
         />
-        <Image src='images/principal.jpeg' d={{ base: 'block', lg: 'none' }} />
+        <Image
+          d={{ base: 'block', lg: 'none' }}
+          alt='Principal Picture'
+          src={require('/public/images/principal.jpeg')}
+        />
         <Flex
           px={8}
           align='center'

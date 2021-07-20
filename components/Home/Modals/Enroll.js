@@ -32,7 +32,7 @@ const EnrollModal = ({ isOpen, onClose }) => {
         mx={{ base: 10 }}
         mt={{ base: 32 }}
         bgRepeat='no-repeat'
-        bgImage="url('/images/student.png')"
+        bgImage={`url(${require('/public/images/student.png')})`}
       >
         <ModalCloseButton color='white' size={6} />
         <ModalBody

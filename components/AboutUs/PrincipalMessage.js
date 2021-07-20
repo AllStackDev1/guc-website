@@ -12,9 +12,12 @@ const PrincipalMessage = () => {
     >
       <Image
         d={{ base: 'block', xl: 'none' }}
-        src='/images/principal-2-mobile.png'
+        src={require('/public/images/principal-2-mobile.png')}
       />
-      <Image d={{ base: 'none', xl: 'block' }} src='/images/principal-2.png' />
+      <Image
+        d={{ base: 'none', xl: 'block' }}
+        src={require('/public/images/principal-2.png')}
+      />
       <Flex
         align='center'
         bgColor='#000'

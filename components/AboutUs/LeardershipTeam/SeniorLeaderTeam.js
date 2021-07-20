@@ -39,7 +39,7 @@ const SeniorLeaderTeam = () => {
         </Text>
       </Box>
       <Box mt={{ base: 10, lg: 20 }} px={{ xl: 20 }}>
-        <Image src='/images/graph.png' />
+        <Image src={require('/public/images/graph.png')} />
       </Box>
     </Container>
   )

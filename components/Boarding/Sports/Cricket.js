@@ -39,8 +39,9 @@ export default function Cricket() {
         <Image
           w='full'
           h='full'
-          src='/images/cricket.jpeg'
           alt='calendar img'
+          // src='/images/cricket.jpeg'
+          src={require('/public/images/cricket.jpeg')}
         />
       </Box>
     </Container>

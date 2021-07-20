@@ -21,7 +21,7 @@ export default function ContactUs() {
         <Hero />
       </Fade>
       <Box d={{ base: 'none', xl: 'inherit' }}>
-        <Image src='/images/school-map.png' />
+        <Image src={require('/public/images/school-map.png')} />
       </Box>
       <ContactsOptions />
       <Footer mt={0} />

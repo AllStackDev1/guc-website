@@ -6,8 +6,8 @@ export default function Hero() {
   return (
     <Box
       bgImg={{
-        base: "url('images/bg-hero@1x.png')",
-        lg: "url('images/bg-hero.png')"
+        base: `url(${require('/public/images/bg-hero@1x.png')})`,
+        lg: `url(${require('/public/images/bg-hero.png')})`
       }}
       bgSize='cover'
       bgPos='center'

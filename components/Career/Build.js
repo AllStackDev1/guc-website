@@ -32,7 +32,7 @@ export default function Build() {
           w='full'
           h='full'
           alt='career img'
-          src='/images/career-img.png'
+          src={require('/public/images/career-img.png')}
         />
       </Box>
     </Flex>

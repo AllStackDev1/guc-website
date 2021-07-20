@@ -84,8 +84,8 @@ const CorePurpose = ({ handleModal }) => {
           bgPos='center'
           bgRepeat='no-repeat'
           bgImage={{
-            base: "url('/images/vision@1x.png')",
-            lg: "url('/images/vision.png')"
+            base: `url(${require('/public/images/vision@1x.png')})`,
+            lg: `url(${require('/public/images/vision.png')})`
           }}
         >
           <Flex
@@ -124,8 +124,8 @@ const CorePurpose = ({ handleModal }) => {
           bgPos='center'
           bgRepeat='no-repeat'
           bgImage={{
-            base: "url('/images/mision@1x.png')",
-            lg: "url('/images/mision.png')"
+            base: `url(${require('/public/images/mision@1x.png')})`,
+            lg: `url(${require('/public/images/mision.png')})`
           }}
         >
           <Flex

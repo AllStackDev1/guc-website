@@ -26,8 +26,8 @@ export default function Hero() {
       <Image
         w='full'
         h='full'
-        src='/images/leadership-team-hero.png'
         alt='calendar img'
+        src={require('/public/images/leadership-team-hero.png')}
       />
     </Container>
   )

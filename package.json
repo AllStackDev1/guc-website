@@ -17,6 +17,7 @@
     "axios": "^0.21.1",
     "formik": "^2.2.9",
     "framer-motion": "^4",
+    "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",
     "marked": "^2.1.1",
     "moment": "2.29.1",

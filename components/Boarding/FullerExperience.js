@@ -42,8 +42,8 @@ export default function FullerExperience() {
         <Image
           w='full'
           h='full'
-          src='/images/boarding-3.png'
           alt='calendar img'
+          src={require('/public/images/boarding-3.png')}
         />
       </Box>
     </Container>

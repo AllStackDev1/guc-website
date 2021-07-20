@@ -14,8 +14,8 @@ export default function ExamDate() {
         <Image
           w='full'
           h='full'
-          src='/images/calendar-img.png'
           alt='calendar img'
+          src={require('/public/images/calendar-img.png')}
         />
       </Box>
       <Box w={{ lg: '45%' }} px={{ base: 2, lg: 0 }} pt={{ base: 14, lg: 32 }}>
