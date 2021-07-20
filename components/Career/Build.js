@@ -1,4 +1,5 @@
 import React from 'react'
+import NextImage from 'next/image'
 import { Box, Text, Flex, Image } from '@chakra-ui/react'
 
 export default function Build() {
@@ -28,11 +29,12 @@ export default function Build() {
         </Text>
       </Box>
       <Box w={{ xl: '40%' }}>
-        <Image
-          w='full'
-          h='full'
-          src='/images/career-img.png'
+        <NextImage
+          width='100%'
+          height='100%'
+          layout='responsive'
           alt='career img'
+          src='/images/career-img.png'
         />
       </Box>
     </Flex>
