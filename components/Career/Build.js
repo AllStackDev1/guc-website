@@ -29,10 +29,10 @@ export default function Build() {
         </Text>
       </Box>
       <Box w={{ xl: '40%' }}>
-        <NextImage
+        <Image
           width='100%'
           height='100%'
-          layout='responsive'
+          layout='fill'
           alt='career img'
           src='/images/career-img.png'
         />
