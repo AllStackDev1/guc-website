@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import PropTypes from 'prop-types'
 import TagManager from 'react-gtm-module'
 import { Box, ChakraProvider } from '@chakra-ui/react'
@@ -23,26 +23,28 @@ const MyApp = ({ Component, pageProps, router }) => {
     <ChakraProvider theme={theme} resetCSS>
       <AppContextProvider>
         <ApiContextProvider>
-          <motion.div
-            key={router.route}
-            initial='pageInitial'
-            animate='pageAnimate'
-            variants={{
-              pageInitial: {
-                opacity: 0
-              },
-              pageAnimate: {
-                opacity: 1
-              },
-              transition: {
-                animationDuration: 5
-              }
-            }}
-          >
-            <Box fontFamily='body' overflowX='hidden'>
-              <Component {...pageProps} />
-            </Box>
-          </motion.div>
+          <AnimatePresence exitBeforeEnter key={router.route}>
+            <motion.div
+              key={router.route}
+              initial='pageInitial'
+              animate='pageAnimate'
+              variants={{
+                pageInitial: {
+                  opacity: 0
+                },
+                pageAnimate: {
+                  opacity: 1
+                },
+                transition: {
+                  duration: 2
+                }
+              }}
+            >
+              <Box fontFamily='body' overflowX='hidden'>
+                <Component {...pageProps} />
+              </Box>
+            </motion.div>
+          </AnimatePresence>
         </ApiContextProvider>
       </AppContextProvider>
     </ChakraProvider>
