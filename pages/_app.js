@@ -23,7 +23,7 @@ const MyApp = ({ Component, pageProps, router }) => {
     <ChakraProvider theme={theme} resetCSS>
       <AppContextProvider>
         <ApiContextProvider>
-          <AnimatePresence exitBeforeEnter key={router.route}>
+          <AnimatePresence exitBeforeEnter>
             <motion.div
               key={router.route}
               initial='pageInitial'
@@ -33,10 +33,8 @@ const MyApp = ({ Component, pageProps, router }) => {
                   opacity: 0
                 },
                 pageAnimate: {
-                  opacity: 1
-                },
-                transition: {
-                  duration: 2
+                  opacity: 1,
+                  transition: { duration: 1.5 }
                 }
               }}
             >
