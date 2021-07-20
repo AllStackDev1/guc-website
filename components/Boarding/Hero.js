@@ -2,7 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 import { Fade } from 'react-reveal'
 import { Box, Text, Container, Heading, Flex } from '@chakra-ui/react'
-import { imgLoader } from 'mics'
 
 export default function Hero() {
   return (
@@ -31,9 +30,8 @@ export default function Hero() {
       <Flex>
         <Fade left>
           <Image
-            width='690px'
-            height='440px'
-            loader={imgLoader}
+            w={{ lg: '690px' }}
+            h={{ lg: '440px' }}
             alt='about-us-img'
             src={require('/public/images/boys-hostels.jpeg')}
           />
@@ -53,9 +51,8 @@ export default function Hero() {
             />
             <Box zIndex={1}>
               <Image
-                width='480px'
-                height='440px'
-                loader={imgLoader}
+                w={{ lg: '480px' }}
+                h={{ lg: '440px' }}
                 alt='about-us-img'
                 src={require('/public/images/emty-room.jpeg')}
               />

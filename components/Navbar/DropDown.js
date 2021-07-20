@@ -13,7 +13,17 @@ const DropDown = ({ title, data, color, withLink, isNavHovered, ...rest }) => {
   const [onOpen, setOnOpen] = React.useState(false)
   const { push, pathname } = useRouter()
 
-  const onMouseEnter = () => isNavHovered && setOnOpen(true)
+  const onMouseEnter = () => {
+    if (isNavHovered) {
+      setOnOpen(true)
+    }
+  }
+
+  React.useEffect(() => {
+    if (!isNavHovered) {
+      setOnOpen(false)
+    }
+  }, [isNavHovered])
 
   return (
     <Menu as={Box} userSelect='none' {...rest}>
