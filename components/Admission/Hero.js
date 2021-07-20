@@ -33,16 +33,16 @@ export default function Hero() {
       <Image
         w='full'
         h='full'
-        src='/images/calendar-hero-mobile.png'
         alt='calendar img'
         d={{ base: 'block', xl: 'none' }}
+        src={require('/public/images/calendar-hero-mobile.png')}
       />
       <Image
         w='full'
         h='full'
-        src='/images/calendar-hero.png'
         alt='calendar img'
         d={{ base: 'none', xl: 'block' }}
+        src={require('/public/images/calendar-hero.png')}
       />
     </Container>
   )

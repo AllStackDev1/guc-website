@@ -19,7 +19,7 @@ const OurHistory = () => {
   const slider = [
     {
       val: 33.33,
-      img: '/images/robert-fisher.jpeg',
+      img: require('/public/images/robert-fisher.jpeg'),
       text: `Robert Fisher arrived in Umuahia in 1927, on January 29, 1929 he
       opened the gates of the school to 25 students drawn from all parts
       of Nigeria and West Africa, but with catchment in Eastern Nigeria,
@@ -31,7 +31,7 @@ const OurHistory = () => {
     },
     {
       val: 66.67,
-      img: '/images/robert-fisher.jpeg',
+      img: require('/public/images/robert-fisher.jpeg'),
       text: `For the first forty years of its existence, the Government College
       Umuahia was a beacon of excellence and source of pride to Umuahia,
       the region and Nigeria. Following the civil war, GCU saw a steady
@@ -39,7 +39,7 @@ const OurHistory = () => {
     },
     {
       val: 100,
-      img: '/images/cricket.jpeg',
+      img: require('/public/images/cricket.jpeg'),
       text: `The most noticeable sign was the ruined and neglected condition of
       the facilities and physical environment. It suffered greatly from
       acute under resourcing and mismanagement. <br /> The values that made it exemplary became badly eroded and in 2014,

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Fade } from 'react-reveal'
 import PropTypes from 'prop-types'
 import { Box, Flex, Text, IconButton, Divider } from '@chakra-ui/react'
 import marked from 'marked'
@@ -23,8 +24,9 @@ export default function NewsDetail({ prev, next, posts, details }) {
       image_url='https://gcu.sch.ng/images/logo.svg'
       description='So much of what makes Winchester exceptional is the people who are a part of the school. Also, its beauty - the buildings, the grounds, the setting. Our heritage and archives provide insight into the past, while our community partnerships prepare boys for a future of compassionate leadership.'
     >
-      <HeroDetails title={details.title} url={details.hero_bg_img?.[0].url} />
-
+      <Fade left>
+        <HeroDetails title={details.title} url={details.hero_bg_img?.[0].url} />
+      </Fade>
       <Flex
         w='full'
         my={{ xl: 16 }}

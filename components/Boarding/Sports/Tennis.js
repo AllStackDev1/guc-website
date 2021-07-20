@@ -11,7 +11,12 @@ export default function Tennis() {
       py={{ base: 8, lg: 14 }}
     >
       <Box w={{ lg: '40%' }} fontSize={{ lg: 'lg' }}>
-        <Image w='full' h='full' src='/images/tennis.png' alt='calendar img' />
+        <Image
+          w='full'
+          h='full'
+          alt='calendar img'
+          src={require('/public/images/tennis.png')}
+        />
       </Box>
       <Box w={{ lg: '55%' }} pt={{ lg: 32 }}>
         <Text

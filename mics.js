@@ -23,3 +23,7 @@ export const fetchStrapiContent = async path => {
   const response = await fetch(`${STRAPI_API_URL}/${path}`)
   return await response.json()
 }
+
+export const imgLoader = ({ src, width, quality }) => {
+  return `${src}?w=${width}&q=${quality || 75}`
+}

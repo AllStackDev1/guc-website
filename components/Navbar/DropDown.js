@@ -1,106 +1,96 @@
-/* eslint-disable react/no-array-index-key */
 import React from 'react'
 import PropTypes from 'prop-types'
-import NextLink from 'next/link'
+import { AnimatePresence, motion } from 'framer-motion'
+import { Menu } from '@headlessui/react'
 import { useRouter } from 'next/router'
-import {
-  Box,
-  Icon,
-  Text,
-  Flex,
-  Link,
-  Portal,
-  Divider,
-  Popover,
-  PopoverBody,
-  PopoverArrow,
-  useDisclosure,
-  PopoverContent,
-  PopoverTrigger
-} from '@chakra-ui/react'
 import { IoIosArrowDropdown, IoIosArrowDropup } from 'react-icons/io'
-import useHover from 'hooks/useHover'
+import { Box, Icon, Text, Flex } from '@chakra-ui/react'
+import MenuItem from './MenuItem'
 
-const DropDown = ({ title, data, color, withLink, ...rest }) => {
-  const { onOpen, onClose, isOpen } = useDisclosure()
-  const [ref, hovered] = useHover()
-  const router = useRouter()
+const MotionBox = motion(Box)
+
+const DropDown = ({ title, data, color, withLink, isNavHovered, ...rest }) => {
+  const [onOpen, setOnOpen] = React.useState(false)
+  const { push, pathname } = useRouter()
+
+  const onMouseEnter = () => {
+    if (isNavHovered) {
+      setOnOpen(true)
+    }
+  }
+
+  React.useEffect(() => {
+    if (!isNavHovered) {
+      setOnOpen(false)
+    }
+  }, [isNavHovered])
 
   return (
-    <Popover isOpen={isOpen || hovered} onOpen={onOpen} onClose={onClose}>
-      <PopoverTrigger>
-        <Flex {...rest}>
-          <Box
-            ref={ref}
-            role='button'
-            _focus={{ outline: 'none' }}
-            style={
-              isOpen || router.pathname.match(new RegExp(withLink, 'g'))
-                ? { color: '#C82B38' }
-                : {}
-            }
-            _hover={{ hover: 'none', color: color || 'cf.400' }}
-          >
-            <Text ml={2}>{title}</Text>
-          </Box>
-          <Box role='button'>
+    <Menu as={Box} userSelect='none' {...rest}>
+      <Menu.Button
+        as={Box}
+        _focus={{ outline: 'none' }}
+        _hover={{ hover: 'none', color: color || 'cf.400' }}
+        cursor='pointer'
+      >
+        <Flex
+          align='center'
+          onMouseOver={onMouseEnter}
+          style={
+            (onOpen && isNavHovered) ||
+            pathname.match(new RegExp(withLink, 'g'))
+              ? { color: '#C82B38' }
+              : {}
+          }
+        >
+          <Text ml={2} onClick={() => withLink && push(withLink)}>
+            {title}
+          </Text>
+          <Box>
             <Icon
               ml={1}
-              as={isOpen ? IoIosArrowDropup : IoIosArrowDropdown}
+              as={
+                onOpen && isNavHovered ? IoIosArrowDropup : IoIosArrowDropdown
+              }
               boxSize={4}
-              onClick={() => withLink && router.push(withLink)}
             />
           </Box>
         </Flex>
-      </PopoverTrigger>
-      <Portal>
-        <PopoverContent
-          bgColor='white'
-          shadow='2xl'
-          border='0'
-          borderTop='1px'
-          borderTopColor='gray.400'
-          width={{ lg: 60 }}
-          _focus={{ outline: 'none' }}
-        >
-          <PopoverArrow
-            borderLeft='1px'
-            borderTop='1px'
-            borderColor='gray.500'
-          />
-          <PopoverBody p={0}>
-            {data.map((item, i) => (
-              <React.Fragment key={i}>
-                <Box
-                  py={4}
-                  px={4}
-                  cursor='pointer'
-                  _hover={{
-                    textDecor: 'none',
-                    color: 'white',
-                    bg: color
-                  }}
-                >
-                  {item.link && (
-                    <NextLink href={item.link} passHref>
-                      <Link d='block' _hover={{ textDecor: 'none' }}>
-                        {item.title}
-                      </Link>
-                    </NextLink>
-                  )}
-                  {item.action && (
-                    <Text d='block' onClick={item.action}>
-                      {item.title}
-                    </Text>
-                  )}
-                </Box>
-                {data.length !== i + 1 && <Divider />}
-              </React.Fragment>
-            ))}
-          </PopoverBody>
-        </PopoverContent>
-      </Portal>
-    </Popover>
+      </Menu.Button>
+      <AnimatePresence>
+        {onOpen && isNavHovered && (
+          <Menu.Items
+            static
+            as={MotionBox}
+            initial={{ opacity: 0, y: -50 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              transition: { duration: 0.3 }
+            }}
+            w={60}
+            mt={2}
+            bg='white'
+            rounded='lg'
+            pos='absolute'
+            color='gray.600'
+            borderWidth={1}
+            borderColor='gray.100'
+            _focus={{ outline: 'none' }}
+            exit={{ opacity: 0.2, y: 50 }}
+            filter='drop-shadow(0px 2px 20px rgba(0, 0, 0, 0.1))'
+          >
+            <AnimatePresence>
+              {[...data]
+                .filter(item => !item.items)
+                .map((item, i) => (
+                  <MenuItem i={i} item={item} key={item.id} />
+                ))}
+            </AnimatePresence>
+          </Menu.Items>
+        )}
+      </AnimatePresence>
+    </Menu>
   )
 }
 
@@ -108,7 +98,8 @@ DropDown.propTypes = {
   title: PropTypes.string,
   data: PropTypes.array,
   color: PropTypes.string,
-  withLink: PropTypes.string
+  withLink: PropTypes.string,
+  isNavHovered: PropTypes.bool
 }
 
 export default DropDown

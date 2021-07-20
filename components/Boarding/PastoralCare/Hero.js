@@ -28,8 +28,8 @@ export default function Hero() {
       <Image
         w='full'
         h='full'
-        src='/images/pastorial-care-hero-img.png'
         alt='calendar img'
+        src={require('/public/images/pastorial-care-hero-img.png')}
       />
     </Container>
   )

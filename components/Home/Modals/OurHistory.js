@@ -36,7 +36,7 @@ const OurHistory = ({ isOpen, onClose }) => {
           </Heading>
 
           <Image
-            src='/images/robert-fisher.jpeg'
+            src={require('/public/images/robert-fisher.jpeg')}
             alt='Robert Fisher'
             mx='auto'
             w={85}

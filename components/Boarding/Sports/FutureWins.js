@@ -35,8 +35,8 @@ export default function FutureWins() {
           <Image
             w={{ lg: 'full' }}
             h={{ lg: 'full' }}
-            src='/images/future-win.png'
             alt='about-us-img'
+            src={require('/public/images/future-win.png')}
           />
         </Box>
       </Flex>

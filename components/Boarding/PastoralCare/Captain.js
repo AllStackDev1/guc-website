@@ -14,8 +14,8 @@ export default function Houses() {
         <Image
           w={{ lg: 'full' }}
           h={{ lg: 'full' }}
-          src='/images/captain.png'
           alt='about-us-img'
+          src={require('/public/images/captain.png')}
         />
       </Box>
       <Box

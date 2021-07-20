@@ -73,7 +73,7 @@ const Experience = () => {
         </Box>
         <Image
           d={{ base: 'none', lg: 'block' }}
-          src='/images/bluejay-bash-student-feature.png'
+          src={require('/public/images/bluejay-bash-student-feature.png')}
         />
       </Box>
       <Box w={{ lg: 82 }}>
@@ -104,7 +104,7 @@ const Experience = () => {
                 DISCOVER MORE
               </Text>
             </Box>
-            <Image src='/images/teacher.png' />
+            <Image src={require('/public/images/teacher.png')} />
           </Flex>
 
           <Box

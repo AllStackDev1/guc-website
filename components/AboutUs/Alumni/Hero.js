@@ -63,8 +63,8 @@ export default function Hero() {
             pos='relative'
             w='full'
             h='full'
-            src='/images/alumni-hero.png'
             alt='calendar img'
+            src={require('/public/images/alumni-hero.png')}
           />
         </Box>
       </Flex>

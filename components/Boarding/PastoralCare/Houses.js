@@ -89,8 +89,8 @@ export default function Houses() {
                 <Image
                   w={{ lg: 'full' }}
                   h={{ lg: 'full' }}
-                  src='/images/houses-img.png'
                   alt='about-us-img'
+                  src={require('/public/images/houses-img.png')}
                 />
               </Box>
             </TabPanel>

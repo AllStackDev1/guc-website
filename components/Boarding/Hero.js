@@ -1,4 +1,5 @@
 import React from 'react'
+import { Fade } from 'react-reveal'
 import { Box, Text, Container, Heading, Image, Flex } from '@chakra-ui/react'
 
 export default function Hero() {
@@ -26,32 +27,37 @@ export default function Hero() {
         </Text>
       </Box>
       <Flex>
-        <Image
-          w={{ lg: '690px' }}
-          h={{ lg: '440px' }}
-          src='/images/boys-hostels.jpeg'
-          alt='about-us-img'
-        />
-        <Box mx={{ lg: 4 }} />
-        <Box pos='relative'>
-          <Box
-            zIndex={-1}
-            mt={{ lg: 10 }}
-            ml={{ lg: 10 }}
-            bg='gcu.100'
-            pos='absolute'
-            w={{ lg: '480px' }}
+        <Fade left>
+          <Image
+            w={{ lg: '690px' }}
             h={{ lg: '440px' }}
+            alt='about-us-img'
+            src={require('/public/images/boys-hostels.jpeg')}
           />
-          <Box zIndex={1}>
-            <Image
+        </Fade>
+
+        <Box mx={{ lg: 4 }} />
+        <Fade right>
+          <Box pos='relative'>
+            <Box
+              zIndex={-1}
+              mt={{ lg: 10 }}
+              ml={{ lg: 10 }}
+              bg='gcu.100'
+              pos='absolute'
               w={{ lg: '480px' }}
               h={{ lg: '440px' }}
-              src='/images/emty-room.jpeg'
-              alt='about-us-img'
             />
+            <Box zIndex={1}>
+              <Image
+                w={{ lg: '480px' }}
+                h={{ lg: '440px' }}
+                alt='about-us-img'
+                src={require('/public/images/emty-room.jpeg')}
+              />
+            </Box>
           </Box>
-        </Box>
+        </Fade>
       </Flex>
     </Container>
   )

@@ -31,16 +31,16 @@ export default function Hero() {
       <Image
         w='full'
         h='full'
-        d={{ base: 'none', xl: 'block' }}
-        src='/images/leadership-team-hero.png'
         alt='calendar img'
+        d={{ base: 'none', xl: 'block' }}
+        src={require('public/images/leadership-team-hero.png')}
       />
       <Image
         w='full'
         h='full'
-        d={{ base: 'block', xl: 'none' }}
-        src='/images/leadership-team-hero-mobile.png'
         alt='calendar img'
+        d={{ base: 'block', xl: 'none' }}
+        src={require('public/images/leadership-team-hero-mobile.png')}
       />
     </Container>
   )
