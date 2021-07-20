@@ -1,7 +1,6 @@
 import React from 'react'
-import Image from 'next/image'
 import { Fade } from 'react-reveal'
-import { Box, Text, Container, Heading, Flex } from '@chakra-ui/react'
+import { Box, Text, Container, Heading, Image, Flex } from '@chakra-ui/react'
 
 export default function Hero() {
   return (
