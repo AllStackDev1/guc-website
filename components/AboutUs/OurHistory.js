@@ -180,7 +180,7 @@ const OurHistory = () => {
           <Box w={{ base: '50%', xl: '25%' }} lineHeight='28px'>
             <Text as='h2'>92</Text>
             <Text as='span' lineHeight='0' fontSize={{ base: 'sm', xl: 'lg' }}>
-              years of <br /> breeding leaders
+              years of <br /> raising leaders
             </Text>
           </Box>
         </Flex>
