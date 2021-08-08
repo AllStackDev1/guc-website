@@ -51,10 +51,10 @@ export default function Hero() {
               fontSize={{ lg: 'lg' }}
               lineHeight={{ lg: '32px' }}
             >
-              “GCU, as the “Eton of the East”, strives towards excellence. We
-              provide a conducive learning environment, and offer our students
-              the right knowledge, skills, creativity and dispositions to thrive
-              in a world of constant change.”
+              “GCU formerly known as the Eton of the East, strives towards
+              excellence. We provide a conducive learning environment, and offer
+              our students the right knowledge, skills, creativity and
+              dispositions to thrive in a world of constant change.”
             </Text>
           </Box>
           <Image

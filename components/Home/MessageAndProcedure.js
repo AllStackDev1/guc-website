@@ -101,7 +101,7 @@ const MessageAndProcedure = ({ handleModal }) => {
             fontSize='sm'
             px={{ lg: 5 }}
             textAlign='center'
-            w={{ lg: '80' }}
+            w={{ lg: '80', '3xl': 'full' }}
           >
             Please be advised that we are only admitting JSS1/Year 7 students.
             To be eligible for admission, prospective students must be between
