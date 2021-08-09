@@ -20,7 +20,6 @@ const MessageAndProcedure = ({ handleModal }) => {
         <Image
           alt='Principal Picture'
           d={{ base: 'none', lg: 'block' }}
-          // src='images/principal-small.jpeg'
           src={require('/public/images/principal-small.jpeg')}
         />
         <Image
@@ -102,7 +101,7 @@ const MessageAndProcedure = ({ handleModal }) => {
             fontSize='sm'
             px={{ lg: 5 }}
             textAlign='center'
-            w={{ base: '100%', lg: '90' }}
+            w={{ lg: '80', '3xl': 'full' }}
           >
             Please be advised that we are only admitting JSS1/Year 7 students.
             To be eligible for admission, prospective students must be between
