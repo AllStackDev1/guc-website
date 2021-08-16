@@ -32,14 +32,14 @@ export default function Houses() {
           HOUSE CAPTAIN
         </Heading>
         <Text mb={{ lg: 4 }} lineHeight={{ base: '25px', lg: '32px' }}>
-          The Housemaster takes primary responsibility for the pastoral care of
-          every boy in his house. He has a detailed understanding of each boy’s
-          life at the school, from his mental and physical health to his
-          academic and extra-curricular profile.
+          The House captain is an elected student prefect that oversees the
+          activities of his fellow colleagues in the house. He reports directly
+          to the housemaster and acts as a bridge between the hostel management
+          and the students.
         </Text>
         <Text lineHeight={{ base: '25px', lg: '32px' }}>
-          The principal role of the Housemaster is to help boys to find their
-          place and to thrive within the school community.
+          He also leads and supports the boys of your house in a variety of
+          house competitions.
         </Text>
       </Box>
     </Container>

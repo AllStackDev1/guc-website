@@ -6,7 +6,6 @@ import Footer from '@components/Home/Footer'
 
 import Hero from '@components/Boarding/Sports/Hero'
 import ChallengeBalance from '@components/Boarding/Sports/ChallengeBalance'
-import FutureWins from '@components/Boarding/Sports/FutureWins'
 import FootBall from '@components/Boarding/Sports/Football'
 import Basketball from '@components/Boarding/Sports/Basketball'
 import Athletics from '@components/Boarding/Sports/Athletics'
@@ -24,7 +23,6 @@ export default function Sports() {
         <Hero />
       </Fade>
       <ChallengeBalance />
-      <FutureWins />
       <FootBall />
       <Basketball />
       <Athletics />
