@@ -6,11 +6,11 @@ import {
   Grid,
   Image,
   Center,
-  GridItem,
-  Container,
+  Button,
   Divider,
   Heading,
-  Button
+  GridItem,
+  Container
 } from '@chakra-ui/react'
 
 const OurHistory = () => {
@@ -18,7 +18,7 @@ const OurHistory = () => {
 
   const slider = [
     {
-      val: 33.33,
+      val: 50,
       img: require('/public/images/robert-fisher.jpeg'),
       text: `Robert Fisher arrived in Umuahia in 1927, on January 29, 1929 he
       opened the gates of the school to 25 students drawn from all parts
@@ -30,20 +30,11 @@ const OurHistory = () => {
       and was replaced by W. N. Tolfree.`
     },
     {
-      val: 66.67,
-      img: require('/public/images/robert-fisher.jpeg'),
-      text: `For the first forty years of its existence, the Government College
-      Umuahia was a beacon of excellence and source of pride to Umuahia,
-      the region and Nigeria. Following the civil war, GCU saw a steady
-      decline in her core values of excellence, discipline and merit.`
-    },
-    {
       val: 100,
       img: require('/public/images/cricket.jpeg'),
-      text: `The most noticeable sign was the ruined and neglected condition of
-      the facilities and physical environment. It suffered greatly from
-      acute under resourcing and mismanagement. <br /> The values that made it exemplary became badly eroded and in 2014,
-      the FEDT was set up to take ownership and restore the school.`
+      text: `<p>For the first forty years of her existence, Government College Umuahia was a beacon of excellence and source of pride to Umuahia, the eastern region and Nigeria at large.</p>
+      <p>In 2014, the Fisher Educational Development Trust was set up to take private ownership of Government College Umuahia, with fresh minds that have been working to resuscitate and refurbish the buildings, facilities, physical environment.</p>
+      `
     }
   ]
 
@@ -77,7 +68,7 @@ const OurHistory = () => {
         md: `${state !== 2 ? '35' : '40'}% ${state !== 2 ? '65' : '60'}%`
       }}
     >
-      <GridItem d={{ base: 'none', md: 'block' }}>
+      <GridItem bg='red' d={{ base: 'none', md: 'block' }} w='100%' h='100%'>
         <Image src={img} w='100%' h='100%' />
       </GridItem>
       <GridItem>

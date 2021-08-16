@@ -62,9 +62,9 @@ const CorePurpose = ({ handleModal }) => {
           </Heading>
           <Text fontSize='sm' lineHeight='25px' mt={5} mb={6}>
             The educational purpose of GCU is embodied in a programme of
-            intellectual, moral, emotional, physical, aesthetic, spiritual and
-            social development. The school inculcates qualities of scholarship,
-            honesty, justice and respect for others.
+            intellectual, moral, physical, and social development. The school
+            inculcates qualities of leadership, self-motivation, discipline,
+            honesty, diligence and respect for others.
           </Text>
           <Text
             fontFamily='body'
