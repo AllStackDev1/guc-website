@@ -32,7 +32,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      sessions
+      sessions: [...sessions].reverse()
     }
   }
 }
