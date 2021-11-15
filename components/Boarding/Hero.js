@@ -32,7 +32,7 @@ export default function Hero() {
             w={{ lg: '690px' }}
             h={{ lg: '440px' }}
             alt='about-us-img'
-            src={require('/public/images/boys-hostels.jpeg')}
+            src={require('/public/images/boys-laughing.png')}
           />
         </Fade>
 
@@ -53,7 +53,7 @@ export default function Hero() {
                 w={{ lg: '480px' }}
                 h={{ lg: '440px' }}
                 alt='about-us-img'
-                src={require('/public/images/emty-room.jpeg')}
+                src={require('/public/images/unseen-boy.png')}
               />
             </Box>
           </Box>
