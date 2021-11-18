@@ -25,7 +25,7 @@ export default function Resumption() {
           fontSize={{ base: 'sm', lg: 'md' }}
           lineHeight={{ base: '27px', lg: '32px' }}
         >
-          The proposed reopening and resumption date of the 2021/2022 session
+          The proposed reopening and resumption date of the 2022/2023 session
           will be communicated to the parents via text and email.
         </Text>
       </Box>

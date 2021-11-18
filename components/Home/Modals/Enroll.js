@@ -56,7 +56,7 @@ const EnrollModal = ({ isOpen, onClose }) => {
             </Heading>
 
             <Box my={4}>
-              <Text {...textStyles}>Ongoing for 2021/2022</Text>
+              <Text {...textStyles}>Ongoing for 2022/2023</Text>
               <Text {...textStyles}>Academic Session</Text>
             </Box>
 
