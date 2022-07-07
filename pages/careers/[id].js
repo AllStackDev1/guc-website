@@ -179,7 +179,7 @@ export default VacancyDetail
 export async function getStaticPaths() {
   const vacancies = await fetchStrapiContent('careers')
 
-  const paths = vacancies.map(({ _id: id }) => ({ params: { id } }))
+  const paths = vacancies?.map(({ _id: id }) => ({ params: { id } }))
 
   return { paths, fallback: false }
 }
